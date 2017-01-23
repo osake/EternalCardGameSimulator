@@ -1,10 +1,17 @@
 package example
 
-class Deck(val deck: Array[Card]) {
+import scala.util.Random
+import scala.collection.mutable.ListBuffer
 
-  var d: Array[Card] = deck
+class Deck(val deck: ListBuffer[Card]) {
+
+  var d: ListBuffer[Card] = deck
 
   def draw() {
 
+  }
+
+  def shuffle() {
+    d = Random.shuffle(d)
   }
 }
