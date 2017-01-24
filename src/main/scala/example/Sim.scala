@@ -13,10 +13,29 @@ class Sim(val d: Deck) {
   var board: ListBuffer[Card] = new ListBuffer[Card]()
   var v: ListBuffer[Card] = new ListBuffer[Card]()
 
+  // Setup the simulator with a shuffled deck and a hand of cards.
   d.shuffle
   draw(7)
 
   def draw(n: Int) {
-    for (i <- 1 to 7) yield hand.append(d.draw)
+    for (i <- 1 to n) yield hand.append(d.draw)
+  }
+
+  def mulligan() {
+    mulligan_counter += 1
+    // TODO(jfrench): put cards back in deck and shuffle
+  }
+
+  private def redraw() {
+    d.shuffle
+    draw(7)
+  }
+
+  def restart() {
+    max_power = 0
+    power = 0
+    mulligan_counter = 0
+    // TODO(jfrench): empty all the card pools back into deck
+
   }
 }
