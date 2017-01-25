@@ -4,19 +4,22 @@ import scala.collection.mutable.ListBuffer
 
 object Hello extends Greeting with App {
   println(greeting)
-  /* sample of creating a raw deck
-   * var d = new ListBuffer[Card]()
+  (0 to 1000000) map { index =>
+    val a = new Sim(new Deck(Prefab.gauntlet_thirty_deck()))
+    val power_count = card_count("p", a.hand)
+    if (power_count <  2 || power_count > 5) {
+      a.mulligan()
+    }
+    a.d.d foreach { c =>
+      //println(c.generic_type + ", " + c.cost)
+    }
 
-   * d += (
-   *   new Card("p", 0),
-   *   new Card("u", 2),
-   *   new Card("s", 1)
-   * )
-   */
-  val a = new Deck(Prefab.gauntlet_thirty_deck())
-  a.shuffle()
-  a.d foreach { c =>
-    println(c.generic_type + ", " + c.cost)
+    //println(a.d.d.size)
+    println(a.mulligan_counter)
+  }
+
+  def card_count(t: String, list: ListBuffer[Card]) : Int = {
+    return list.filter(c => c.generic_type == t).size
   }
 }
 
