@@ -6,7 +6,7 @@ object Hello extends Greeting with App {
   println(greeting)
   (0 to 1000000) map { index =>
     val a = new Sim(new Deck(Prefab.gauntlet_thirty_deck()))
-    val power_count = card_count("p", a.hand)
+    val power_count = a.countType("p", a.hand)
     if (power_count <  2 || power_count > 5) {
       a.mulligan()
     }
