@@ -2,6 +2,11 @@ package example
 
 import scala.collection.mutable.ListBuffer
 
+/**
+  * Binary for executing the simulator.
+  *
+  * Reads the first argument as a given number of times to execute the simulator.
+  */
 object Run extends Greeting with App {
   var iterations = 10
   if (args.size > 0) {

@@ -4,6 +4,12 @@ import scala.collection.mutable.ListBuffer
 
 // TODO(jfrench): Probably want a configuration file which defines deck size, etc.
 // The tests would want to respec the size so I don't need 75 card decks in all the tests :)
+/**
+  * Sim is the heart of the simulator.  It's effectively the methods needed to play a game of cards.
+  * It utilizes decks and cards, then extends methods such as mulligans, playing, and restarting.
+  * A binary which utilizes the simulator will just utilize these common terms to navigate the sim
+  * so that it can produce output based on given inputs.
+  */
 class Sim(val d: Deck) {
   var power: Int = 0
   var max_power: Int = 0
@@ -25,6 +31,12 @@ class Sim(val d: Deck) {
     for (i <- 1 to n) yield hand.append(d.draw)
   }
 
+  /**
+    * Mulligan is when you're not happy with a hand.  In this simulator, it is
+    * specific to having 2-5 power which is a game requirement.  We also track
+    * how many mulligans happen when the player initiates one.  In general testing,
+    * about 1 in 1,000,000 times you would see 8 redraws.
+    */
   def mulligan() {
     mulligan_counter += 1
     // TODO(jfrench): put cards back in deck and shuffle
@@ -35,8 +47,11 @@ class Sim(val d: Deck) {
     }
   }
 
+  /**
+    * While private, this is a useful method for cleaning up the state.  Reset all
+    * the lists by replacing them into the deck, shuffle, and draw seven new cards.
+    */
   private def reset_and_draw() {
-    // Replace hand, void, pool, and board
     hand foreach { c =>
       d replace c
       hand -= c
@@ -57,18 +72,21 @@ class Sim(val d: Deck) {
     draw(7)
   }
 
+  /**
+    * Restarting a game, so setting everything back to zero and resetting board state.
+    */
   def restart() {
     max_power = 0
     power = 0
     mulligan_counter = 0
-    // TODO(jfrench): empty all the card pools back into deck
     reset_and_draw()
-
   }
 
-  // Handle playing a card
+  /**
+    * Handle the various behavior of card types when they're played.
+    */
   def play(c: Card) {
-    // Does it make sense to accept any card, or should we check first?
+    // TODO(jfrench): Does it make sense to accept any card, or should we check first?
     c.generic_type match {
       case "p" => playPower(c)
       case "u" => playUnit(c)
@@ -78,25 +96,25 @@ class Sim(val d: Deck) {
     }
   }
 
-  def playPower(c: Card) {
+  private def playPower(c: Card) {
     hand -= c
     pool += c
     power += 1
     max_power += 1
   }
 
-  def playUnit(c: Card) {
+  private def playUnit(c: Card) {
     hand -= c
     board += c
   }
 
-  def playSpell(c: Card) {
+  private def playSpell(c: Card) {
     // TODO(jfrench): Add spell interactions
     hand -= c
     v += c
   }
 
-  def playAttachment(c: Card) {
+  private def playAttachment(c: Card) {
     // TODO(jfrench): Add attachment interactions
     hand -= c
     board += c // temporarily just chuck it on the board
@@ -115,6 +133,9 @@ class Sim(val d: Deck) {
     println("Mulligans: " + mulligan_counter)
   }
 
+  /**
+    * Given a list and generic type, get a count of those cards from the list.
+    */
   def countType(t: String, list: ListBuffer[Card]) : Int = {
     return list.filter(c => c.generic_type == t).size
   }
