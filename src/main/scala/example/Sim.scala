@@ -68,12 +68,38 @@ class Sim(val d: Deck) {
 
   // Handle playing a card
   def play(c: Card) {
-
+    // Does it make sense to accept any card, or should we check first?
+    c.generic_type match {
+      case "p" => playPower(c)
+      case "u" => playUnit(c)
+      case "s" => playSpell(c)
+      case "a" => playAttachment(c)
+      case _ => println("Unexpected case: " + _)
+    }
   }
 
   def playPower(c: Card) {
     hand -= c
     pool += c
+    power += 1
+    max_power += 1
+  }
+
+  def playUnit(c: Card) {
+    hand -= c
+    board += c
+  }
+
+  def playSpell(c: Card) {
+    // TODO(jfrench): Add spell interactions
+    hand -= c
+    v += c
+  }
+
+  def playAttachment(c: Card) {
+    // TODO(jfrench): Add attachment interactions
+    hand -= c
+    board += c // temporarily just chuck it on the board
   }
 
   def discard(c: Card) {

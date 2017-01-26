@@ -3,8 +3,12 @@ package example
 import scala.collection.mutable.ListBuffer
 
 object Run extends Greeting with App {
+  var iterations = 10
+  if (args.size > 0) {
+    iterations = args(0).toInt
+  }
   println(greeting)
-  (0 to 10) map { index =>
+  (1 to iterations) map { index =>
     val a = new Sim(new Deck(Prefab.gauntlet_thirty_deck()))
     val power_count = a.countType("p", a.hand)
     if (power_count <  2 || power_count > 5) {
