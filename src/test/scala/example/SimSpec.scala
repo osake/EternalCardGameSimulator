@@ -10,16 +10,16 @@ class SimSpec extends FlatSpec with Matchers {
     new {
       var cards = new ListBuffer[Card]()
       cards += (
-        new Card("p", 0),
-        new Card("p", 0),
-        new Card("u", 2),
-        new Card("u", 3),
-        new Card("s", 1),
-        new Card("p", 0),
-        new Card("p", 0),
-        new Card("u", 2),
-        new Card("u", 3),
-        new Card("s", 1)
+        new Card(generic_type = "p", cost = 0),
+        new Card(generic_type = "p", cost = 0),
+        new Card(generic_type = "u", cost = 2),
+        new Card(generic_type = "u", cost = 3),
+        new Card(generic_type = "s", cost = 1),
+        new Card(generic_type = "p", cost = 0),
+        new Card(generic_type = "p", cost = 0),
+        new Card(generic_type = "u", cost = 2),
+        new Card(generic_type = "u", cost = 3),
+        new Card(generic_type = "s", cost = 1)
       )
     }
 
@@ -71,7 +71,7 @@ class SimSpec extends FlatSpec with Matchers {
 
   it should "not play a card you don't have" in {
     val f = fixture
-    val trickCard = new Card("s", 99)
+    val trickCard = new Card(generic_type = "s", cost = 99)
     val deck = new Deck(f.cards)
     val s = new Sim(deck)
 
@@ -81,7 +81,7 @@ class SimSpec extends FlatSpec with Matchers {
 
   it should "not discard a card you don't have" in {
     val f = fixture
-    val trickCard = new Card("s", 99)
+    val trickCard = new Card(generic_type = "s", cost = 99)
     val deck = new Deck(f.cards)
     val s = new Sim(deck)
 
@@ -91,7 +91,7 @@ class SimSpec extends FlatSpec with Matchers {
 
   it should "not be able to play an expensive unit without sufficient power" in {
     val f = fixture
-    val trickCard = new Card("u", 99)
+    val trickCard = new Card(generic_type = "u", cost = 99)
     val deck = new Deck(f.cards)
     val s = new Sim(deck)
     s.hand += trickCard // force expensive card into hand

@@ -8,11 +8,11 @@ class DeckSpec extends FlatSpec with Matchers {
   "The Deck object" should "intialize a deck of cards" in {
     var cards = new ListBuffer[Card]()
     cards += (
-      new Card("p", 0),
-      new Card("p", 0),
-      new Card("u", 2),
-      new Card("u", 3),
-      new Card("s", 1)
+      new Card(),
+      new Card(),
+      new Card(),
+      new Card(),
+      new Card()
     )
     val deck = new Deck(cards)
     deck.d.size should be (5)
