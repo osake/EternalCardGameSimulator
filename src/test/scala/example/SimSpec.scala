@@ -65,4 +65,24 @@ class SimSpec extends FlatSpec with Matchers {
       }
     }
   }
+
+  it should "not play a card you don't have" in {
+    val f = fixture
+    val trickCard = new Card("s", 99)
+    val deck = new Deck(f.cards)
+    val s = new Sim(deck)
+
+    s.play(trickCard)
+    s.hand.size should be (7)
+  }
+
+  it should "not discard a card you don't have" in {
+    val f = fixture
+    val trickCard = new Card("s", 99)
+    val deck = new Deck(f.cards)
+    val s = new Sim(deck)
+
+    s.discard(trickCard)
+    s.hand.size should be (7)
+  }
 }

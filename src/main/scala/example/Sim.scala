@@ -86,13 +86,16 @@ class Sim(val d: Deck) {
     * Handle the various behavior of card types when they're played.
     */
   def play(c: Card) {
-    // TODO(jfrench): Does it make sense to accept any card, or should we check first?
-    c.generic_type match {
-      case "p" => playPower(c)
-      case "u" => playUnit(c)
-      case "s" => playSpell(c)
-      case "a" => playAttachment(c)
-      case _ => println("Unexpected case: " + _)
+    if (hand.contains(c)) {
+      c.generic_type match {
+        case "p" => playPower(c)
+        case "u" => playUnit(c)
+        case "s" => playSpell(c)
+        case "a" => playAttachment(c)
+        case _ => println("Unexpected case: " + _)
+      }
+    } else {
+      println("You can't play a card you don't have.")
     }
   }
 
@@ -121,8 +124,12 @@ class Sim(val d: Deck) {
   }
 
   def discard(c: Card) {
-    hand -= c
-    v += c
+    if (hand.contains(c)) {
+      hand -= c
+      v += c
+    } else {
+      println("You can't discard a card you don't have.")
+    }
   }
 
   def hand_data() {
