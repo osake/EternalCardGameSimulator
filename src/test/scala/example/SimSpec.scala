@@ -43,6 +43,9 @@ class SimSpec extends FlatSpec with Matchers {
     val deck = new Deck(f.cards)
     val s = new Sim(deck)
 
+    s.maxPower    = 5  // force power to a medium value
+    s.currentPower = 5
+
     // The fixture guarantees we draw a unit in 7 cards
     s.hand foreach { c =>
       if (c.generic_type == "u") {
@@ -84,5 +87,19 @@ class SimSpec extends FlatSpec with Matchers {
 
     s.discard(trickCard)
     s.hand.size should be (7)
+  }
+
+  it should "not be able to play an expensive unit without sufficient power" in {
+    val f = fixture
+    val trickCard = new Card("u", 99)
+    val deck = new Deck(f.cards)
+    val s = new Sim(deck)
+    s.hand += trickCard // force expensive card into hand
+    s.maxPower     = 5  // force power to a medium value
+    s.currentPower = 5
+
+    s.play(trickCard)
+    s.board should be ('empty)
+    s.hand.size should be (8)
   }
 }

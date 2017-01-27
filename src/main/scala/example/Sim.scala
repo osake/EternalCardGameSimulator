@@ -12,7 +12,8 @@ import scala.collection.mutable.ListBuffer
   */
 class Sim(val d: Deck) {
   var power: Int = 0
-  var max_power: Int = 0
+  var maxPower: Int = 0
+  var currentPower: Int = 0
   var mulligan_counter: Int = 0
   var hand: ListBuffer[Card] = new ListBuffer[Card]()
   var pool: ListBuffer[Card] = new ListBuffer[Card]()
@@ -76,7 +77,7 @@ class Sim(val d: Deck) {
     * Restarting a game, so setting everything back to zero and resetting board state.
     */
   def restart() {
-    max_power = 0
+    maxPower = 0
     power = 0
     mulligan_counter = 0
     reset_and_draw()
@@ -103,24 +104,44 @@ class Sim(val d: Deck) {
     hand -= c
     pool += c
     power += 1
-    max_power += 1
+    maxPower += 1
+    currentPower += 1
   }
 
   private def playUnit(c: Card) {
-    hand -= c
-    board += c
+    if (isAffordable(c)) {
+      hand -= c
+      currentPower -= c.cost
+      board += c
+    } else {
+      println("Could not afford " + c.cost + " card with " + currentPower + " power available.")
+    }
   }
 
   private def playSpell(c: Card) {
     // TODO(jfrench): Add spell interactions
-    hand -= c
-    v += c
+    if (isAffordable(c)) {
+      hand -= c
+      currentPower -= c.cost
+      v += c
+    } else {
+      println("Could not afford " + c.cost + " card with " + currentPower + " power available.")
+    }
   }
 
   private def playAttachment(c: Card) {
     // TODO(jfrench): Add attachment interactions
-    hand -= c
-    board += c // temporarily just chuck it on the board
+    if (isAffordable(c)) {
+      hand -= c
+      currentPower -= c.cost
+      board += c // temporarily just chuck it on the board
+    } else {
+      println("Could not afford " + c.cost + " card with " + currentPower + " power available.")
+    }
+  }
+
+  private def isAffordable(c: Card) : Boolean = {
+    return c.cost <= currentPower
   }
 
   def discard(c: Card) {
@@ -147,3 +168,4 @@ class Sim(val d: Deck) {
     return list.filter(c => c.generic_type == t).size
   }
 }
+
