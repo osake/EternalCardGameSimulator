@@ -1,5 +1,7 @@
 # EternalCardGameSimulator
 
+[![Build Status](https://travis-ci.org/osake/EternalCardGameSimulator.png?branch=master)](https://travis-ci.org/osake/EternalCardGameSimulator)
+
 
 This is my simulator for Eternal Card Game which is built using sbt.  For the Mac, using brew:
 
