@@ -105,5 +105,11 @@ class SimSpec extends FlatSpec with Matchers {
 
   it should "not test this function, but I'm lazy" in {
     val c = Prefab.testCard
+    c.cost should be (3) // because we know stuff
+  }
+
+  it should "not test this function either, but I'm lazy" in {
+    val c = Prefab.testCollection
+    c.size should be > 480 // because we know more stuff
   }
 }

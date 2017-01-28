@@ -12,6 +12,10 @@ object Run extends Greeting with App {
   if (args.size > 0) {
     iterations = args(0).toInt
   }
+
+  val f = new File("data/cards.json")
+  println(f.contents)
+
   println(greeting)
   (1 to iterations) map { index =>
     val a = new Sim(new Deck(Prefab.gauntlet_thirty_deck()))

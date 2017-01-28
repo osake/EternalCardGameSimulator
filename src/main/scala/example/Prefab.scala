@@ -34,6 +34,13 @@ object Prefab {
     return gson.fromJson(jsonString.trim, classOf[Card])
   }
 
+  def testCollection() : Array[Card] = {
+    val gson = new Gson
+    val jsonString = new File("data/cards.json").contents
+
+    return gson.fromJson(jsonString.trim, classOf[Array[Card]])
+  }
+
 
   def gauntlet_thirty_deck() : ListBuffer[Card] = {
     var d = new ListBuffer[Card]()
