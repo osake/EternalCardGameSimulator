@@ -8,5 +8,8 @@ lazy val root = (project in file(".")).
       version      := "0.1.0-SNAPSHOT"
     )),
     name := "Run",
-    libraryDependencies += scalaTest % Test
+    libraryDependencies += scalaTest % Test,
+    libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.5.0",
+    libraryDependencies += "org.slf4j" % "slf4j-simple" % "1.7.22",
+    libraryDependencies += "com.google.code.gson" % "gson" % "2.8.0"
   )

@@ -1,6 +1,8 @@
 package example
 
 import scala.collection.mutable.ListBuffer
+import com.google.gson.Gson
+import com.typesafe.scalalogging.LazyLogging
 
 // TODO(jfrench): Probably want a configuration file which defines deck size, etc.
 // The tests would want to respec the size so I don't need 75 card decks in all the tests :)
@@ -10,7 +12,7 @@ import scala.collection.mutable.ListBuffer
   * A binary which utilizes the simulator will just utilize these common terms to navigate the sim
   * so that it can produce output based on given inputs.
   */
-class Sim(val d: Deck) {
+class Sim(val d: Deck) extends LazyLogging {
   var power: Int = 0
   var maxPower: Int = 0
   var currentPower: Int = 0
@@ -93,7 +95,7 @@ class Sim(val d: Deck) {
         case "u" => playUnit(c)
         case "s" => playSpell(c)
         case "a" => playAttachment(c)
-        case _ => println("Unexpected case: " + _)
+        case _ => logger.warn("Unexpected generic type" + c.generic_type)
       }
     } else {
       println("You can't play a card you don't have.")
@@ -114,7 +116,7 @@ class Sim(val d: Deck) {
       currentPower -= c.cost
       board += c
     } else {
-      println("Could not afford " + c.cost + " card with " + currentPower + " power available.")
+      logger.warn("Could not afford " + c.cost + " unit with " + currentPower + " power available.")
     }
   }
 
@@ -125,7 +127,7 @@ class Sim(val d: Deck) {
       currentPower -= c.cost
       v += c
     } else {
-      println("Could not afford " + c.cost + " card with " + currentPower + " power available.")
+      logger.warn("Could not afford " + c.cost + " spell with " + currentPower + " power available.")
     }
   }
 
@@ -136,7 +138,7 @@ class Sim(val d: Deck) {
       currentPower -= c.cost
       board += c // temporarily just chuck it on the board
     } else {
-      println("Could not afford " + c.cost + " card with " + currentPower + " power available.")
+      logger.warn("Could not afford " + c.cost + " attachment with " + currentPower + " power available.")
     }
   }
 
@@ -149,7 +151,7 @@ class Sim(val d: Deck) {
       hand -= c
       v += c
     } else {
-      println("You can't discard a card you don't have.")
+      logger.warn("You can't discard a card you don't have.")
     }
   }
 
