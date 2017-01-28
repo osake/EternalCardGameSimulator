@@ -1,0 +1,9210 @@
+[
+  {
+    "set": "Set1",
+    "num": 408,
+    "name": "Seek Power",
+    "rules_text": "Draw a Sigil of your choice from your deck.",
+    "influence": "",
+    "id": 0,
+    "rarity": "Common",
+    "colors": [],
+    "cost": "1",
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 188
+  },
+  {
+    "set": "Set1",
+    "name": "Fire Sigil",
+    "rules_text": " ",
+    "influence": "",
+    "id": 1,
+    "rarity": "Default",
+    "colors": [],
+    "num": 1,
+    "generic_type": "Power",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "name": "Granite Monument",
+    "rules_text": "Depleted; Transmute 5: 4/1; Magmahound with Charge",
+    "influence": "{F}",
+    "id": 2,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "num": 423,
+    "generic_type": "Power",
+    "draftable": true,
+    "rank": 208
+  },
+  {
+    "set": "Set1",
+    "num": 3,
+    "name": "Charchain Flail",
+    "rules_text": "Powersurge; Summon: +Attack equal to your power.",
+    "influence": "{F}{F}",
+    "id": 3,
+    "rarity": "Rare",
+    "colors": [
+      "Fire"
+    ],
+    "cost": "0",
+    "health": "1",
+    "attack": "0",
+    "generic_type": "Relic Weapon",
+    "draftable": true,
+    "rank": 110
+  },
+  {
+    "set": "Set1",
+    "num": 2,
+    "name": "Flame Blast",
+    "rules_text": "Powersurge; Deal damage equal to your power.",
+    "influence": "{F}{F}{F}",
+    "id": 4,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": "0",
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 45
+  },
+  {
+    "set": "Set1",
+    "num": 5,
+    "name": "Grenadin Drone",
+    "rules_text": "Summon: Play a 1/1 Grenadin",
+    "influence": "{F}",
+    "id": 5,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": "1",
+    "health": "1",
+    "subtypes": [
+      "Grenadin"
+    ],
+    "attack": "1",
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 187
+  },
+  {
+    "set": "Set1",
+    "num": 4,
+    "name": "Heavy Axe",
+    "rules_text": " ",
+    "influence": "{F}",
+    "id": 6,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": "1",
+    "health": "1",
+    "attack": "2",
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 360
+  },
+  {
+    "set": "Set0",
+    "num": 1,
+    "name": "Hellhound Yearling",
+    "rules_text": "Summon: Deal 1 damage to the enemy player.",
+    "influence": "{F}",
+    "id": 7,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": "1",
+    "health": "1",
+    "subtypes": [
+      "Beast"
+    ],
+    "attack": "1",
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 6,
+    "name": "Light the Fuse",
+    "rules_text": "Put five {F}bombs into the enemy deck.",
+    "influence": "{F}",
+    "id": 8,
+    "rarity": "Legendary",
+    "colors": [
+      "Fire"
+    ],
+    "cost": "1",
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 397
+  },
+  {
+    "set": "Set1",
+    "num": 13,
+    "name": "Oni Ronin",
+    "rules_text": "Warcry",
+    "influence": "{F}",
+    "id": 10,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": "1",
+    "health": "1",
+    "subtypes": [
+      "Oni"
+    ],
+    "attack": "2",
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 104
+  },
+  {
+    "set": "Set1",
+    "num": 16,
+    "name": "Pyroknight",
+    "rules_text": "Overwhelm; Ultimate: Pay 5 to give Pyroknight +4/+4.",
+    "influence": "{F}",
+    "id": 11,
+    "rarity": "Rare",
+    "colors": [
+      "Fire"
+    ],
+    "cost": "1",
+    "health": "1",
+    "subtypes": [
+      "Warrior"
+    ],
+    "attack": "2",
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 56
+  },
+  {
+    "set": "Set1",
+    "num": 15,
+    "name": "Ruin",
+    "rules_text": "Kill an enemy attachment.",
+    "influence": "{F}",
+    "id": 12,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": "1",
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 372
+  },
+  {
+    "set": "Set1",
+    "num": 11,
+    "name": "Ruthless Stranger",
+    "rules_text": "Strangers have +1 Attack.",
+    "influence": "{F}",
+    "id": 13,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 1,
+    "health": 1,
+    "subtypes": [
+      "Stranger"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 239
+  },
+  {
+    "set": "Set1",
+    "num": 7,
+    "name": "Sparring Partner",
+    "rules_text": "Sparring Partner has +3 Attack while he is wielding a weapon.",
+    "influence": "{F}",
+    "id": 14,
+    "rarity": "Rare",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 1,
+    "health": 3,
+    "subtypes": [
+      "Oni"
+    ],
+    "attack": 0,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 334
+  },
+  {
+    "set": "Set1",
+    "num": 10,
+    "name": "Temper",
+    "rules_text": "Deal 1 damage. The top unit or weapon of your deck gets +1/+1.",
+    "influence": "{F}",
+    "id": 15,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 1,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 238
+  },
+  {
+    "set": "Set1",
+    "num": 12,
+    "name": "Ticking Grenadin",
+    "rules_text": "Entomb: Deal 3 damage to the enemy player.",
+    "influence": "{F}",
+    "id": 16,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 1,
+    "health": 1,
+    "subtypes": [
+      "Grenadin"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 355
+  },
+  {
+    "set": "Set1",
+    "num": 8,
+    "name": "Torch",
+    "rules_text": "Deal 3 damage.",
+    "influence": "{F}",
+    "id": 17,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 1,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 46
+  },
+  {
+    "set": "Set1",
+    "num": 14,
+    "name": "Warhelm",
+    "rules_text": "Warcry, Charge",
+    "influence": "{F}",
+    "id": 18,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 1,
+    "health": 0,
+    "attack": 1,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 281
+  },
+  {
+    "set": "Set1",
+    "num": 22,
+    "name": "Bladekin Apprentice",
+    "rules_text": "Quickdraw; When Bladekin Apprentice attacks, she gets +1 Attack.",
+    "influence": "{F}",
+    "id": 19,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 2,
+    "health": 1,
+    "subtypes": [
+      "Oni"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 113
+  },
+  {
+    "set": "Set1",
+    "num": 19,
+    "name": "Brazen Daredevil",
+    "rules_text": "Reckless; When Brazen Daredevil attacks, she deals damage equal to her Attack to a random enemy.",
+    "influence": "{F}",
+    "id": 20,
+    "rarity": "Rare",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 2,
+    "health": 1,
+    "subtypes": [
+      "Gunslinger"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 194
+  },
+  {
+    "set": "Set1",
+    "num": 24,
+    "name": "Clever Stranger",
+    "rules_text": "When a Stranger is killed, its owner plays a 1/1 Grenadin.",
+    "influence": "{F}",
+    "id": 21,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 2,
+    "health": 1,
+    "subtypes": [
+      "Stranger"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 287
+  },
+  {
+    "set": "Set0",
+    "num": 2,
+    "name": "Detonate",
+    "rules_text": "Deal 3 damage to the enemy player.",
+    "influence": "{F}",
+    "id": 22,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 2,
+    "generic_type": "Spell",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set0",
+    "num": 3,
+    "name": "Kaleb's Favor",
+    "rules_text": "Deal 2 damage to the enemy player. Draw a {F} Sigil from your deck.",
+    "influence": "{F}",
+    "id": 23,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 2,
+    "generic_type": "Spell",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set0",
+    "num": 4,
+    "name": "Oni Striker",
+    "rules_text": "Charge",
+    "influence": "{F}",
+    "id": 24,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 2,
+    "health": 1,
+    "subtypes": [
+      "Oni"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 23,
+    "name": "Ornate Katana",
+    "rules_text": "Summon: Draw a card.",
+    "influence": "{F}",
+    "id": 25,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 2,
+    "health": 0,
+    "attack": 2,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 158
+  },
+  {
+    "set": "Set1",
+    "num": 25,
+    "name": "Piercing Shot",
+    "rules_text": "Deal 2 damage to an enemy unit and 2 damage to the enemy player.",
+    "influence": "{F}",
+    "id": 26,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 2,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 116
+  },
+  {
+    "set": "Set1",
+    "num": 21,
+    "name": "Pyre Adept",
+    "rules_text": "",
+    "influence": "{F}",
+    "id": 27,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 2,
+    "health": 1,
+    "subtypes": [
+      "Mage"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 326
+  },
+  {
+    "set": "Set1",
+    "num": 20,
+    "name": "Rakano Outlaw",
+    "rules_text": "Warcry, Quickdraw",
+    "influence": "{F}",
+    "id": 28,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Gunslinger"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 91
+  },
+  {
+    "set": "Set1",
+    "num": 17,
+    "name": "Rampage",
+    "rules_text": "Give a unit +3/+1 and Overwhelm this turn.",
+    "influence": "{F}",
+    "id": 29,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 2,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 259
+  },
+  {
+    "set": "Set1",
+    "num": 18,
+    "name": "Song of War",
+    "rules_text": "Your units gain Warcry.",
+    "influence": "{F}",
+    "id": 30,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 2,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 409
+  },
+  {
+    "set": "Set1",
+    "num": 29,
+    "name": "Assembly Line",
+    "rules_text": "Play three 1/1 Grenadin.",
+    "influence": "{F}",
+    "id": 31,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 3,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 132
+  },
+  {
+    "set": "Set1",
+    "num": 28,
+    "name": "Burn Out",
+    "rules_text": "Sacrifice a unit to deal 5 damage to an enemy.",
+    "influence": "{F}",
+    "id": 32,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 4,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 296
+  },
+  {
+    "set": "Set1",
+    "num": 31,
+    "name": "Granite Acolyte",
+    "rules_text": "Summon: Play a +2 Attack Iron Sword on one of your units.",
+    "influence": "{F}",
+    "id": 34,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 3,
+    "health": 1,
+    "subtypes": [
+      "Oni"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 159
+  },
+  {
+    "set": "Set1",
+    "num": 32,
+    "name": "Oni Quartermaster",
+    "rules_text": "When you play a weapon, draw a card.",
+    "influence": "{F}",
+    "id": 35,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 3,
+    "health": 2,
+    "subtypes": [
+      "Oni"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 129
+  },
+  {
+    "set": "Set1",
+    "num": 27,
+    "name": "Rakano Flagbearer",
+    "rules_text": "Warcry 2",
+    "influence": "{F}",
+    "id": 36,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 3,
+    "health": 1,
+    "subtypes": [
+      "Oni"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 402
+  },
+  {
+    "set": "Set1",
+    "num": 33,
+    "name": "Rally",
+    "rules_text": "Your units get +2 Attack this turn.",
+    "influence": "{F}",
+    "id": 37,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 3,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 316
+  },
+  {
+    "set": "Set1",
+    "num": 30,
+    "name": "Rebel Sharpshooter",
+    "rules_text": "Rebel Sharpshooter has Quickdraw while she has 4 Attack or more.",
+    "influence": "{F}",
+    "id": 38,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 3,
+    "health": 3,
+    "subtypes": [
+      "Rebel"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 114
+  },
+  {
+    "set": "Set1",
+    "num": 26,
+    "name": "Shogun's Scepter",
+    "rules_text": "Warcry; Summon: Play a 2/1 Oni Ronin with Warcry.",
+    "influence": "{F}{F}",
+    "id": 39,
+    "rarity": "Rare",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 3,
+    "health": 1,
+    "attack": 2,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 94
+  },
+  {
+    "set": "Set1",
+    "num": 35,
+    "name": "Centaur Outrider",
+    "rules_text": "",
+    "influence": "{F}",
+    "id": 40,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 4,
+    "health": 2,
+    "subtypes": [
+      "Centaur"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 354
+  },
+  {
+    "set": "Set1",
+    "num": 39,
+    "name": "Cloud of Ash",
+    "rules_text": "Exhaust all enemy units.",
+    "influence": "{F}",
+    "id": 41,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 4,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 318
+  },
+  {
+    "set": "Set1",
+    "num": 40,
+    "name": "Furnace Mage",
+    "rules_text": "Summon: Kill an enemy attachment.",
+    "influence": "{F}{F}",
+    "id": 42,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 4,
+    "health": 3,
+    "subtypes": [
+      "Mage"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 109
+  },
+  {
+    "set": "Set1",
+    "num": 36,
+    "name": "Guerrilla Fighter",
+    "rules_text": "Warcry; Summon: Exhaust an enemy unit.",
+    "influence": "{F}",
+    "id": 43,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 4,
+    "health": 2,
+    "subtypes": [
+      "Rebel"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 269
+  },
+  {
+    "set": "Set1",
+    "num": 41,
+    "name": "Magma Javelin",
+    "rules_text": "",
+    "influence": "{F}",
+    "id": 44,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 4,
+    "health": 1,
+    "attack": 4,
+    "generic_type": "Relic Weapon",
+    "draftable": true,
+    "rank": 232
+  },
+  {
+    "set": "Set1",
+    "num": 42,
+    "name": "Outlands Sniper",
+    "rules_text": "Summon: Deal 2 damage.",
+    "influence": "{F}{F}",
+    "id": 45,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 4,
+    "health": 2,
+    "subtypes": [
+      "Gunslinger"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 48
+  },
+  {
+    "set": "Set1",
+    "num": 43,
+    "name": "Rebel Illuminator",
+    "rules_text": "Entomb: Draw a Torch.",
+    "influence": "{F}",
+    "id": 46,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 4,
+    "health": 1,
+    "subtypes": [
+      "Rebel",
+      "Mage"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 49
+  },
+  {
+    "set": "Set1",
+    "num": 37,
+    "name": "Recogulator",
+    "rules_text": "Entomb: Play two 1/1 Grenadin.",
+    "influence": "{F}",
+    "id": 47,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 4,
+    "health": 2,
+    "subtypes": [
+      "Grenadin"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 300
+  },
+  {
+    "set": "Set1",
+    "num": 38,
+    "name": "Steelfang Chakram",
+    "rules_text": "Entomb: Draw Steelfang Chakram from the void.",
+    "influence": "{F}",
+    "id": 48,
+    "rarity": "Rare",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 4,
+    "health": 0,
+    "attack": 4,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 24
+  },
+  {
+    "set": "Set1",
+    "num": 44,
+    "name": "Blazing Renegade",
+    "rules_text": "Charge, Quickdraw",
+    "influence": "{F}",
+    "id": 49,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 5,
+    "health": 1,
+    "subtypes": [
+      "Gunslinger"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 385
+  },
+  {
+    "set": "Set1",
+    "num": 46,
+    "name": "Calderan Channeler",
+    "rules_text": "Summon: Each of your units deals 1 damage to the enemy player.",
+    "influence": "{F}",
+    "id": 50,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 5,
+    "health": 2,
+    "subtypes": [
+      "Mage"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 362
+  },
+  {
+    "set": "Set1",
+    "num": 50,
+    "name": "Centaur Raidleader",
+    "rules_text": "Charge; Summon: The top unit of your deck gets Charge.",
+    "influence": "{F}{F}",
+    "id": 51,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 5,
+    "health": 4,
+    "subtypes": [
+      "Centaur"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 263
+  },
+  {
+    "set": "Set1",
+    "num": 49,
+    "name": "Dusthoof Brawler",
+    "rules_text": "Overwhelm",
+    "influence": "{F}",
+    "id": 52,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 5,
+    "health": 3,
+    "subtypes": [
+      "Centaur"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 322
+  },
+  {
+    "set": "Set0",
+    "num": 6,
+    "name": "Flash Fire",
+    "rules_text": "Deal damage equal to your {F} influence.",
+    "influence": "{F}",
+    "id": 53,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 5,
+    "generic_type": "Spell",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 45,
+    "name": "Infernus",
+    "rules_text": "Overwhelm, Charge; Free on your first turn. At the end of your turn, sacrifice Infernus.",
+    "influence": "{F}",
+    "id": 54,
+    "rarity": "Rare",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 5,
+    "health": 5,
+    "subtypes": [
+      "Elemental"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 313
+  },
+  {
+    "set": "Set1",
+    "num": 48,
+    "name": "Obliterate",
+    "rules_text": "Overwhelm; Deal 6 damage.",
+    "influence": "{F}{F}",
+    "id": 55,
+    "rarity": "Rare",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 5,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 36
+  },
+  {
+    "set": "Set1",
+    "num": 51,
+    "name": "Shogun of the Wastes",
+    "rules_text": "Double Damage; Summon: Your units deal Double Damage this turn.",
+    "influence": "{F}{F}",
+    "id": 56,
+    "rarity": "Rare",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 5,
+    "health": 3,
+    "subtypes": [
+      "Oni"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 140
+  },
+  {
+    "set": "Set1",
+    "num": 47,
+    "name": "Soulfire Drake",
+    "rules_text": "Flying, Charge; Entomb: Each unit in your deck randomly gets Flying or Charge.",
+    "influence": "{F}{F}",
+    "id": 57,
+    "rarity": "Legendary",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 5,
+    "health": 2,
+    "subtypes": [
+      "Dragon"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 43
+  },
+  {
+    "set": "Set1",
+    "num": 53,
+    "name": "Frontline Cyclops",
+    "rules_text": "Warcry, Reckless",
+    "influence": "{F}",
+    "id": 58,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 6,
+    "health": 6,
+    "subtypes": [
+      "Giant"
+    ],
+    "attack": 6,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 101
+  },
+  {
+    "set": "Set1",
+    "num": 56,
+    "name": "General Izalio",
+    "rules_text": "Quickdraw; Your other units have +2 Attack.",
+    "influence": "{F}{F}",
+    "id": 59,
+    "rarity": "Rare",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 6,
+    "health": 4,
+    "subtypes": [
+      "Gunslinger",
+      "Soldier"
+    ],
+    "attack": 6,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 44
+  },
+  {
+    "set": "Set1",
+    "num": 57,
+    "name": "Greed's Reward",
+    "rules_text": "Deal 2 damage to the enemy player for each card in their hand.",
+    "influence": "{F}",
+    "id": 60,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 6,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 395
+  },
+  {
+    "set": "Set1",
+    "num": 55,
+    "name": "Hellfire Rifle",
+    "rules_text": "Summon: Deal 3 damage to the enemy player.",
+    "influence": "{F}{F}",
+    "id": 61,
+    "rarity": "Common",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 6,
+    "health": 3,
+    "attack": 3,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 396
+  },
+  {
+    "set": "Set1",
+    "num": 54,
+    "name": "Worldpyre Phoenix",
+    "rules_text": "Flying; Entomb: Draw Worldpyre Phoenix from the void with +2/+2 and cost increased by 2.",
+    "influence": "{F}{F}",
+    "id": 64,
+    "rarity": "Rare",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 6,
+    "health": 5,
+    "subtypes": [
+      "Phoenix"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 6
+  },
+  {
+    "set": "Set1",
+    "num": 59,
+    "name": "Claw of the First Dragon",
+    "rules_text": "Entomb: Play four random 1-cost units.",
+    "influence": "{F}{F}",
+    "id": 65,
+    "rarity": "Legendary",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 7,
+    "health": 4,
+    "attack": 4,
+    "generic_type": "Relic Weapon",
+    "draftable": true,
+    "rank": 205
+  },
+  {
+    "set": "Set1",
+    "num": 60,
+    "name": "Steelbound Dragon",
+    "rules_text": "Flying, Overhwlem",
+    "influence": "{F}{F}",
+    "id": 66,
+    "rarity": "Rare",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 7,
+    "health": 7,
+    "subtypes": [
+      "Dragon"
+    ],
+    "attack": 7,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 22
+  },
+  {
+    "set": "Set1",
+    "num": 61,
+    "name": "Kaleb, Uncrowned Prince",
+    "rules_text": "Charge; Summon: Play a random weapon on each of your {F} units.",
+    "influence": "{F}{F}{F}",
+    "id": 67,
+    "rarity": "Legendary",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 8,
+    "health": 6,
+    "subtypes": [
+      "Scion"
+    ],
+    "attack": 6,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 240
+  },
+  {
+    "set": "Set1",
+    "num": 62,
+    "name": "Lavablood Goliath",
+    "rules_text": "Overwhelm; Summon: Deal Lavablood Goliath's Attack in damage.",
+    "influence": "{F}{F}",
+    "id": 68,
+    "rarity": "Legendary",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 9,
+    "health": 6,
+    "subtypes": [
+      "Giant"
+    ],
+    "attack": 6,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 314
+  },
+  {
+    "set": "Set1",
+    "name": "Time Sigil",
+    "rules_text": "",
+    "influence": "",
+    "id": 69,
+    "rarity": "Default",
+    "colors": [],
+    "num": 63,
+    "generic_type": "Power",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "name": "Amber Monument",
+    "rules_text": "Depleted; Transmute 5: 5/5 Dinosaur with Overwhelm.",
+    "influence": "",
+    "id": 70,
+    "rarity": "Uncommon",
+    "colors": [],
+    "num": 420,
+    "generic_type": "Power",
+    "draftable": true,
+    "rank": 71
+  },
+  {
+    "set": "Set1",
+    "num": 66,
+    "name": "Copper Conduit",
+    "rules_text": "Powersurge, Overwhelm; Summon: +Attack/+Health equal to your power.",
+    "influence": "{T}",
+    "id": 71,
+    "rarity": "Rare",
+    "colors": [
+      "Time"
+    ],
+    "cost": 0,
+    "health": 0,
+    "subtypes": [
+      "Sentinel"
+    ],
+    "attack": 0,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 26
+  },
+  {
+    "set": "Set1",
+    "num": 65,
+    "name": "Forcefield",
+    "rules_text": "Powersurge; Give a unit or player + Health equal to your power.",
+    "influence": "{T}{T}",
+    "id": 72,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 0,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 393
+  },
+  {
+    "set": "Set1",
+    "num": 64,
+    "name": "Sand Warrior",
+    "rules_text": "",
+    "influence": "{T}{T}{T}",
+    "id": 73,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 0,
+    "health": 2,
+    "subtypes": [
+      "Illusion",
+      "Warrior"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 359
+  },
+  {
+    "set": "Set1",
+    "num": 71,
+    "name": "Excavate",
+    "rules_text": "Move a card from the void to the top of your deck. You gain 2 Health.",
+    "influence": "{T}",
+    "id": 74,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 1,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 392
+  },
+  {
+    "set": "Set1",
+    "num": 67,
+    "name": "Infinite Hourglass",
+    "rules_text": "Your units have Endurance.",
+    "influence": "{T}",
+    "id": 76,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 1,
+    "generic_type": "Relic",
+    "draftable": true,
+    "rank": 344
+  },
+  {
+    "set": "Set1",
+    "num": 74,
+    "name": "Initiate of the Sands",
+    "rules_text": "+1 maximum power.",
+    "influence": "{T}",
+    "id": 77,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 1,
+    "health": 1,
+    "subtypes": [
+      "Mage"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 298
+  },
+  {
+    "set": "Set1",
+    "num": 69,
+    "name": "Ornamental Daggers",
+    "rules_text": "Echo",
+    "influence": "{T}",
+    "id": 78,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 1,
+    "health": 1,
+    "attack": 1,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 270
+  },
+  {
+    "set": "Set1",
+    "num": 75,
+    "name": "Predator's Instinct",
+    "rules_text": "Give a unit Killer.",
+    "influence": "{T}",
+    "id": 79,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 1,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 275
+  },
+  {
+    "set": "Set1",
+    "num": 72,
+    "name": "Seer's Companion",
+    "rules_text": "Flying; Fate: You can see the top card of the enemy deck.",
+    "influence": "{T}",
+    "id": 80,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 1,
+    "health": 1,
+    "subtypes": [
+      "Bird"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 406
+  },
+  {
+    "set": "Set0",
+    "num": 9,
+    "name": "Silence",
+    "rules_text": "Silence a unit.",
+    "influence": "{T}",
+    "id": 81,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 1,
+    "generic_type": "Spell",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 70,
+    "name": "Slow",
+    "rules_text": "Double the cost of a card in the enemy player's hand.",
+    "influence": "{T}",
+    "id": 82,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 1,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 408
+  },
+  {
+    "set": "Set1",
+    "num": 68,
+    "name": "Water of Life",
+    "rules_text": "Echo; You gain 3 Health.",
+    "influence": "{T}",
+    "id": 83,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 1,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 417
+  },
+  {
+    "set": "Set1",
+    "num": 85,
+    "name": "Accelerate",
+    "rules_text": "Give a unit in your hand Charge.",
+    "influence": "{T}",
+    "id": 84,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 2,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 383
+  },
+  {
+    "set": "Set1",
+    "num": 77,
+    "name": "Bold Adventurer",
+    "rules_text": "",
+    "influence": "{T}",
+    "id": 85,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 2,
+    "health": 3,
+    "subtypes": [
+      "Explorer"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 186
+  },
+  {
+    "set": "Set1",
+    "num": 84,
+    "name": "Ephemeral Wisp",
+    "rules_text": "Empower: Play Ephemeral Wisp from the void.",
+    "influence": "{T}",
+    "id": 86,
+    "rarity": "Rare",
+    "colors": [
+      "Time"
+    ],
+    "cost": 2,
+    "health": 1,
+    "subtypes": [
+      "Elemental"
+    ],
+    "attack": 0,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 340
+  },
+  {
+    "set": "Set1",
+    "num": 82,
+    "name": "Friendly Wisp",
+    "rules_text": "Flying; Ultimate: When you play a unit with 5 Attack or more, draw two cards.",
+    "influence": "{T}",
+    "id": 87,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 2,
+    "health": 1,
+    "subtypes": [
+      "Elemental"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 301
+  },
+  {
+    "set": "Set1",
+    "num": 79,
+    "name": "Sandform",
+    "rules_text": "Draw a copy of a unit in your hand. The copy gets +1/+1.",
+    "influence": "{T}",
+    "id": 88,
+    "rarity": "Rare",
+    "colors": [
+      "Time"
+    ],
+    "cost": 2,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 264
+  },
+  {
+    "set": "Set1",
+    "num": 83,
+    "name": "Sauropod Wrangler",
+    "rules_text": "Your units with 5 Attack or more cost 1 less.",
+    "influence": "{T}",
+    "id": 89,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Explorer"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 290
+  },
+  {
+    "set": "Set1",
+    "num": 81,
+    "name": "Secret Pages",
+    "rules_text": "Echo; Draw a Sigil of your choice from your deck.",
+    "influence": "{T}",
+    "id": 90,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 2,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 211
+  },
+  {
+    "set": "Set0",
+    "num": 11,
+    "name": "Talir's Favored",
+    "rules_text": "Summon: Draw a {T} Sigil from your deck.",
+    "influence": "{T}",
+    "id": 92,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Mystic"
+    ],
+    "attack": 0,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 80,
+    "name": "Teleport",
+    "rules_text": "Put a unit into its owner's hand.",
+    "influence": "{T}",
+    "id": 93,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 2,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 213
+  },
+  {
+    "set": "Set1",
+    "num": 76,
+    "name": "Unlock Potential",
+    "rules_text": "Your units get +1/+1.",
+    "influence": "{T}",
+    "id": 95,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 3,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 222
+  },
+  {
+    "set": "Set1",
+    "num": 78,
+    "name": "Voice of the Speaker",
+    "rules_text": "Your power cards have Echo.",
+    "influence": "{T}",
+    "id": 96,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Mage"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 302
+  },
+  {
+    "set": "Set1",
+    "num": 90,
+    "name": "Ageless Mentor",
+    "rules_text": "Summon: All units in your hand with cost 4 or more get +2/+2.",
+    "influence": "{T}",
+    "id": 97,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 3,
+    "health": 3,
+    "subtypes": [
+      "Mystic"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 96
+  },
+  {
+    "set": "Set1",
+    "num": 93,
+    "name": "Amber Acolyte",
+    "rules_text": "Summon: Draw a Sigil of your choice from your deck.",
+    "influence": "{T}",
+    "id": 98,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 3,
+    "health": 1,
+    "subtypes": [
+      "Mage"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 180
+  },
+  {
+    "set": "Set1",
+    "num": 94,
+    "name": "Clockroach",
+    "rules_text": "Echo; Summon: Clockroaches in your hand and deck get +1/+1.",
+    "influence": "{T}{T}",
+    "id": 99,
+    "rarity": "Rare",
+    "colors": [
+      "Time"
+    ],
+    "cost": 3,
+    "health": 2,
+    "subtypes": [
+      "Clockroach"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 185
+  },
+  {
+    "set": "Set1",
+    "num": 86,
+    "name": "Dawnwalker",
+    "rules_text": "Overwhelm; When you play a unit with 5 Attack or more, play Dawnwalker from the Void.",
+    "influence": "{T}{T}",
+    "id": 100,
+    "rarity": "Rare",
+    "colors": [
+      "Time"
+    ],
+    "cost": 3,
+    "health": 1,
+    "subtypes": [
+      "Radiant"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 141
+  },
+  {
+    "set": "Set1",
+    "num": 95,
+    "name": "Decay",
+    "rules_text": "Kill an enemy attachment. Your gain 3 Health.",
+    "influence": "{T}",
+    "id": 101,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 3,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 308
+  },
+  {
+    "set": "Set1",
+    "num": 92,
+    "name": "Determined Stranger",
+    "rules_text": "Stranger have +1/+1.",
+    "influence": "{T}",
+    "id": 102,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 3,
+    "health": 2,
+    "subtypes": [
+      "Stranger"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 247
+  },
+  {
+    "set": "Set1",
+    "num": 91,
+    "name": "Dispel",
+    "rules_text": "Silence a unit. Draw a card.",
+    "influence": "{T}",
+    "id": 103,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 3,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 248
+  },
+  {
+    "set": "Set1",
+    "num": 87,
+    "name": "Nomad Healer",
+    "rules_text": "Fate: You gain 3 Health.",
+    "influence": "{T}",
+    "id": 104,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 3,
+    "health": 3,
+    "subtypes": [
+      "Explorer"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 379
+  },
+  {
+    "set": "Set1",
+    "num": 96,
+    "name": "Scorpion Wasp",
+    "rules_text": "Flying, Deadly, Ambush",
+    "influence": "{T}",
+    "id": 106,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 3,
+    "health": 1,
+    "subtypes": [
+      "Vermin"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 28
+  },
+  {
+    "set": "Set1",
+    "num": 88,
+    "name": "Synchronized Strike",
+    "rules_text": "Give two of your units +2/+2 this turn.",
+    "influence": "{T}",
+    "id": 107,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 3,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 219
+  },
+  {
+    "set": "Set1",
+    "num": 105,
+    "name": "Ancient Lore",
+    "rules_text": "Draw two cards. Units drawn this way get +1/+1.",
+    "influence": "{T}{T}",
+    "id": 108,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 4,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 202
+  },
+  {
+    "set": "Set1",
+    "num": 98,
+    "name": "Healer's Cloak",
+    "rules_text": "Summon: You gain Health equal to the wielder's Health.",
+    "influence": "{T}",
+    "id": 109,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 4,
+    "health": 2,
+    "attack": 2,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 353
+  },
+  {
+    "set": "Set0",
+    "num": 13,
+    "name": "Horned Vorlunk",
+    "rules_text": "Overwhelm",
+    "influence": "{T}",
+    "id": 110,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 4,
+    "health": 4,
+    "subtypes": [
+      "Dinosaur"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 104,
+    "name": "Marisen's Disciple",
+    "rules_text": "Summon: Choose and play a 1/1 Scorpion, 2/2 Locust, or 3/3 Sandcrawler.",
+    "influence": "{T}",
+    "id": 111,
+    "rarity": "Rare",
+    "colors": [
+      "Time"
+    ],
+    "cost": 4,
+    "health": 2,
+    "subtypes": [
+      "Mage"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 33
+  },
+  {
+    "set": "Set0",
+    "num": 15,
+    "name": "Oasis Sanctuary",
+    "rules_text": "You gain 6 Health.",
+    "influence": "{T}",
+    "id": 112,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 4,
+    "generic_type": "Spell",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 100,
+    "name": "Praxis Displacer",
+    "rules_text": "Summon: You may put another unit into its owner's hand.",
+    "influence": "{T}{T}",
+    "id": 113,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 4,
+    "health": 2,
+    "subtypes": [
+      "Mage"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 119
+  },
+  {
+    "set": "Set1",
+    "num": 99,
+    "name": "Sandstorm Titan",
+    "rules_text": "Endurance; Units can't fly.",
+    "influence": "{T}{T}",
+    "id": 114,
+    "rarity": "Legendary",
+    "colors": [
+      "Time"
+    ],
+    "cost": 4,
+    "health": 6,
+    "subtypes": [
+      "Sentinel"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 3
+  },
+  {
+    "set": "Set1",
+    "num": 97,
+    "name": "Steward of Prophecy",
+    "rules_text": "Summon: Silence a unit in the enemy player's hand.",
+    "influence": "{T}",
+    "id": 115,
+    "rarity": "Rare",
+    "colors": [
+      "Time"
+    ],
+    "cost": 4,
+    "health": 3,
+    "subtypes": [
+      "Radiant"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 198
+  },
+  {
+    "set": "Set0",
+    "num": 14,
+    "name": "Timekeeper",
+    "rules_text": "+1/+1 for each of your {T} influence.",
+    "influence": "{T}",
+    "id": 116,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 4,
+    "health": 0,
+    "subtypes": [
+      "Radiant"
+    ],
+    "attack": 0,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 101,
+    "name": "Towertop Patrol",
+    "rules_text": "Flying",
+    "influence": "{T}",
+    "id": 117,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 4,
+    "health": 5,
+    "subtypes": [
+      "Mystic"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 245
+  },
+  {
+    "set": "Set1",
+    "num": 102,
+    "name": "Xenan Guardian",
+    "rules_text": "Endurance; Ultimate: Pay 8 to give Xenan Guardian +5/+5.",
+    "influence": "{T}",
+    "id": 118,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 4,
+    "health": 3,
+    "subtypes": [
+      "Radiant"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 184
+  },
+  {
+    "set": "Set1",
+    "num": 103,
+    "name": "Xenan Obelisk",
+    "rules_text": "Your units have +1/+1. They have +2/+2 instead while you have 8 or more maximum power.",
+    "influence": "{T}",
+    "id": 119,
+    "rarity": "Rare",
+    "colors": [
+      "Time"
+    ],
+    "cost": 4,
+    "generic_type": "Relic",
+    "draftable": true,
+    "rank": 7
+  },
+  {
+    "set": "Set1",
+    "num": 108,
+    "name": "Elysian Pathfinder",
+    "rules_text": "Summon: The top unit of your deck gets Echo.",
+    "influence": "{T}",
+    "id": 120,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 5,
+    "health": 3,
+    "subtypes": [
+      "Mystic"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 203
+  },
+  {
+    "set": "Set1",
+    "num": 107,
+    "name": "Idol of Destran",
+    "rules_text": "While Idol of Destran is in your hand or deck, it gets +1/+1 each time you play a unit.",
+    "influence": "{T}{T}",
+    "id": 121,
+    "rarity": "Legendary",
+    "colors": [
+      "Time"
+    ],
+    "cost": 5,
+    "health": 0,
+    "subtypes": [
+      "Sentinel"
+    ],
+    "attack": 0,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 304
+  },
+  {
+    "set": "Set1",
+    "num": 115,
+    "name": "Lumen Defender",
+    "rules_text": "Deadly; Summon: You gain 5 Health.",
+    "influence": "{T}",
+    "id": 123,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 5,
+    "health": 5,
+    "subtypes": [
+      "Radiant"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 137
+  },
+  {
+    "set": "Set1",
+    "num": 111,
+    "name": "Merciless Stranger",
+    "rules_text": "Strangers are Deadly.",
+    "influence": "{T}",
+    "id": 124,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 5,
+    "health": 3,
+    "subtypes": [
+      "Stranger"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 312
+  },
+  {
+    "set": "Set1",
+    "num": 106,
+    "name": "Passage of Ages",
+    "rules_text": "Kill all enemy attachments. Play a 1/1 Wisp for each one killed.",
+    "influence": "{T}{T}",
+    "id": 125,
+    "rarity": "Rare",
+    "colors": [
+      "Time"
+    ],
+    "cost": 5,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 400
+  },
+  {
+    "set": "Set1",
+    "num": 112,
+    "name": "Striking Snake Formation",
+    "rules_text": "All of your units get Killer.",
+    "influence": "{T}{T}",
+    "id": 126,
+    "rarity": "Rare",
+    "colors": [
+      "Time"
+    ],
+    "cost": 5,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 57
+  },
+  {
+    "set": "Set1",
+    "num": 114,
+    "name": "Towering Terrazon",
+    "rules_text": "",
+    "influence": "{T}{T}",
+    "id": 127,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 5,
+    "health": 5,
+    "subtypes": [
+      "Dinosaur"
+    ],
+    "attack": 6,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 120
+  },
+  {
+    "set": "Set1",
+    "num": 110,
+    "name": "Reliquary Raider",
+    "rules_text": "When treasure Hunter attacks, draw a card. When she blocks, you gain 4 Health.",
+    "influence": "{T}",
+    "id": 128,
+    "rarity": "Rare",
+    "colors": [
+      "Time"
+    ],
+    "cost": 5,
+    "health": 4,
+    "subtypes": [
+      "Explorer"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 75
+  },
+  {
+    "set": "Set1",
+    "num": 113,
+    "name": "Twinbrood Sauropod",
+    "rules_text": "Echo",
+    "influence": "{T}{T}",
+    "id": 129,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 5,
+    "health": 4,
+    "subtypes": [
+      "Dinosaur"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 17
+  },
+  {
+    "set": "Set1",
+    "num": 117,
+    "name": "Lumen Shepherd",
+    "rules_text": "Fate: Play a 1/1 Wisp.",
+    "influence": "{T}",
+    "id": 130,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 6,
+    "health": 6,
+    "subtypes": [
+      "Radiant"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 122
+  },
+  {
+    "set": "Set1",
+    "num": 116,
+    "name": "Mystic Ascendant",
+    "rules_text": "Empower: +2/+2 and draw a card.",
+    "influence": "{T}",
+    "id": 131,
+    "rarity": "Legendary",
+    "colors": [
+      "Time"
+    ],
+    "cost": 6,
+    "health": 4,
+    "subtypes": [
+      "Mystic"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 25
+  },
+  {
+    "set": "Set1",
+    "num": 118,
+    "name": "Predatory Carnosaur",
+    "rules_text": "Killer",
+    "influence": "{T}{T}{T}",
+    "id": 132,
+    "rarity": "Rare",
+    "colors": [
+      "Time"
+    ],
+    "cost": 6,
+    "health": 6,
+    "subtypes": [
+      "Dinosaur"
+    ],
+    "attack": 6,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 10
+  },
+  {
+    "set": "Set1",
+    "num": 119,
+    "name": "Ancient Terrazon",
+    "rules_text": "Invulnerable to damage",
+    "influence": "{T}{T}{T}",
+    "id": 133,
+    "rarity": "Rare",
+    "colors": [
+      "Time"
+    ],
+    "cost": 7,
+    "health": 7,
+    "subtypes": [
+      "Dinosaur"
+    ],
+    "attack": 7,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 63
+  },
+  {
+    "set": "Set1",
+    "num": 120,
+    "name": "Carnosaur Behemoth",
+    "rules_text": "Empower: Overwhelm this turn.",
+    "influence": "{T}{T}",
+    "id": 134,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 7,
+    "health": 7,
+    "subtypes": [
+      "Dinosaur"
+    ],
+    "attack": 7,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 295
+  },
+  {
+    "set": "Set1",
+    "num": 121,
+    "name": "Hall of Lost Kings",
+    "rules_text": "Play a 5/5 Sentine. If you have more than 25 Health, play five Sentinels instead.",
+    "influence": "{T}{T}",
+    "id": 135,
+    "rarity": "Rare",
+    "colors": [
+      "Time"
+    ],
+    "cost": 7,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 320
+  },
+  {
+    "set": "Set1",
+    "num": 122,
+    "name": "Pillar of Amar",
+    "rules_text": "Empower: Play a 5/5 Sentinel.",
+    "influence": "{T}{T}{T}",
+    "id": 136,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 7,
+    "health": 5,
+    "subtypes": [
+      "Sentinel"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 20
+  },
+  {
+    "set": "Set1",
+    "num": 123,
+    "name": "Marisen, the Eldest",
+    "rules_text": "At the start of each player's turn, play one of the following at random: 1/1 Scorpion, 2/2 Locust, or 3/3 Sandcrawler",
+    "influence": "{T}{T}",
+    "id": 137,
+    "rarity": "Legendary",
+    "colors": [
+      "Time"
+    ],
+    "cost": 8,
+    "health": 7,
+    "subtypes": [
+      "Mage"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 15
+  },
+  {
+    "set": "Set1",
+    "num": 124,
+    "name": "Talir, Who Sees Beyond",
+    "rules_text": "Overwhelm; Your {T} units have Destiny.",
+    "influence": "{T}{T}{T}",
+    "id": 138,
+    "rarity": "Legendary",
+    "colors": [
+      "Time"
+    ],
+    "cost": 8,
+    "health": 6,
+    "subtypes": [
+      "Scion"
+    ],
+    "attack": 6,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 32
+  },
+  {
+    "set": "Set1",
+    "name": "Justice Sigil",
+    "rules_text": "",
+    "influence": "",
+    "id": 139,
+    "rarity": "Default",
+    "colors": [],
+    "num": 126,
+    "generic_type": "Power",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "name": "Emerald Monument",
+    "rules_text": "Depleted; Transmute 5: +3/+3 Gemblade.",
+    "influence": "",
+    "id": 140,
+    "rarity": "Uncommon",
+    "colors": [],
+    "num": 422,
+    "generic_type": "Power",
+    "draftable": true,
+    "rank": 207
+  },
+  {
+    "set": "Set1",
+    "num": 125,
+    "name": "Gilded Glaive",
+    "rules_text": "Powersurge; Summon - +Attack/+Health equal to your power.",
+    "influence": "{J}{J}",
+    "id": 141,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 0,
+    "health": 0,
+    "attack": 0,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 35
+  },
+  {
+    "set": "Set1",
+    "num": 133,
+    "name": "Detain",
+    "rules_text": "Give an enemy unit -6 Attack this turn.",
+    "influence": "{J}",
+    "id": 142,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 1,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 390
+  },
+  {
+    "set": "Set1",
+    "num": 134,
+    "name": "District Infantry",
+    "rules_text": "Empower: +2/+2 this turn.",
+    "influence": "{J}",
+    "id": 143,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 1,
+    "health": 1,
+    "subtypes": [
+      "Soldier"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 276
+  },
+  {
+    "set": "Set1",
+    "num": 128,
+    "name": "Elder's Feather",
+    "rules_text": "Flying",
+    "influence": "{J}",
+    "id": 144,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 1,
+    "health": 1,
+    "attack": 1,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 108
+  },
+  {
+    "set": "Set1",
+    "num": 130,
+    "name": "Finest Hour",
+    "rules_text": "Give a unit +3/+3 this turn.",
+    "influence": "{J}",
+    "id": 145,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 1,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 220
+  },
+  {
+    "set": "Set1",
+    "num": 129,
+    "name": "Inspire",
+    "rules_text": "The top unit or weapon of your deck gets +1/+1. Draw a card.",
+    "influence": "{J}",
+    "id": 146,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 1,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 319
+  },
+  {
+    "set": "Set1",
+    "num": 132,
+    "name": "Protect",
+    "rules_text": "Give a unit or player an Aegis.",
+    "influence": "{J}",
+    "id": 147,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 1,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 253
+  },
+  {
+    "set": "Set0",
+    "num": 16,
+    "name": "Steadfast Deputy",
+    "rules_text": "Aegis",
+    "influence": "{J}",
+    "id": 148,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 1,
+    "health": 1,
+    "subtypes": [
+      "Warrior"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 131,
+    "name": "Tinker Apprentice",
+    "rules_text": "Summon: Give a unit or weapon in your hand +1/+1.",
+    "influence": "{J}",
+    "id": 149,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 1,
+    "health": 1,
+    "subtypes": [
+      "Tinker"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 324
+  },
+  {
+    "set": "Set1",
+    "num": 127,
+    "name": "Valkyrie Aspirant",
+    "rules_text": "Flying; Ultimate: Pay 8 to give Valkyrie Aspirant +4/+4.",
+    "influence": "{J}",
+    "id": 150,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 1,
+    "health": 1,
+    "subtypes": [
+      "Valkyrie"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 351
+  },
+  {
+    "set": "Set1",
+    "num": 135,
+    "name": "Argenport Soldier",
+    "rules_text": "",
+    "influence": "{J}",
+    "id": 151,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Soldier"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 250
+  },
+  {
+    "set": "Set0",
+    "num": 17,
+    "name": "Crownwatch Commando",
+    "rules_text": "When you play a weapon on Crownwatch Commando, he gets Flying and Lifesteal this turn.",
+    "influence": "{J}",
+    "id": 152,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Soldier"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 142,
+    "name": "Crownwatch Longsword",
+    "rules_text": "",
+    "influence": "{J}",
+    "id": 153,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 2,
+    "health": 2,
+    "attack": 2,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 278
+  },
+  {
+    "set": "Set1",
+    "num": 139,
+    "name": "Crownwatch Paladin",
+    "rules_text": "Warcry, Aegis",
+    "influence": "{J}",
+    "id": 154,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Paladin"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 177
+  },
+  {
+    "set": "Set1",
+    "num": 144,
+    "name": "Eager Owlet",
+    "rules_text": "Flying; +3 Attack while you have another Flying unit.",
+    "influence": "{J}",
+    "id": 155,
+    "rarity": "Rare",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 2,
+    "health": 3,
+    "subtypes": [
+      "Bird"
+    ],
+    "attack": 0,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 321
+  },
+  {
+    "set": "Set1",
+    "num": 137,
+    "name": "Minotaur Grunt",
+    "rules_text": "Warcry",
+    "influence": "{J}",
+    "id": 156,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 2,
+    "health": 3,
+    "subtypes": [
+      "Minotaur"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 170
+  },
+  {
+    "set": "Set1",
+    "num": 140,
+    "name": "Paladin Oathbook",
+    "rules_text": "When you attack the enemy player with exactly one unit, it gets +1/+1.",
+    "influence": "{J}",
+    "id": 157,
+    "rarity": "Rare",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 2,
+    "generic_type": "Relic",
+    "draftable": true,
+    "rank": 12
+  },
+  {
+    "set": "Set1",
+    "num": 141,
+    "name": "Rebuke",
+    "rules_text": "Silence and Stun a unit.",
+    "influence": "{J}",
+    "id": 158,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 2,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 307
+  },
+  {
+    "set": "Set1",
+    "num": 136,
+    "name": "Reinforce",
+    "rules_text": "You gain 4 Armor.",
+    "influence": "{J}",
+    "id": 159,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 2,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 403
+  },
+  {
+    "set": "Set0",
+    "num": 18,
+    "name": "Rolant's Favor",
+    "rules_text": "You gain 2 Armor. Draw a {J} Sigil from your deck.",
+    "influence": "{J}",
+    "id": 160,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 2,
+    "generic_type": "Spell",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 138,
+    "name": "Tinker Overseer",
+    "rules_text": "Flying; When you play a relic, Tinker Overseer gets +1/+1.",
+    "influence": "{J}",
+    "id": 161,
+    "rarity": "Rare",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Tinker"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 225
+  },
+  {
+    "set": "Set1",
+    "num": 143,
+    "name": "Vanquish",
+    "rules_text": "Kill a unit with 4 Attack or more.",
+    "influence": "{J}",
+    "id": 162,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 2,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 27
+  },
+  {
+    "set": "Set1",
+    "num": 146,
+    "name": "Auric Sentry",
+    "rules_text": "Endurance, Warcry",
+    "influence": "{J}",
+    "id": 163,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 3,
+    "health": 5,
+    "subtypes": [
+      "Minotaur"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 127
+  },
+  {
+    "set": "Set1",
+    "num": 147,
+    "name": "Brightmace Paladin",
+    "rules_text": "Brightmace Paladin has Lifesteal while he has 4 Attack or more.",
+    "influence": "{J}",
+    "id": 164,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 3,
+    "health": 3,
+    "subtypes": [
+      "Paladin"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 148
+  },
+  {
+    "set": "Set1",
+    "num": 148,
+    "name": "Bronze Cuirass",
+    "rules_text": "",
+    "influence": "{J}",
+    "id": 165,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 3,
+    "health": 6,
+    "attack": 0,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 387
+  },
+  {
+    "set": "Set1",
+    "num": 153,
+    "name": "Emerald Acolyte",
+    "rules_text": "Summon: You gain 3 Armor.",
+    "influence": "{J}",
+    "id": 166,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 3,
+    "health": 1,
+    "subtypes": [
+      "Tinker"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 378
+  },
+  {
+    "set": "Set1",
+    "num": 156,
+    "name": "Hero of the People",
+    "rules_text": "When you play a unit, Hero of the People gains its battle skills. Hero of the People has +1/+1 for each of her battle skills.",
+    "influence": "{J}",
+    "id": 167,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 3,
+    "health": 1,
+    "subtypes": [
+      "Paladin"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 256
+  },
+  {
+    "set": "Set1",
+    "num": 155,
+    "name": "Hooru Envoy",
+    "rules_text": "When a spell is played directly on Hooru Envoy, you draw a card.",
+    "influence": "{J}",
+    "id": 168,
+    "rarity": "Rare",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 3,
+    "health": 1,
+    "subtypes": [
+      "Mage"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 342
+  },
+  {
+    "set": "Set1",
+    "num": 150,
+    "name": "Loyal Watchwing",
+    "rules_text": "Flying, Warcry",
+    "influence": "{J}",
+    "id": 169,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 3,
+    "health": 1,
+    "subtypes": [
+      "Valkyrie"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 338
+  },
+  {
+    "set": "Set1",
+    "num": 149,
+    "name": "Order of the Spire",
+    "rules_text": "Empower: Double Order of the Spire's Attack / Health.",
+    "influence": "{J}",
+    "id": 170,
+    "rarity": "Rare",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 3,
+    "health": 1,
+    "subtypes": [
+      "Paladin"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 136
+  },
+  {
+    "set": "Set1",
+    "num": 157,
+    "name": "Privilege of Rank",
+    "rules_text": "Draw two {J} Sigils from your deck. If Privilege of Rank is discarded, play it.",
+    "influence": "{J}",
+    "id": 171,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 3,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 346
+  },
+  {
+    "set": "Set1",
+    "num": 152,
+    "name": "Silverwing Familiar",
+    "rules_text": "Flying, Lifesteal, Aegis",
+    "influence": "{J}",
+    "id": 172,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 3,
+    "health": 1,
+    "subtypes": [
+      "Bird"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 73
+  },
+  {
+    "set": "Set1",
+    "num": 154,
+    "name": "Spire Chaplain",
+    "rules_text": "When Spire Chaplain attacks, draw a {J} Sigil from your deck.",
+    "influence": "{J}",
+    "id": 173,
+    "rarity": "Rare",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 3,
+    "health": 2,
+    "subtypes": [
+      "Soldier"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 268
+  },
+  {
+    "set": "Set0",
+    "num": 20,
+    "name": "Treasury Guard",
+    "rules_text": "Endurance",
+    "influence": "{J}",
+    "id": 174,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 3,
+    "health": 3,
+    "subtypes": [
+      "Minotaur"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 151,
+    "name": "Valkyrie Enforcer",
+    "rules_text": "Flying; Summon: You may silence another unit.",
+    "influence": "{J}{J}",
+    "id": 175,
+    "rarity": "Rare",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 3,
+    "health": 3,
+    "subtypes": [
+      "Valkyrie"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 64
+  },
+  {
+    "set": "Set1",
+    "num": 145,
+    "name": "Valorous Stranger",
+    "rules_text": "Strangers have Warcry.",
+    "influence": "{J}",
+    "id": 176,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 3,
+    "health": 2,
+    "subtypes": [
+      "Stranger"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 306
+  },
+  {
+    "set": "Set1",
+    "num": 163,
+    "name": "Armorsmith",
+    "rules_text": "Summon: You gain 2 Armor. Free if you already have 2 Armor or more.",
+    "influence": "{J}",
+    "id": 177,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 4,
+    "health": 2,
+    "subtypes": [
+      "Tinker"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 380
+  },
+  {
+    "set": "Set1",
+    "num": 166,
+    "name": "Auric Runehammer",
+    "rules_text": "Summon: You are invulnerable to damage this turn.",
+    "influence": "{J}{J}",
+    "id": 178,
+    "rarity": "Rare",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 4,
+    "health": 1,
+    "attack": 4,
+    "generic_type": "Relic Weapon",
+    "draftable": true,
+    "rank": 39
+  },
+  {
+    "set": "Set1",
+    "num": 168,
+    "name": "Blinding Burst",
+    "rules_text": "You and your units are invulnerable to damage this turn.",
+    "influence": "{J}{J}",
+    "id": 179,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 4,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 386
+  },
+  {
+    "set": "Set1",
+    "num": 160,
+    "name": "Combrei Magister",
+    "rules_text": "Empower: Invulnerable to damage this turn.",
+    "influence": "{J}",
+    "id": 180,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 5,
+    "health": 2,
+    "subtypes": [
+      "Soldier"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 333
+  },
+  {
+    "set": "Set1",
+    "num": 158,
+    "name": "Copperhall Recruit",
+    "rules_text": "",
+    "influence": "{J}",
+    "id": 181,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 4,
+    "health": 5,
+    "subtypes": [
+      "Minotaur"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 367
+  },
+  {
+    "set": "Set1",
+    "num": 169,
+    "name": "Crownwatch Cavalry",
+    "rules_text": "Summon: Give one of your other units Crownwatch Cavalry's Attack / Health.",
+    "influence": "{J}",
+    "id": 182,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 4,
+    "health": 2,
+    "subtypes": [
+      "Soldier"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 123
+  },
+  {
+    "set": "Set1",
+    "num": 170,
+    "name": "Hammer of Might",
+    "rules_text": "Summon: Warcry 3 this turn.",
+    "influence": "{J}",
+    "id": 183,
+    "rarity": "Rare",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 4,
+    "health": 3,
+    "attack": 3,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 58
+  },
+  {
+    "set": "Set0",
+    "num": 21,
+    "name": "Mantle of Justice",
+    "rules_text": "+1/+1 for each of your {J} influence.",
+    "influence": "{J}",
+    "id": 184,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 4,
+    "health": 0,
+    "attack": 0,
+    "generic_type": "Weapon",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 165,
+    "name": "Overdrive",
+    "rules_text": "Give a unit +4/+4 this turn. Ready it as the end of the turn.",
+    "influence": "{J}",
+    "id": 185,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 4,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 399
+  },
+  {
+    "set": "Set1",
+    "num": 159,
+    "name": "Prosecutor-at-Arms",
+    "rules_text": "Summon: +1/+1 for each of your units that died this turn.",
+    "influence": "{J}",
+    "id": 186,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 4,
+    "health": 3,
+    "subtypes": [
+      "Soldier"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 273
+  },
+  {
+    "set": "Set1",
+    "num": 167,
+    "name": "Silverwing Avenger",
+    "rules_text": "Flying; Summon: Give an enemy unit -2 Attack.",
+    "influence": "{J}{J}",
+    "id": 187,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 4,
+    "health": 2,
+    "subtypes": [
+      "Valkyrie"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 106
+  },
+  {
+    "set": "Set1",
+    "num": 162,
+    "name": "Stalwart Shield",
+    "rules_text": "Endurance",
+    "influence": "{J}",
+    "id": 188,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 4,
+    "health": 3,
+    "attack": 1,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 223
+  },
+  {
+    "set": "Set1",
+    "num": 161,
+    "name": "Tireless Stranger",
+    "rules_text": "Strangers have Endurance.",
+    "influence": "{J}",
+    "id": 189,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 4,
+    "health": 3,
+    "subtypes": [
+      "Stranger"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 364
+  },
+  {
+    "set": "Set1",
+    "num": 164,
+    "name": "Treasury Gate",
+    "rules_text": "The first time you play a relic weapon each turn, play a Minotaur with the same Attack / Health and battle skills.",
+    "influence": "{J}",
+    "id": 190,
+    "rarity": "Rare",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 4,
+    "generic_type": "Relic",
+    "draftable": true,
+    "rank": 414
+  },
+  {
+    "set": "Set1",
+    "num": 173,
+    "name": "Auric Bailiff",
+    "rules_text": "Summon: Stun an enemy unit with 4 Attack or more.",
+    "influence": "{J}",
+    "id": 191,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 5,
+    "health": 5,
+    "subtypes": [
+      "Minotaur"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 266
+  },
+  {
+    "set": "Set1",
+    "num": 172,
+    "name": "Harsh Rule",
+    "rules_text": "Kill all units.",
+    "influence": "{J}{J}",
+    "id": 192,
+    "rarity": "Rare",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 5,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 2
+  },
+  {
+    "set": "Set1",
+    "num": 174,
+    "name": "Marshal Ironthorn",
+    "rules_text": "Ultimate: Pay 15 to kill all enemy units.; Empower: Play an additional copy of that power.",
+    "influence": "{J}{J}",
+    "id": 193,
+    "rarity": "Legendary",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 5,
+    "health": 5,
+    "subtypes": [
+      "Soldier"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 85
+  },
+  {
+    "set": "Set1",
+    "num": 171,
+    "name": "Mithril Mace",
+    "rules_text": "",
+    "influence": "{J}{J}",
+    "id": 194,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 5,
+    "health": 4,
+    "attack": 3,
+    "generic_type": "Relic Weapon",
+    "draftable": true,
+    "rank": 249
+  },
+  {
+    "set": "Set1",
+    "num": 175,
+    "name": "Silverwing Commander",
+    "rules_text": "Flying, Warcry 2",
+    "influence": "{J}{J}",
+    "id": 195,
+    "rarity": "Rare",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 5,
+    "health": 4,
+    "subtypes": [
+      "Valkyrie"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 8
+  },
+  {
+    "set": "Set1",
+    "num": 182,
+    "name": "Augmented Form",
+    "rules_text": "Give a unit +6/+6.",
+    "influence": "{J}{J}{J}",
+    "id": 196,
+    "rarity": "Rare",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 6,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 95
+  },
+  {
+    "set": "Set1",
+    "num": 178,
+    "name": "Ceremonial Mask",
+    "rules_text": "Summon: Give one of your units +4/+4 this turn.",
+    "influence": "{J}{J}",
+    "id": 197,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 6,
+    "health": 4,
+    "attack": 4,
+    "generic_type": "Relic Weapon",
+    "draftable": true,
+    "rank": 155
+  },
+  {
+    "set": "Set1",
+    "num": 180,
+    "name": "Civic Peacekeeper",
+    "rules_text": "Empower: Stun an enemy unit.",
+    "influence": "{J}",
+    "id": 198,
+    "rarity": "Common",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 6,
+    "health": 3,
+    "subtypes": [
+      "Soldier"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 357
+  },
+  {
+    "set": "Set1",
+    "num": 177,
+    "name": "Plated Demolisher",
+    "rules_text": "Endurance; Summon: You gain 2 Armor. At the start of the enemy turn, if you have no Armor, sacrifice Plated Demolisher.",
+    "influence": "{J}{J}",
+    "id": 200,
+    "rarity": "Legendary",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 6,
+    "health": 8,
+    "subtypes": [
+      "Engine"
+    ],
+    "attack": 8,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 118
+  },
+  {
+    "set": "Set1",
+    "num": 179,
+    "name": "Retribution",
+    "rules_text": "Deal damage to the enemy player for all of the damage you have taken this turn.",
+    "influence": "{J}{J}{J}",
+    "id": 201,
+    "rarity": "Legendary",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 6,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 404
+  },
+  {
+    "set": "Set1",
+    "num": 181,
+    "name": "Valkyrie Wings",
+    "rules_text": "Flying, Aegis",
+    "influence": "{J}{J}",
+    "id": 202,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 6,
+    "health": 2,
+    "attack": 2,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 199
+  },
+  {
+    "set": "Set1",
+    "num": 184,
+    "name": "Flight Lieutenant",
+    "rules_text": "Empower: Your units get Flying this turn.",
+    "influence": "{J}",
+    "id": 203,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 7,
+    "health": 4,
+    "subtypes": [
+      "Valkyrie"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 328
+  },
+  {
+    "set": "Set1",
+    "num": 183,
+    "name": "Rolant's Honor Guard",
+    "rules_text": "Flying, Lifesteal",
+    "influence": "{J}{J}",
+    "id": 204,
+    "rarity": "Rare",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 7,
+    "health": 6,
+    "subtypes": [
+      "Valkyrie"
+    ],
+    "attack": 6,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 1
+  },
+  {
+    "set": "Set1",
+    "num": 185,
+    "name": "Rolant, the Iron Fist",
+    "rules_text": "Endurance; Your {J} units have Endurance and are invulnerable to damage.",
+    "influence": "{J}{J}{J}",
+    "id": 205,
+    "rarity": "Legendary",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 8,
+    "health": 6,
+    "subtypes": [
+      "Scion"
+    ],
+    "attack": 6,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 70
+  },
+  {
+    "set": "Set1",
+    "num": 186,
+    "name": "Sword of the Sky King",
+    "rules_text": "",
+    "influence": "{J}{J}",
+    "id": 206,
+    "rarity": "Legendary",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 8,
+    "health": 8,
+    "attack": 8,
+    "generic_type": "Relic Weapon",
+    "draftable": true,
+    "rank": 69
+  },
+  {
+    "set": "Set1",
+    "name": "Primal Sigil",
+    "rules_text": "",
+    "influence": "",
+    "id": 207,
+    "rarity": "Default",
+    "colors": [],
+    "num": 187,
+    "generic_type": "Power",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "name": "Cobalt Monument",
+    "rules_text": "Depleted; Transmute 5: 3/4 Stormdancer with Flying.",
+    "influence": "",
+    "id": 208,
+    "rarity": "Uncommon",
+    "colors": [],
+    "num": 418,
+    "generic_type": "Power",
+    "draftable": true,
+    "rank": 115
+  },
+  {
+    "set": "Set1",
+    "num": 188,
+    "name": "Shamanic Trance",
+    "rules_text": "Reduce the cost of a spell in your hand by 1.",
+    "influence": "{P}",
+    "id": 209,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 0,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 407
+  },
+  {
+    "set": "Set1",
+    "num": 192,
+    "name": "Blind Storyteller",
+    "rules_text": "Pay 2 and exhaust Blind Storyteller to draw a card, then discard a card.",
+    "influence": "{P}",
+    "id": 210,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 1,
+    "health": 1,
+    "subtypes": [
+      "Explorer"
+    ],
+    "attack": 0,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 117
+  },
+  {
+    "set": "Set0",
+    "num": 22,
+    "name": "Chill",
+    "rules_text": "Stun an enemy unit.",
+    "influence": "{P}",
+    "id": 211,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 1,
+    "generic_type": "Fast Spell",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set0",
+    "num": 23,
+    "name": "Cloudsnake Hatchling",
+    "rules_text": "Flying",
+    "influence": "{P}",
+    "id": 212,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 1,
+    "health": 2,
+    "subtypes": [
+      "Serpent"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 190,
+    "name": "Levitate",
+    "rules_text": "Give a unit Flying this turn. Draw a card.",
+    "influence": "{P}",
+    "id": 213,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 1,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 260
+  },
+  {
+    "set": "Set1",
+    "num": 193,
+    "name": "Permafrost",
+    "rules_text": "Stun the cursed unit (for as long as it is cursed).",
+    "influence": "{P}",
+    "id": 214,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 1,
+    "generic_type": "Curse",
+    "draftable": true,
+    "rank": 29
+  },
+  {
+    "set": "Set1",
+    "num": 189,
+    "name": "Unstable Form",
+    "rules_text": "Echo; Transform a unit into a random unit that costs 1 more.",
+    "influence": "{P}",
+    "id": 215,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 1,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 415
+  },
+  {
+    "set": "Set1",
+    "num": 191,
+    "name": "Yeti Spy",
+    "rules_text": "Infiltrate: Draw a card.",
+    "influence": "{P}",
+    "id": 216,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 1,
+    "health": 1,
+    "subtypes": [
+      "Yeti"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 339
+  },
+  {
+    "set": "Set1",
+    "num": 200,
+    "name": "Backlash",
+    "rules_text": "Negate an enemy spell and deal 2 damage to that play.",
+    "influence": "{P}",
+    "id": 217,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 2,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 285
+  },
+  {
+    "set": "Set1",
+    "num": 199,
+    "name": "Cloudsnake Saddle",
+    "rules_text": "Can only be played on a unit with Flying.",
+    "influence": "{P}",
+    "id": 218,
+    "rarity": "Rare",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 2,
+    "health": 3,
+    "attack": 3,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 368
+  },
+  {
+    "set": "Set1",
+    "num": 201,
+    "name": "East-Wind Herald",
+    "rules_text": "Flying; Summon: Reduce the cost of the top spell of your deck by 1.",
+    "influence": "{P}",
+    "id": 219,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 2,
+    "health": 3,
+    "subtypes": [
+      "Elemental"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 255
+  },
+  {
+    "set": "Set0",
+    "num": 24,
+    "name": "Eilyn's Favor",
+    "rules_text": "You gain an Aegis. Draw a {P} Sigil from your deck.",
+    "influence": "{P}",
+    "id": 220,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 2,
+    "generic_type": "Spell",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 196,
+    "name": "Herald's Song",
+    "rules_text": "Echo; Draw a card, then discard a card.",
+    "influence": "{P}",
+    "id": 221,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 2,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 327
+  },
+  {
+    "set": "Set1",
+    "num": 206,
+    "name": "Lightning Storm",
+    "rules_text": "Deal 2 damage to each unit.",
+    "influence": "{P}",
+    "id": 222,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 2,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 30
+  },
+  {
+    "set": "Set1",
+    "num": 197,
+    "name": "Lightning Strike",
+    "rules_text": "Deal 4 damage to an attacking enemy.",
+    "influence": "{P}",
+    "id": 223,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 2,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 83
+  },
+  {
+    "set": "Set1",
+    "num": 198,
+    "name": "New Stranger",
+    "rules_text": "Echo",
+    "influence": "{P}",
+    "id": 224,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 2,
+    "health": 1,
+    "subtypes": [
+      "Stranger"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 398
+  },
+  {
+    "set": "Set1",
+    "num": 207,
+    "name": "Second Sight",
+    "rules_text": "Draw two cards, then put a card from your hand on top of your deck.",
+    "influence": "{P}",
+    "id": 225,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 2,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 370
+  },
+  {
+    "set": "Set1",
+    "num": 194,
+    "name": "Static Bolt",
+    "rules_text": "Deal 1 damage.; Fate: Increase the damage dealt by all Static Bolts in your hand and deck by 1.",
+    "influence": "{P}",
+    "id": 226,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 2,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 221
+  },
+  {
+    "set": "Set1",
+    "num": 204,
+    "name": "Tundra Explorer",
+    "rules_text": "When Tundra Explorer attacks, if the top card of your deck is a spell, draw it.",
+    "influence": "{P}",
+    "id": 227,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Explorer"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 291
+  },
+  {
+    "set": "Set1",
+    "num": 205,
+    "name": "Violent Gust",
+    "rules_text": "Deal 5 damage to a Flying unit.",
+    "influence": "{P}",
+    "id": 228,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 2,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 212
+  },
+  {
+    "set": "Set1",
+    "num": 202,
+    "name": "Whispering Wind",
+    "rules_text": "Flying; When Whispering Wind attacks, you may discard a card to draw a higher-cost card from your deck.",
+    "influence": "{P}",
+    "id": 229,
+    "rarity": "Rare",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Elemental"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 139
+  },
+  {
+    "set": "Set1",
+    "num": 195,
+    "name": "Wild Cloudsnake",
+    "rules_text": "Flying; When you play another unit with Flying, Wild Cloudsnake gets +1/+1.",
+    "influence": "{P}",
+    "id": 230,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 2,
+    "health": 1,
+    "subtypes": [
+      "Serpent"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 336
+  },
+  {
+    "set": "Set1",
+    "num": 212,
+    "name": "Cobalt Acolyte",
+    "rules_text": "Summon: Give a unit Flying",
+    "influence": "{P}",
+    "id": 232,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 3,
+    "health": 1,
+    "subtypes": [
+      "Mage"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 160
+  },
+  {
+    "set": "Set1",
+    "num": 210,
+    "name": "Eye of Winter",
+    "rules_text": "Once per turn, you mat pay 2 to stun a unit.",
+    "influence": "{P}",
+    "id": 233,
+    "rarity": "Rare",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 3,
+    "generic_type": "Relic",
+    "draftable": true,
+    "rank": 13
+  },
+  {
+    "set": "Set1",
+    "num": 209,
+    "name": "Flash Freeze",
+    "rules_text": "Stun two enemy units.",
+    "influence": "{P}",
+    "id": 234,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 3,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 305
+  },
+  {
+    "set": "Set1",
+    "num": 214,
+    "name": "Ice Sprite",
+    "rules_text": "Flying; Summon: Stun an enemy unit. (Ice Sprite keeps it stunned.)",
+    "influence": "{P}",
+    "id": 235,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 3,
+    "health": 2,
+    "subtypes": [
+      "Sprite"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 50
+  },
+  {
+    "set": "Set1",
+    "num": 216,
+    "name": "Icebreaker",
+    "rules_text": "Exhaust Icebreaker to kill a stunned enemy unit.",
+    "influence": "{P}",
+    "id": 236,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 3,
+    "health": 3,
+    "subtypes": [
+      "Yeti"
+    ],
+    "attack": 0,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 331
+  },
+  {
+    "set": "Set1",
+    "num": 217,
+    "name": "Mirror Image",
+    "rules_text": "Play a copy of one of your units.",
+    "influence": "{P}",
+    "id": 237,
+    "rarity": "Rare",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 3,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 343
+  },
+  {
+    "set": "Set1",
+    "num": 211,
+    "name": "Polymorph",
+    "rules_text": "Transform a unit into a 1/1 Frog.",
+    "influence": "{P}{P}",
+    "id": 238,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 3,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 143
+  },
+  {
+    "set": "Set1",
+    "num": 213,
+    "name": "Push Onward",
+    "rules_text": "Draw one of the top three cards of your deck and reduce its cost by 1. Put the rest on the bottom.",
+    "influence": "{P}",
+    "id": 239,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 3,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 190
+  },
+  {
+    "set": "Set1",
+    "num": 215,
+    "name": "Scaly Gruan",
+    "rules_text": "",
+    "influence": "{P}",
+    "id": 240,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 3,
+    "health": 4,
+    "subtypes": [
+      "Dinosaur"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 329
+  },
+  {
+    "set": "Set1",
+    "num": 208,
+    "name": "Skysnapper",
+    "rules_text": "Flying",
+    "influence": "{P}",
+    "id": 241,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 3,
+    "health": 1,
+    "subtypes": [
+      "Serpent"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 228
+  },
+  {
+    "set": "Set0",
+    "num": 27,
+    "name": "Thunderbird",
+    "rules_text": "Flying, Aegis",
+    "influence": "{P}",
+    "id": 242,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 3,
+    "health": 2,
+    "subtypes": [
+      "Bird"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 218,
+    "name": "Wisdom of the Elders",
+    "rules_text": "Draw two cards.",
+    "influence": "{P}{P}",
+    "id": 243,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 3,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 183
+  },
+  {
+    "set": "Set1",
+    "num": 222,
+    "name": "Avalanche Stalker",
+    "rules_text": "Ambush",
+    "influence": "{P}{P}",
+    "id": 244,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 4,
+    "health": 4,
+    "subtypes": [
+      "Giant"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 121
+  },
+  {
+    "set": "Set0",
+    "num": 28,
+    "name": "Clifftop Rider",
+    "rules_text": "Flying",
+    "influence": "{P}",
+    "id": 245,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 4,
+    "health": 3,
+    "subtypes": [
+      "Barbarian",
+      "Serpent"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 225,
+    "name": "Cloudsnake Harrier",
+    "rules_text": "Flying; Summon: You may put a card from your hand on top of your deck. Its cost is reduced by 2.",
+    "influence": "{P}",
+    "id": 246,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 4,
+    "health": 3,
+    "subtypes": [
+      "Serpent"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 169
+  },
+  {
+    "set": "Set1",
+    "num": 223,
+    "name": "Deranged Dinomancer",
+    "rules_text": "At the start of your turn, transform a unit into a 5/5 Tyrannosaur.",
+    "influence": "{P}{P}",
+    "id": 247,
+    "rarity": "Rare",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 4,
+    "health": 1,
+    "subtypes": [
+      "Shaman"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 68
+  },
+  {
+    "set": "Set1",
+    "num": 221,
+    "name": "Rain of Frogs",
+    "rules_text": "Choose a non-power card from the enemy player's hand. Transform each copy in their hand, deck, and void into 1/1 Frogs with Destiny.",
+    "influence": "{P}",
+    "id": 249,
+    "rarity": "Rare",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 4,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 401
+  },
+  {
+    "set": "Set1",
+    "num": 219,
+    "name": "Serpent Trainer",
+    "rules_text": "Flying; Infiltrate: Play a 2/2 Serpent Hatchling with Flying.",
+    "influence": "{P}",
+    "id": 250,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 4,
+    "health": 2,
+    "subtypes": [
+      "Barbarian"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 165
+  },
+  {
+    "set": "Set1",
+    "num": 224,
+    "name": "Stormcaller",
+    "rules_text": "Exhaust Stormcaller to deal 1 damage.",
+    "influence": "{P}{P}",
+    "id": 251,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 4,
+    "health": 2,
+    "subtypes": [
+      "Shaman"
+    ],
+    "attack": 0,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 60
+  },
+  {
+    "set": "Set1",
+    "num": 235,
+    "name": "Aerial Ace",
+    "rules_text": "Flying, Aegis",
+    "influence": "{P}",
+    "id": 252,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 5,
+    "health": 3,
+    "subtypes": [
+      "Barbarian",
+      "Serpent"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 303
+  },
+  {
+    "set": "Set1",
+    "num": 232,
+    "name": "Crystallize",
+    "rules_text": "Stun and deal 1 damage to each enemy unit.",
+    "influence": "{P}{P}",
+    "id": 253,
+    "rarity": "Rare",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 5,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 31
+  },
+  {
+    "set": "Set1",
+    "num": 228,
+    "name": "Elysian Trailblazer",
+    "rules_text": "Summon: The top spell of your deck gets Echo.",
+    "influence": "{P}",
+    "id": 254,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 5,
+    "health": 3,
+    "subtypes": [
+      "Explorer"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 128
+  },
+  {
+    "set": "Set1",
+    "num": 227,
+    "name": "Jotun Hurler",
+    "rules_text": "Fate: Draw a Snowball.",
+    "influence": "{P}",
+    "id": 255,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 5,
+    "health": 4,
+    "subtypes": [
+      "Giant"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 144
+  },
+  {
+    "set": "Set1",
+    "num": 226,
+    "name": "Jotun Warrior",
+    "rules_text": "",
+    "influence": "{P}",
+    "id": 256,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 5,
+    "health": 5,
+    "subtypes": [
+      "Giant",
+      "Warrior"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 332
+  },
+  {
+    "set": "Set1",
+    "num": 233,
+    "name": "Magus of the Mist",
+    "rules_text": "Summon: Play a 6/6 Flying Illusionary Dragon that dies if Magus of the Mist dies.",
+    "influence": "{P}{P}{P}",
+    "id": 257,
+    "rarity": "Legendary",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 5,
+    "health": 3,
+    "subtypes": [
+      "Mage"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 62
+  },
+  {
+    "set": "Set0",
+    "num": 30,
+    "name": "Primal Incarnation",
+    "rules_text": "Flying; +1 Attack for each of your {P} influence.",
+    "influence": "{P}",
+    "id": 258,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 5,
+    "health": 3,
+    "subtypes": [
+      "Elemental"
+    ],
+    "attack": 0,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 236,
+    "name": "Sapphire Dragon",
+    "rules_text": "Flying, Overwhelm",
+    "influence": "{P}{P}",
+    "id": 259,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 6,
+    "health": 4,
+    "subtypes": [
+      "Dragon"
+    ],
+    "attack": 6,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 52
+  },
+  {
+    "set": "Set1",
+    "num": 229,
+    "name": "Soaring Stranger",
+    "rules_text": "Strangers have Flying.",
+    "influence": "{P}",
+    "id": 260,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 5,
+    "health": 3,
+    "subtypes": [
+      "Stranger"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 197
+  },
+  {
+    "set": "Set1",
+    "num": 234,
+    "name": "Staff of Stories",
+    "rules_text": "At the start of your turn, draw a card.",
+    "influence": "{P}{P}",
+    "id": 261,
+    "rarity": "Rare",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 5,
+    "health": 5,
+    "attack": 0,
+    "generic_type": "Relic Weapon",
+    "draftable": true,
+    "rank": 54
+  },
+  {
+    "set": "Set1",
+    "num": 231,
+    "name": "West-Wind Herald",
+    "rules_text": "Flying, Aegis; Infiltrate: Play a spell from the void for free.",
+    "influence": "{P}{P}",
+    "id": 262,
+    "rarity": "Rare",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 5,
+    "health": 2,
+    "subtypes": [
+      "Elemental"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 241
+  },
+  {
+    "set": "Set1",
+    "num": 230,
+    "name": "Windshaper",
+    "rules_text": "Your Flying units have +1/+1.",
+    "influence": "{P}",
+    "id": 263,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 5,
+    "health": 5,
+    "subtypes": [
+      "Barbarian"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 254
+  },
+  {
+    "set": "Set1",
+    "num": 238,
+    "name": "Araktodon",
+    "rules_text": "Overwhelm",
+    "influence": "{P}",
+    "id": 264,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 6,
+    "health": 5,
+    "subtypes": [
+      "Dinosaur"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 363
+  },
+  {
+    "set": "Set1",
+    "num": 237,
+    "name": "Hatchery Hunter",
+    "rules_text": "Summon: Transform all cards in your hand into 3/3 Flying Sky Serpents.",
+    "influence": "{P}{P}",
+    "id": 266,
+    "rarity": "Rare",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 6,
+    "health": 4,
+    "subtypes": [
+      "Shaman"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 99
+  },
+  {
+    "set": "Set1",
+    "num": 239,
+    "name": "Jarrall Iceheart",
+    "rules_text": "Infiltrate: Draw the top spell of your deck. Deal damage to each enemy unit equal to that spell's cost.",
+    "influence": "{P}{P}{P}",
+    "id": 267,
+    "rarity": "Legendary",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 6,
+    "health": 6,
+    "subtypes": [
+      "Giant",
+      "Shaman"
+    ],
+    "attack": 6,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 138
+  },
+  {
+    "set": "Set1",
+    "num": 242,
+    "name": "Mistveil Drake",
+    "rules_text": "Flying; Fate: You gain an Aegis.; Summon: If you have an Aegis, Mistveil Drake gets +3/+3.",
+    "influence": "{P}{P}",
+    "id": 268,
+    "rarity": "Rare",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 6,
+    "health": 3,
+    "subtypes": [
+      "Dragon"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 55
+  },
+  {
+    "set": "Set1",
+    "num": 240,
+    "name": "North-Wind Herald",
+    "rules_text": "Flying; Free if you have played two spells this turn.",
+    "influence": "{P}{P}",
+    "id": 269,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 6,
+    "health": 2,
+    "subtypes": [
+      "Elemental"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 317
+  },
+  {
+    "set": "Set1",
+    "num": 243,
+    "name": "Thunderstrike Dragon",
+    "rules_text": "Flying, Echo",
+    "influence": "{P}{P}",
+    "id": 270,
+    "rarity": "Rare",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 7,
+    "health": 5,
+    "subtypes": [
+      "Dragon"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 53
+  },
+  {
+    "set": "Set1",
+    "num": 244,
+    "name": "Channel the Tempest",
+    "rules_text": "Draw three cards. Then deal damage equal to the number of cards in your hand.",
+    "influence": "{P}{P}{P}{P}",
+    "id": 271,
+    "rarity": "Rare",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 8,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 204
+  },
+  {
+    "set": "Set1",
+    "num": 245,
+    "name": "Eilyn, Queen of the Wilds",
+    "rules_text": "Flying; After you play a {P} spell, play an additional random {P} spell from your deck.",
+    "influence": "{P}{P}{P}",
+    "id": 272,
+    "rarity": "Legendary",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 8,
+    "health": 6,
+    "subtypes": [
+      "Scion"
+    ],
+    "attack": 6,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 214
+  },
+  {
+    "set": "Set1",
+    "num": 246,
+    "name": "Rimescale Draconus",
+    "rules_text": "Flying; Summon: Play Permafrost on each exhausted enemy unit.",
+    "influence": "{P}{P}{P}",
+    "id": 273,
+    "rarity": "Legendary",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 7,
+    "health": 6,
+    "subtypes": [
+      "Dragon"
+    ],
+    "attack": 7,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 16
+  },
+  {
+    "set": "Set1",
+    "num": 248,
+    "name": "Scourge of Frosthome",
+    "rules_text": "Enemies can't play spells.",
+    "influence": "{P}{P}{P}",
+    "id": 274,
+    "rarity": "Legendary",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 10,
+    "health": 8,
+    "subtypes": [
+      "Dinosaur"
+    ],
+    "attack": 8,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 309
+  },
+  {
+    "set": "Set1",
+    "num": 247,
+    "name": "Skycrag Wyvarch",
+    "rules_text": "Flying; Costs 2 less for each of your other Flying units.",
+    "influence": "{P}",
+    "id": 275,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 10,
+    "health": 5,
+    "subtypes": [
+      "Dragon"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 215
+  },
+  {
+    "set": "Set1",
+    "name": "Shadow Sigil",
+    "rules_text": "",
+    "influence": "",
+    "id": 276,
+    "rarity": "Default",
+    "colors": [],
+    "num": 249,
+    "generic_type": "Power",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "name": "Amethyst Monument",
+    "rules_text": "Depleted; Transmute 5: 3/3 Puma with Lifesteal.",
+    "influence": "",
+    "id": 277,
+    "rarity": "Uncommon",
+    "colors": [],
+    "num": 426,
+    "generic_type": "Power",
+    "draftable": true,
+    "rank": 134
+  },
+  {
+    "set": "Set1",
+    "num": 260,
+    "name": "Blood Beetle",
+    "rules_text": "Infiltrate: +1 Attack and Flying.",
+    "influence": "{S}",
+    "id": 278,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 1,
+    "health": 2,
+    "subtypes": [
+      "Vermin"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 274
+  },
+  {
+    "set": "Set1",
+    "num": 250,
+    "name": "Dark Return",
+    "rules_text": "Draw a unit from the void and give it +1/+1.",
+    "influence": "{S}",
+    "id": 279,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 1,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 163
+  },
+  {
+    "set": "Set1",
+    "num": 256,
+    "name": "Direfang Spider",
+    "rules_text": "Deadly",
+    "influence": "{S}",
+    "id": 280,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 1,
+    "health": 1,
+    "subtypes": [
+      "Vermin"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 246
+  },
+  {
+    "set": "Set1",
+    "num": 258,
+    "name": "Ghostform",
+    "rules_text": "Give a unit Lifesteal and Unblockable this turn.",
+    "influence": "{S}",
+    "id": 281,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 1,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 394
+  },
+  {
+    "set": "Set1",
+    "num": 253,
+    "name": "Hair-Trigger Stranger",
+    "rules_text": "Strangers have Quickdraw.",
+    "influence": "{S}",
+    "id": 282,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 1,
+    "health": 1,
+    "subtypes": [
+      "Stranger"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 371
+  },
+  {
+    "set": "Set1",
+    "num": 254,
+    "name": "Pilfer",
+    "rules_text": "Steal the top card of the enemy deck.",
+    "influence": "{S}",
+    "id": 283,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 1,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 373
+  },
+  {
+    "set": "Set1",
+    "num": 259,
+    "name": "Rapid Shot",
+    "rules_text": "Give a unit +4 Attack and Quickdraw this turn.",
+    "influence": "{S}",
+    "id": 284,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 1,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 244
+  },
+  {
+    "set": "Set1",
+    "num": 252,
+    "name": "Sabotage",
+    "rules_text": "Choose a spell or attachment in the enemy player's hand. They discard it.",
+    "influence": "{S}",
+    "id": 285,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 1,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 349
+  },
+  {
+    "set": "Set0",
+    "num": 31,
+    "name": "Sickness",
+    "rules_text": "Give a unit -1/-1.",
+    "influence": "{S}",
+    "id": 286,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 1,
+    "generic_type": "Fast Spell",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 255,
+    "name": "Slumbering Stone",
+    "rules_text": "Entomb: Play a 2/2 Flying Gargoyle.",
+    "influence": "{S}",
+    "id": 287,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 1,
+    "health": 2,
+    "subtypes": [
+      "Gargoyle"
+    ],
+    "attack": 0,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 284
+  },
+  {
+    "set": "Set1",
+    "num": 251,
+    "name": "Suffocate",
+    "rules_text": "Kill a unit with 3 Attack or less.",
+    "influence": "{S}",
+    "id": 289,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 1,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 38
+  },
+  {
+    "set": "Set1",
+    "num": 269,
+    "name": "Annihilate",
+    "rules_text": "Kill a unit with a single faction.",
+    "influence": "{S}",
+    "id": 290,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 2,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 19
+  },
+  {
+    "set": "Set1",
+    "num": 268,
+    "name": "Argenport Instigator",
+    "rules_text": "When a unit dies, deal 1 damage to its owner.",
+    "influence": "{S}",
+    "id": 291,
+    "rarity": "Rare",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 2,
+    "health": 3,
+    "subtypes": [
+      "Rogue"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 181
+  },
+  {
+    "set": "Set1",
+    "num": 266,
+    "name": "Blackguard Sidearm",
+    "rules_text": "Quickdraw",
+    "influence": "{S}",
+    "id": 292,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 2,
+    "health": 0,
+    "attack": 2,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 286
+  },
+  {
+    "set": "Set0",
+    "num": 32,
+    "name": "Cabal Rogue",
+    "rules_text": "Unblockable",
+    "influence": "{S}",
+    "id": 293,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 2,
+    "health": 1,
+    "subtypes": [
+      "Rogue"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 264,
+    "name": "Dark Wisp",
+    "rules_text": "Entomb: Draw a card.",
+    "influence": "{S}",
+    "id": 294,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 2,
+    "health": 1,
+    "subtypes": [
+      "Elemental"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 283
+  },
+  {
+    "set": "Set1",
+    "num": 261,
+    "name": "Devour",
+    "rules_text": "Sacrifice a unit to draw two cards and get 2 Health.",
+    "influence": "{S}",
+    "id": 295,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 2,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 280
+  },
+  {
+    "set": "Set0",
+    "num": 34,
+    "name": "Jungle Prowler",
+    "rules_text": "",
+    "influence": "{S}",
+    "id": 296,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Beast"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 270,
+    "name": "Lethrai Ranger",
+    "rules_text": "Infiltrate: +2/+2.",
+    "influence": "{S}",
+    "id": 297,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Elf"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 172
+  },
+  {
+    "set": "Set1",
+    "num": 267,
+    "name": "Madness",
+    "rules_text": "Ready and steal an enemy unit this turn.",
+    "influence": "{S}",
+    "id": 298,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 3,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 282
+  },
+  {
+    "set": "Set1",
+    "num": 265,
+    "name": "Scavenging Vulture",
+    "rules_text": "Flying; +1 Attack while you have a unit in the void.",
+    "influence": "{S}",
+    "id": 299,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 2,
+    "health": 1,
+    "subtypes": [
+      "Bird"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 345
+  },
+  {
+    "set": "Set1",
+    "num": 262,
+    "name": "Sporefolk",
+    "rules_text": "Summon: Discard the top five cards of your deck.",
+    "influence": "{S}",
+    "id": 300,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Sporefolk"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 411
+  },
+  {
+    "set": "Set0",
+    "num": 33,
+    "name": "Vampire Bat",
+    "rules_text": "Flying, Lifesteal",
+    "influence": "{S}",
+    "id": 301,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 2,
+    "health": 1,
+    "subtypes": [
+      "Beast"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set0",
+    "num": 35,
+    "name": "Vara's Favor",
+    "rules_text": "Lifesteal; Deal 1 damage. Draw a {S} Sigil from your deck.",
+    "influence": "{S}",
+    "id": 302,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 2,
+    "generic_type": "Spell",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 263,
+    "name": "Venomfang Dagger",
+    "rules_text": "Deadly",
+    "influence": "{S}",
+    "id": 303,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 2,
+    "health": 1,
+    "attack": 1,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 337
+  },
+  {
+    "set": "Set1",
+    "num": 276,
+    "name": "Amethyst Acolyte",
+    "rules_text": "Summon: Give an enemy unit -1/-1.",
+    "influence": "{S}",
+    "id": 304,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 3,
+    "health": 1,
+    "subtypes": [
+      "Elf"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 161
+  },
+  {
+    "set": "Set1",
+    "num": 282,
+    "name": "Beastcaller's Amulet",
+    "rules_text": "Infiltrate: Play a 5/5 Beast.",
+    "influence": "{S}",
+    "id": 305,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 3,
+    "health": 0,
+    "attack": 1,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 166
+  },
+  {
+    "set": "Set0",
+    "num": 36,
+    "name": "Devouring Shadow",
+    "rules_text": "Give a unit -1/-1 for each of your {S} influence.",
+    "influence": "{S}",
+    "id": 306,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 3,
+    "generic_type": "Spell",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 271,
+    "name": "Direwood Beastcaller",
+    "rules_text": "Infiltrate: Play two 5/5 Beasts.",
+    "influence": "{S}",
+    "id": 307,
+    "rarity": "Rare",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 3,
+    "health": 1,
+    "subtypes": [
+      "Elf"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 151
+  },
+  {
+    "set": "Set1",
+    "num": 277,
+    "name": "Execute",
+    "rules_text": "Kill an exhausted enemy unit and deal 2 damage to the enemy player.",
+    "influence": "{S}",
+    "id": 308,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 3,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 47
+  },
+  {
+    "set": "Set1",
+    "num": 279,
+    "name": "Lethrai Nightblade",
+    "rules_text": "Unblockable",
+    "influence": "{S}",
+    "id": 310,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 3,
+    "health": 2,
+    "subtypes": [
+      "Elf"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 227
+  },
+  {
+    "set": "Set1",
+    "num": 275,
+    "name": "Lifedrinker",
+    "rules_text": "Summon: You get Lifesteal this turn.",
+    "influence": "{S}",
+    "id": 311,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 3,
+    "health": 2,
+    "attack": 2,
+    "generic_type": "Relic Weapon",
+    "draftable": true,
+    "rank": 267
+  },
+  {
+    "set": "Set0",
+    "num": 37,
+    "name": "Feln Assassin",
+    "rules_text": "Killer",
+    "influence": "{S}",
+    "id": 312,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 3,
+    "health": 2,
+    "subtypes": [
+      "Nightsworn"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 274,
+    "name": "Plague",
+    "rules_text": "Enemy units get -1/-1.",
+    "influence": "{S}",
+    "id": 313,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 3,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 65
+  },
+  {
+    "set": "Set1",
+    "num": 278,
+    "name": "Ravenous Thornbeast",
+    "rules_text": "Summon: You may sacrifice another unit to give Ravenous Thornbeast +2/+2.",
+    "influence": "{S}",
+    "id": 314,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 3,
+    "health": 3,
+    "subtypes": [
+      "Beast"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 164
+  },
+  {
+    "set": "Set1",
+    "num": 280,
+    "name": "Shadowlands Guide",
+    "rules_text": "Summon: Play a unit with cost 1 or less from the void.",
+    "influence": "{S}",
+    "id": 315,
+    "rarity": "Rare",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 3,
+    "health": 1,
+    "subtypes": [
+      "Cultist"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 279
+  },
+  {
+    "set": "Set1",
+    "num": 272,
+    "name": "Torrent of Spiders",
+    "rules_text": "Play a 1/1 Deadly Spider. Play an additional Spider for every three units you have in the void.",
+    "influence": "{S}",
+    "id": 316,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 3,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 365
+  },
+  {
+    "set": "Set1",
+    "num": 281,
+    "name": "Xenan Destroyer",
+    "rules_text": "Lifesteal, Reckless",
+    "influence": "{S}",
+    "id": 317,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 3,
+    "health": 3,
+    "subtypes": [
+      "Radiant"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 231
+  },
+  {
+    "set": "Set1",
+    "num": 284,
+    "name": "Back-Alley Bouncer",
+    "rules_text": "",
+    "influence": "{S}",
+    "id": 318,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 4,
+    "health": 3,
+    "subtypes": [
+      "Rogue"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 258
+  },
+  {
+    "set": "Set1",
+    "num": 283,
+    "name": "Cabal Recruiter",
+    "rules_text": "Infiltrate: Play the top unit of the enemy deck.",
+    "influence": "{S}",
+    "id": 319,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 4,
+    "health": 2,
+    "subtypes": [
+      "Cultist"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 193
+  },
+  {
+    "set": "Set1",
+    "num": 290,
+    "name": "Deathstrike",
+    "rules_text": "Kill a unit.",
+    "influence": "{S}{S}",
+    "id": 320,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 4,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 21
+  },
+  {
+    "set": "Set1",
+    "num": 286,
+    "name": "Impending Doom",
+    "rules_text": "Flying; At the end of your turn, Impending Doom deals 1 damage to you.",
+    "influence": "{S}{S}",
+    "id": 321,
+    "rarity": "Rare",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 4,
+    "health": 5,
+    "subtypes": [
+      "Nightmare"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 80
+  },
+  {
+    "set": "Set1",
+    "num": 285,
+    "name": "Lethrai Falchion",
+    "rules_text": "Overwhelm, Lifesteal",
+    "influence": "{S}{S}",
+    "id": 322,
+    "rarity": "Rare",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 4,
+    "health": 1,
+    "attack": 3,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 77
+  },
+  {
+    "set": "Set1",
+    "num": 291,
+    "name": "Soul Collector",
+    "rules_text": "When another unit dies, Soul Collector gets +1/+1. Entomb: You gain Health equal to Soul Collector's Health.",
+    "influence": "{S}",
+    "id": 323,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 4,
+    "health": 1,
+    "subtypes": [
+      "Cultist"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 126
+  },
+  {
+    "set": "Set1",
+    "num": 287,
+    "name": "Steward of the Past",
+    "rules_text": "Deadly; Summon: Silence all units in the enemy void. When an enemy unit would be killed or discarded, Silence it.",
+    "influence": "{S}",
+    "id": 324,
+    "rarity": "Rare",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 4,
+    "health": 5,
+    "subtypes": [
+      "Radiant"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 84
+  },
+  {
+    "set": "Set1",
+    "num": 289,
+    "name": "Subvert",
+    "rules_text": "Steal a random card from the enemy player's hand.",
+    "influence": "{S}",
+    "id": 325,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 4,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 369
+  },
+  {
+    "set": "Set1",
+    "num": 295,
+    "name": "Ashara, the Deadshot",
+    "rules_text": "Deadly, Quickdraw",
+    "influence": "{S}{S}",
+    "id": 327,
+    "rarity": "Rare",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 5,
+    "health": 3,
+    "subtypes": [
+      "Elf",
+      "Gunslinger"
+    ],
+    "attack": 6,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 81
+  },
+  {
+    "set": "Set1",
+    "num": 297,
+    "name": "Cabal Cutthroat",
+    "rules_text": "Lifesteal, Charge; Infiltrate: Deal damage to the enemy player equal to the highest cost card in their hand.",
+    "influence": "{S}{S}",
+    "id": 328,
+    "rarity": "Rare",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 5,
+    "health": 2,
+    "subtypes": [
+      "Rogue"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 335
+  },
+  {
+    "set": "Set1",
+    "num": 292,
+    "name": "Grasping at Shadows",
+    "rules_text": "Play a unit from the void.",
+    "influence": "{S}",
+    "id": 329,
+    "rarity": "Rare",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 5,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 310
+  },
+  {
+    "set": "Set1",
+    "num": 293,
+    "name": "Lurking Sanguar",
+    "rules_text": "Lifesteal; Free if two units dealt damage to the enemy player this turn.",
+    "influence": "{S}",
+    "id": 330,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 5,
+    "health": 2,
+    "subtypes": [
+      "Beast"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 206
+  },
+  {
+    "set": "Set1",
+    "num": 294,
+    "name": "Oblivion Spike",
+    "rules_text": "+1 Attack for each of your units in the void.",
+    "influence": "{S}{S}",
+    "id": 331,
+    "rarity": "Rare",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 5,
+    "health": 5,
+    "attack": 0,
+    "generic_type": "Relic Weapon",
+    "draftable": true,
+    "rank": 152
+  },
+  {
+    "set": "Set0",
+    "num": 40,
+    "name": "Sinister Warlock",
+    "rules_text": "Summon: Give an enemy unit -1/-1.",
+    "influence": "{S}{S}",
+    "id": 332,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 5,
+    "health": 3,
+    "subtypes": [
+      "Cultist"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 299,
+    "name": "Umbren Reaper",
+    "rules_text": "Flying; Entomb: Deal 5 damage to the enemy player and you gain 5 Health.",
+    "influence": "{S}{S}",
+    "id": 333,
+    "rarity": "Rare",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 5,
+    "health": 1,
+    "subtypes": [
+      "Radiant"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 37
+  },
+  {
+    "set": "Set1",
+    "num": 298,
+    "name": "Whip Chain",
+    "rules_text": "Killer",
+    "influence": "{S}{S}",
+    "id": 335,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 5,
+    "health": 2,
+    "attack": 2,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 98
+  },
+  {
+    "set": "Set1",
+    "num": 300,
+    "name": "Argenport Ringmaster",
+    "rules_text": "Infiltrate: Play five random units from the enemy void.",
+    "influence": "{S}{S}",
+    "id": 336,
+    "rarity": "Rare",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 6,
+    "health": 5,
+    "subtypes": [
+      "Cultist"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 86
+  },
+  {
+    "set": "Set1",
+    "num": 301,
+    "name": "Direwood Rampager",
+    "rules_text": "",
+    "influence": "{S}",
+    "id": 337,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 6,
+    "health": 4,
+    "subtypes": [
+      "Beast"
+    ],
+    "attack": 6,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 330
+  },
+  {
+    "set": "Set1",
+    "num": 304,
+    "name": "Horsesnatcher Bat",
+    "rules_text": "Flying, Quickdraw",
+    "influence": "{S}{S}",
+    "id": 338,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 6,
+    "health": 3,
+    "subtypes": [
+      "Beast"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 135
+  },
+  {
+    "set": "Set1",
+    "num": 302,
+    "name": "Spirit Drain",
+    "rules_text": "Lifesteal; Deal 4 damage to a unit.",
+    "influence": "{S}{S}",
+    "id": 339,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 6,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 347
+  },
+  {
+    "set": "Set1",
+    "num": 303,
+    "name": "Whispers in the Void",
+    "rules_text": "The Tormentor appears in the void.",
+    "influence": "{S}{S}{S}{S}",
+    "id": 340,
+    "rarity": "Legendary",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 6,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 174
+  },
+  {
+    "set": "Set1",
+    "num": 306,
+    "name": "Azindel's Gift",
+    "rules_text": "At the end of the cursed player's turn, they discard their hand.",
+    "influence": "{S}",
+    "id": 341,
+    "rarity": "Rare",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 7,
+    "generic_type": "Relic",
+    "draftable": true,
+    "rank": 366
+  },
+  {
+    "set": "Set1",
+    "num": 305,
+    "name": "Venomspine Hydra",
+    "rules_text": "Entomb: Kill all enemy units.",
+    "influence": "{S}{S}{S}",
+    "id": 342,
+    "rarity": "Legendary",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 7,
+    "health": 7,
+    "subtypes": [
+      "Beast"
+    ],
+    "attack": 7,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 79
+  },
+  {
+    "set": "Set1",
+    "num": 308,
+    "name": "Touch of the Umbren",
+    "rules_text": "Lifesteal; Steal the cursed unit (for as long as it is cursed).",
+    "influence": "{S}{S}{S}",
+    "id": 343,
+    "rarity": "Rare",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 8,
+    "generic_type": "Curse",
+    "draftable": true,
+    "rank": 89
+  },
+  {
+    "set": "Set1",
+    "num": 307,
+    "name": "Vara, Fate-Touched",
+    "rules_text": "Deadly; When you play Vara or another {S} unit, play an additional {S} unit from the void.",
+    "influence": "{S}{S}{S}",
+    "id": 344,
+    "rarity": "Legendary",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 8,
+    "health": 6,
+    "subtypes": [
+      "Scion"
+    ],
+    "attack": 6,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 67
+  },
+  {
+    "set": "Set1",
+    "num": 309,
+    "name": "The Last Word",
+    "rules_text": "Deadly, Quickdraw; Ultimate: Pay 9 to make The Deathstroke's attacks deadly to players.",
+    "influence": "{S}{S}{S}",
+    "id": 345,
+    "rarity": "Legendary",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 9,
+    "health": 1,
+    "attack": 1,
+    "generic_type": "Relic Weapon",
+    "draftable": true,
+    "rank": 361
+  },
+  {
+    "set": "Set1",
+    "num": 310,
+    "name": "The Witching Hour",
+    "rules_text": "Play four Pale Riders. When you play a non-power card, reduce the cost of The Witching Hour by 1.",
+    "influence": "{S}{S}{S}{S}{S}{S}",
+    "id": 346,
+    "rarity": "Legendary",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 24,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 413
+  },
+  {
+    "set": "Set0",
+    "name": "Praxis Banner",
+    "rules_text": "Gain {F} {T}.; Depleted unless you have a unit.",
+    "influence": "{T}{F}",
+    "id": 347,
+    "rarity": "Common",
+    "colors": [
+      "Time",
+      "Fire"
+    ],
+    "num": 59,
+    "generic_type": "Power",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set0",
+    "name": "Seat of Impulse",
+    "rules_text": "Gain {F} {T}.; Depleted unless you have a Sigil in your hand.",
+    "influence": "{T}{F}",
+    "id": 348,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time",
+      "Fire"
+    ],
+    "num": 54,
+    "generic_type": "Power",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "name": "Rakano Banner",
+    "rules_text": "Gain {F} {J}.; Depleted unless you have a unit.",
+    "influence": "{J}{F}",
+    "id": 349,
+    "rarity": "Common",
+    "colors": [
+      "Fire",
+      "Justice"
+    ],
+    "num": 427,
+    "generic_type": "Power",
+    "draftable": true,
+    "rank": 418
+  },
+  {
+    "set": "Set0",
+    "name": "Seat of Glory",
+    "rules_text": "Gain {F} {J}.; Depleted unless you have a Sigil in your hand.",
+    "influence": "{J}{F}",
+    "id": 350,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire",
+      "Justice"
+    ],
+    "num": 56,
+    "generic_type": "Power",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 311,
+    "name": "Fearless Nomad",
+    "rules_text": "",
+    "influence": "{F}{J}",
+    "id": 351,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire",
+      "Justice"
+    ],
+    "cost": 1,
+    "health": 1,
+    "subtypes": [
+      "Rebel"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 352
+  },
+  {
+    "set": "Set1",
+    "num": 314,
+    "name": "Champion of Glory",
+    "rules_text": "{F} {F}: +2 Attack and Quickdraw.; {J} {J}: +2 Health and Endurance.",
+    "influence": "{F}{J}",
+    "id": 352,
+    "rarity": "Rare",
+    "colors": [
+      "Fire",
+      "Justice"
+    ],
+    "cost": 2,
+    "health": 1,
+    "subtypes": [
+      "Warrior"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 216
+  },
+  {
+    "set": "Set1",
+    "num": 313,
+    "name": "Morningstar",
+    "rules_text": "",
+    "influence": "{F}{J}",
+    "id": 353,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire",
+      "Justice"
+    ],
+    "cost": 4,
+    "health": 3,
+    "attack": 4,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 146
+  },
+  {
+    "set": "Set1",
+    "num": 312,
+    "name": "Rakano Artisan",
+    "rules_text": "Summon: All weapons in your deck get +1/+1.",
+    "influence": "{F}{J}",
+    "id": 354,
+    "rarity": "Rare",
+    "colors": [
+      "Fire",
+      "Justice"
+    ],
+    "cost": 2,
+    "health": 1,
+    "subtypes": [
+      "Soldier"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 262
+  },
+  {
+    "set": "Set1",
+    "num": 316,
+    "name": "Crownwatch Deserter",
+    "rules_text": "Warcry",
+    "influence": "{F}{J}",
+    "id": 355,
+    "rarity": "Common",
+    "colors": [
+      "Fire",
+      "Justice"
+    ],
+    "cost": 3,
+    "health": 3,
+    "subtypes": [
+      "Rebel",
+      "Soldier"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 130
+  },
+  {
+    "set": "Set1",
+    "num": 315,
+    "name": "Sword of Icaria",
+    "rules_text": "Warcry",
+    "influence": "{F}{J}",
+    "id": 356,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire",
+      "Justice"
+    ],
+    "cost": 3,
+    "health": 2,
+    "attack": 3,
+    "generic_type": "Relic Weapon",
+    "draftable": true,
+    "rank": 178
+  },
+  {
+    "set": "Set1",
+    "num": 319,
+    "name": "Battleblur Centaur",
+    "rules_text": "Endurance, Charge",
+    "influence": "{F}{J}",
+    "id": 357,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire",
+      "Justice"
+    ],
+    "cost": 4,
+    "health": 5,
+    "subtypes": [
+      "Centaur"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 265
+  },
+  {
+    "set": "Set1",
+    "num": 317,
+    "name": "Deepforged Plate",
+    "rules_text": "Overwhelm, Endurance",
+    "influence": "{F}{F}{J}{J}",
+    "id": 358,
+    "rarity": "Legendary",
+    "colors": [
+      "Fire",
+      "Justice"
+    ],
+    "cost": 5,
+    "health": 5,
+    "attack": 5,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 92
+  },
+  {
+    "set": "Set1",
+    "num": 318,
+    "name": "Longhorn Sergeant",
+    "rules_text": "Warcry; When you Warcry, you gain 1 Armor.",
+    "influence": "{F}{J}",
+    "id": 359,
+    "rarity": "Rare",
+    "colors": [
+      "Fire",
+      "Justice"
+    ],
+    "cost": 4,
+    "health": 4,
+    "subtypes": [
+      "Rebel",
+      "Minotaur"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 196
+  },
+  {
+    "set": "Set1",
+    "num": 323,
+    "name": "Navani, Warsinger",
+    "rules_text": "Warcry; Navani's Warcry affects all units and weapons in your deck.",
+    "influence": "{F}{J}",
+    "id": 360,
+    "rarity": "Legendary",
+    "colors": [
+      "Fire",
+      "Justice"
+    ],
+    "cost": 4,
+    "health": 4,
+    "subtypes": [
+      "Warrior"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 145
+  },
+  {
+    "set": "Set1",
+    "num": 321,
+    "name": "Renegade Valkyrie",
+    "rules_text": "Double Damage, Flying",
+    "influence": "{F}{J}",
+    "id": 361,
+    "rarity": "Common",
+    "colors": [
+      "Fire",
+      "Justice"
+    ],
+    "cost": 4,
+    "health": 2,
+    "subtypes": [
+      "Rebel",
+      "Valkyrie"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 251
+  },
+  {
+    "set": "Set1",
+    "num": 322,
+    "name": "Righteous Fury",
+    "rules_text": "Give a unit Lifesteal and Double Damage.",
+    "influence": "{F}{J}",
+    "id": 362,
+    "rarity": "Rare",
+    "colors": [
+      "Fire",
+      "Justice"
+    ],
+    "cost": 4,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 200
+  },
+  {
+    "set": "Set1",
+    "num": 320,
+    "name": "Rise to the Challenge",
+    "rules_text": "Draw a unit or weapon of your choice from your deck. It gets +2 Attack.",
+    "influence": "{F}{J}",
+    "id": 363,
+    "rarity": "Rare",
+    "colors": [
+      "Fire",
+      "Justice"
+    ],
+    "cost": 4,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 209
+  },
+  {
+    "set": "Set1",
+    "num": 325,
+    "name": "Coup de Grace",
+    "rules_text": "Ready your units. They can attack again.",
+    "influence": "{F}{F}{J}{J}",
+    "id": 364,
+    "rarity": "Legendary",
+    "colors": [
+      "Fire",
+      "Justice"
+    ],
+    "cost": 5,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 389
+  },
+  {
+    "set": "Set1",
+    "num": 324,
+    "name": "Field Captain",
+    "rules_text": "+1 Attack for each time you or one of your units have attacked this game.",
+    "influence": "{F}{J}",
+    "id": 365,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire",
+      "Justice"
+    ],
+    "cost": 5,
+    "health": 5,
+    "subtypes": [
+      "Rebel",
+      "Soldier"
+    ],
+    "attack": 0,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 189
+  },
+  {
+    "set": "Set1",
+    "num": 326,
+    "name": "Ijin, Imperial Armorer",
+    "rules_text": "Pay 4 and exhaust Ijin to play a +4/+4 Mithril Armor on another one of your units.",
+    "influence": "{F}{F}{J}",
+    "id": 366,
+    "rarity": "Legendary",
+    "colors": [
+      "Fire",
+      "Justice"
+    ],
+    "cost": 3,
+    "health": 2,
+    "subtypes": [
+      "Oni"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 5
+  },
+  {
+    "set": "Set1",
+    "num": 327,
+    "name": "Ferocious Stranger",
+    "rules_text": "Strangers deal Double Damage.",
+    "influence": "{F}{J}",
+    "id": 367,
+    "rarity": "Rare",
+    "colors": [
+      "Fire",
+      "Justice"
+    ],
+    "cost": 6,
+    "health": 4,
+    "subtypes": [
+      "Stranger"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 218
+  },
+  {
+    "set": "Set1",
+    "num": 328,
+    "name": "Starsteel Daisho",
+    "rules_text": "Your avatar can attack twice each turn.",
+    "influence": "{F}{F}{J}{J}",
+    "id": 368,
+    "rarity": "Legendary",
+    "colors": [
+      "Fire",
+      "Justice"
+    ],
+    "cost": 6,
+    "health": 4,
+    "attack": 4,
+    "generic_type": "Relic Weapon",
+    "draftable": true,
+    "rank": 154
+  },
+  {
+    "set": "Set1",
+    "num": 329,
+    "name": "Icaria, the Liberator",
+    "rules_text": "Flying, Endurance, Warcry 5, Charge, Aegis",
+    "influence": "{F}{F}{F}{J}{J}{J}",
+    "id": 369,
+    "rarity": "Legendary",
+    "colors": [
+      "Fire",
+      "Justice"
+    ],
+    "cost": 7,
+    "health": 5,
+    "subtypes": [
+      "Rebel",
+      "Valkyrie"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 76
+  },
+  {
+    "set": "Set1",
+    "name": "Combrei Banner",
+    "rules_text": "Gain {T} {J}.; Depleted unles you have a unit.",
+    "influence": "{J}{T}",
+    "id": 370,
+    "rarity": "Common",
+    "colors": [
+      "Time",
+      "Justice"
+    ],
+    "num": 424,
+    "generic_type": "Power",
+    "draftable": true,
+    "rank": 419
+  },
+  {
+    "set": "Set0",
+    "name": "Seat of Progress",
+    "rules_text": "Gain {T} {J}.; Depleted unless you have a Sigil in your hand.",
+    "influence": "{J}{T}",
+    "id": 371,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time",
+      "Justice"
+    ],
+    "num": 58,
+    "generic_type": "Power",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 330,
+    "name": "Safe Return",
+    "rules_text": "Put one of your units into your hand and give it +1/+1.",
+    "influence": "{T}{J}",
+    "id": 372,
+    "rarity": "Common",
+    "colors": [
+      "Time",
+      "Justice"
+    ],
+    "cost": 1,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 375
+  },
+  {
+    "set": "Set1",
+    "num": 331,
+    "name": "Awakened Student",
+    "rules_text": "Empower: +1/+1.",
+    "influence": "{T}{J}",
+    "id": 373,
+    "rarity": "Common",
+    "colors": [
+      "Time",
+      "Justice"
+    ],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Mystic"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 90
+  },
+  {
+    "set": "Set1",
+    "num": 332,
+    "name": "Desert Marshal",
+    "rules_text": "Ambush; Summon: You may silence another unit.",
+    "influence": "{T}{J}",
+    "id": 374,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time",
+      "Justice"
+    ],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Soldier"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 59
+  },
+  {
+    "set": "Set1",
+    "num": 333,
+    "name": "Combrei Healer",
+    "rules_text": "Summon: You and a unit each get +3 Health.",
+    "influence": "{T}{J}",
+    "id": 375,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time",
+      "Justice"
+    ],
+    "cost": 3,
+    "health": 2,
+    "subtypes": [
+      "Cleric"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 179
+  },
+  {
+    "set": "Set1",
+    "num": 335,
+    "name": "Knight-Chancellor Siraf",
+    "rules_text": "Overwhlem; Pay 8 to play a random {T} or {J} unit and double its Attack / Health.",
+    "influence": "{T}{J}",
+    "id": 376,
+    "rarity": "Legendary",
+    "colors": [
+      "Time",
+      "Justice"
+    ],
+    "cost": 3,
+    "health": 4,
+    "subtypes": [
+      "Soldier"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 4
+  },
+  {
+    "set": "Set1",
+    "num": 334,
+    "name": "Stand Together",
+    "rules_text": "Your units get +1/+1 and Aegis",
+    "influence": "{T}{J}",
+    "id": 377,
+    "rarity": "Rare",
+    "colors": [
+      "Time",
+      "Justice"
+    ],
+    "cost": 3,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 66
+  },
+  {
+    "set": "Set1",
+    "num": 336,
+    "name": "Vodakhan's Staff",
+    "rules_text": "Empower: If you have 8 or more power, draw Vodakhan's Staff from the void.",
+    "influence": "{T}{J}",
+    "id": 378,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time",
+      "Justice"
+    ],
+    "cost": 3,
+    "health": 3,
+    "attack": 3,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 51
+  },
+  {
+    "set": "Set1",
+    "num": 340,
+    "name": "Copperhall Elite",
+    "rules_text": "Overwhelm, Aegis",
+    "influence": "{T}{J}",
+    "id": 379,
+    "rarity": "Rare",
+    "colors": [
+      "Time",
+      "Justice"
+    ],
+    "cost": 4,
+    "health": 4,
+    "subtypes": [
+      "Minotaur"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 61
+  },
+  {
+    "set": "Set1",
+    "num": 337,
+    "name": "Enlightened Stranger",
+    "rules_text": "Empower: All Strangers get +1/+1.",
+    "influence": "{T}{J}",
+    "id": 380,
+    "rarity": "Rare",
+    "colors": [
+      "Time",
+      "Justice"
+    ],
+    "cost": 4,
+    "health": 2,
+    "subtypes": [
+      "Stranger"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 230
+  },
+  {
+    "set": "Set1",
+    "num": 341,
+    "name": "Karmic Guardian",
+    "rules_text": "Flying, Lifesteal, Endurance",
+    "influence": "{T}{T}{J}",
+    "id": 381,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time",
+      "Justice"
+    ],
+    "cost": 4,
+    "health": 4,
+    "subtypes": [
+      "Mystic"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 82
+  },
+  {
+    "set": "Set1",
+    "num": 342,
+    "name": "Scepter of Nobility",
+    "rules_text": "At the start of your turn, your units get +1/+1.",
+    "influence": "{T}{J}",
+    "id": 382,
+    "rarity": "Legendary",
+    "colors": [
+      "Time",
+      "Justice"
+    ],
+    "cost": 4,
+    "health": 4,
+    "attack": 0,
+    "generic_type": "Relic Weapon",
+    "draftable": true,
+    "rank": 167
+  },
+  {
+    "set": "Set1",
+    "num": 339,
+    "name": "Stronghold's Visage",
+    "rules_text": "At the start of your turn, you gain 1 Health and 1 Armor.",
+    "influence": "{T}{J}",
+    "id": 383,
+    "rarity": "Rare",
+    "colors": [
+      "Time",
+      "Justice"
+    ],
+    "cost": 4,
+    "generic_type": "Relic",
+    "draftable": true,
+    "rank": 242
+  },
+  {
+    "set": "Set1",
+    "num": 338,
+    "name": "The Great Parliament",
+    "rules_text": "Play a 4/4 Flying Owl for every 4 maximum power you have.",
+    "influence": "{T}{J}",
+    "id": 384,
+    "rarity": "Legendary",
+    "colors": [
+      "Time",
+      "Justice"
+    ],
+    "cost": 4,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 78
+  },
+  {
+    "set": "Set1",
+    "num": 343,
+    "name": "Reality Warden",
+    "rules_text": "Cards cannot leave the enemy void.",
+    "influence": "{T}{T}{J}{J}",
+    "id": 385,
+    "rarity": "Legendary",
+    "colors": [
+      "Time",
+      "Justice"
+    ],
+    "cost": 5,
+    "health": 7,
+    "subtypes": [
+      "Sentinel"
+    ],
+    "attack": 7,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 103
+  },
+  {
+    "set": "Set1",
+    "num": 344,
+    "name": "Squad Strategist",
+    "rules_text": "Overwhelm; +1/+1 for each of your other units.; Your other units have +1/+1.",
+    "influence": "{T}{J}",
+    "id": 386,
+    "rarity": "Rare",
+    "colors": [
+      "Time",
+      "Justice"
+    ],
+    "cost": 5,
+    "health": 1,
+    "subtypes": [
+      "Soldier"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 41
+  },
+  {
+    "set": "Set1",
+    "num": 345,
+    "name": "Champion of Progress",
+    "rules_text": "{T} {T} {T} {T} {T} {T}: +6/+6.; {J} {J} {J} {J} {J} {J}: +6/+6.",
+    "influence": "{T}{J}",
+    "id": 387,
+    "rarity": "Rare",
+    "colors": [
+      "Time",
+      "Justice"
+    ],
+    "cost": 6,
+    "health": 6,
+    "subtypes": [
+      "Minotaur"
+    ],
+    "attack": 6,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 243
+  },
+  {
+    "set": "Set1",
+    "num": 346,
+    "name": "Minotaur Ambassador",
+    "rules_text": "Summon: Play a {T} Sigil and a {J} Sigil from your deck.",
+    "influence": "{T}{J}",
+    "id": 388,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time",
+      "Justice"
+    ],
+    "cost": 6,
+    "health": 5,
+    "subtypes": [
+      "Minotaur"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 289
+  },
+  {
+    "set": "Set1",
+    "num": 347,
+    "name": "Vodakhan, Temple Speaker",
+    "rules_text": "+Attack / +Health equal to your maximum power.; Your power cards have Destiny.",
+    "influence": "{T}{T}{T}{J}{J}{J}",
+    "id": 389,
+    "rarity": "Legendary",
+    "colors": [
+      "Time",
+      "Justice"
+    ],
+    "cost": 7,
+    "health": 0,
+    "subtypes": [
+      "Mystic"
+    ],
+    "attack": 0,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 97
+  },
+  {
+    "set": "Set1",
+    "num": 348,
+    "name": "A New Tomorrow",
+    "rules_text": "Play the top 12 power from your deck Depleted.",
+    "influence": "{T}{T}{J}{J}",
+    "id": 390,
+    "rarity": "Legendary",
+    "colors": [
+      "Time",
+      "Justice"
+    ],
+    "cost": 10,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 382
+  },
+  {
+    "set": "Set1",
+    "name": "Elysian Banner",
+    "rules_text": "Gain {T} {P}.; Depleted unless you have a unit.",
+    "influence": "{P}{T}",
+    "id": 391,
+    "rarity": "Common",
+    "colors": [
+      "Time",
+      "Primal"
+    ],
+    "num": 421,
+    "generic_type": "Power",
+    "draftable": true,
+    "rank": 420
+  },
+  {
+    "set": "Set0",
+    "name": "Seat of Wisdom",
+    "rules_text": "Gain {T} {P}.; Depleted unless you have a Sigil in your hand.",
+    "influence": "{P}{T}",
+    "id": 392,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time",
+      "Primal"
+    ],
+    "num": 63,
+    "generic_type": "Power",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 349,
+    "name": "Unexpected Arrival",
+    "rules_text": "Powersurge; Play a random unit with cost equal to your power.",
+    "influence": "{T}{T}{P}{P}",
+    "id": 393,
+    "rarity": "Legendary",
+    "colors": [
+      "Time",
+      "Primal"
+    ],
+    "cost": 0,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 272
+  },
+  {
+    "set": "Set1",
+    "num": 350,
+    "name": "Call the Ancients",
+    "rules_text": "Put four 6/6 Titans with Aegis and Endurance into your deck.",
+    "influence": "{T}{P}",
+    "id": 394,
+    "rarity": "Legendary",
+    "colors": [
+      "Time",
+      "Primal"
+    ],
+    "cost": 1,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 142
+  },
+  {
+    "set": "Set1",
+    "num": 351,
+    "name": "Accelerated Evolution",
+    "rules_text": "Echo; Give a unit +1/+1 and your choice of Flying or Endurance.",
+    "influence": "{T}{P}",
+    "id": 395,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time",
+      "Primal"
+    ],
+    "cost": 2,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 42
+  },
+  {
+    "set": "Set1",
+    "num": 352,
+    "name": "Cocoon",
+    "rules_text": "You gain 4 Health and an Aegis.",
+    "influence": "{T}{P}",
+    "id": 396,
+    "rarity": "Common",
+    "colors": [
+      "Time",
+      "Primal"
+    ],
+    "cost": 2,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 388
+  },
+  {
+    "set": "Set1",
+    "num": 353,
+    "name": "Storm Lynx",
+    "rules_text": "Ambush",
+    "influence": "{T}{P}",
+    "id": 397,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time",
+      "Primal"
+    ],
+    "cost": 2,
+    "health": 3,
+    "subtypes": [
+      "Beast"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 182
+  },
+  {
+    "set": "Set1",
+    "num": 355,
+    "name": "Crown of Possibilities",
+    "rules_text": "When you draw a unit, it gains a random skill.",
+    "influence": "{T}{P}",
+    "id": 398,
+    "rarity": "Rare",
+    "colors": [
+      "Time",
+      "Primal"
+    ],
+    "cost": 3,
+    "generic_type": "Relic",
+    "draftable": true,
+    "rank": 201
+  },
+  {
+    "set": "Set1",
+    "num": 356,
+    "name": "False Prince",
+    "rules_text": "Overwhelm; When a spell is played directly on False Prince, tranform him into a 1/1 Frog.",
+    "influence": "{T}{T}{P}",
+    "id": 399,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time",
+      "Primal"
+    ],
+    "cost": 3,
+    "health": 5,
+    "subtypes": [
+      "Illusion"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 105
+  },
+  {
+    "set": "Set1",
+    "num": 354,
+    "name": "Pteriax Hatchling",
+    "rules_text": "Flying, Echo",
+    "influence": "{T}{P}",
+    "id": 400,
+    "rarity": "Common",
+    "colors": [
+      "Time",
+      "Primal"
+    ],
+    "cost": 3,
+    "health": 1,
+    "subtypes": [
+      "Dinosaur"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 112
+  },
+  {
+    "set": "Set1",
+    "num": 357,
+    "name": "Amaran Camel",
+    "rules_text": "When you draw a card, you gain 1 Health.",
+    "influence": "{T}{P}",
+    "id": 401,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time",
+      "Primal"
+    ],
+    "cost": 3,
+    "health": 3,
+    "subtypes": [
+      "Beast"
+    ],
+    "attack": 0,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 376
+  },
+  {
+    "set": "Set1",
+    "num": 359,
+    "name": "Crystalline Chalice",
+    "rules_text": "Once per turn, you may pay 2 and exhaust one of your units with 2 Attack or less. It gets +2/+2 and you draw a card.",
+    "influence": "{T}{P}{P}",
+    "id": 403,
+    "rarity": "Rare",
+    "colors": [
+      "Time",
+      "Primal"
+    ],
+    "cost": 4,
+    "generic_type": "Relic",
+    "draftable": true,
+    "rank": 173
+  },
+  {
+    "set": "Set1",
+    "num": 362,
+    "name": "Cirso, the Great Glutton",
+    "rules_text": "Overwhelm; When a unit blocks or is blocked by Cirso, transform that unit into a 2/2 Pig.",
+    "influence": "{T}{T}{P}{P}",
+    "id": 404,
+    "rarity": "Legendary",
+    "colors": [
+      "Time",
+      "Primal"
+    ],
+    "cost": 5,
+    "health": 6,
+    "subtypes": [
+      "Beast",
+      "Giant"
+    ],
+    "attack": 6,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 11
+  },
+  {
+    "set": "Set1",
+    "num": 361,
+    "name": "Explorer Emeritus",
+    "rules_text": "Exhaust Explorer Emeritus to draw a card.",
+    "influence": "{T}{T}{P}{P}",
+    "id": 405,
+    "rarity": "Rare",
+    "colors": [
+      "Time",
+      "Primal"
+    ],
+    "cost": 5,
+    "health": 1,
+    "subtypes": [
+      "Explorer"
+    ],
+    "attack": 0,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 72
+  },
+  {
+    "set": "Set1",
+    "num": 363,
+    "name": "Hunting Pteriax",
+    "rules_text": "Flying, Ambush",
+    "influence": "{T}{P}",
+    "id": 406,
+    "rarity": "Rare",
+    "colors": [
+      "Time",
+      "Primal"
+    ],
+    "cost": 5,
+    "health": 3,
+    "subtypes": [
+      "Dinosaur"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 74
+  },
+  {
+    "set": "Set1",
+    "num": 360,
+    "name": "Psionic Savant",
+    "rules_text": "Flying; When you draw a card, Psionic Savant gets +1/+1.",
+    "influence": "{T}{P}",
+    "id": 407,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time",
+      "Primal"
+    ],
+    "cost": 5,
+    "health": 1,
+    "subtypes": [
+      "Mystic"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 210
+  },
+  {
+    "set": "Set1",
+    "num": 364,
+    "name": "Fortunate Stranger",
+    "rules_text": "When a player plays a Stranger, they draw a card.",
+    "influence": "{T}{P}",
+    "id": 408,
+    "rarity": "Rare",
+    "colors": [
+      "Time",
+      "Primal"
+    ],
+    "cost": 6,
+    "health": 3,
+    "subtypes": [
+      "Stranger"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 277
+  },
+  {
+    "set": "Set1",
+    "num": 366,
+    "name": "Curiox, the Collector",
+    "rules_text": "Flying, Endurance; Fate: Put a Dragon's Eye into your deck.",
+    "influence": "{T}{T}{T}{P}{P}{P}",
+    "id": 409,
+    "rarity": "Legendary",
+    "colors": [
+      "Time",
+      "Primal"
+    ],
+    "cost": 7,
+    "health": 6,
+    "subtypes": [
+      "Dragon",
+      "Explorer"
+    ],
+    "attack": 6,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 147
+  },
+  {
+    "set": "Set1",
+    "num": 365,
+    "name": "Shimmerpack",
+    "rules_text": "Summon: Choose a player. Transform all of their units into copies of Shimmerpack.",
+    "influence": "{T}{P}",
+    "id": 410,
+    "rarity": "Legendary",
+    "colors": [
+      "Time",
+      "Primal"
+    ],
+    "cost": 7,
+    "health": 4,
+    "subtypes": [
+      "Illusion"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 150
+  },
+  {
+    "set": "Set1",
+    "num": 367,
+    "name": "Gemini Ritual",
+    "rules_text": "Give a unit +4/+4, then play a copy of it.",
+    "influence": "{T}{T}{P}{P}",
+    "id": 411,
+    "rarity": "Legendary",
+    "colors": [
+      "Time",
+      "Primal"
+    ],
+    "cost": 8,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 271
+  },
+  {
+    "set": "Set0",
+    "name": "Hooru Banner",
+    "rules_text": "Gain {J} {P}.; Depleted unless you have a unit.",
+    "influence": "{P}{J}",
+    "id": 412,
+    "rarity": "Common",
+    "colors": [
+      "Primal",
+      "Justice"
+    ],
+    "num": 57,
+    "generic_type": "Power",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set0",
+    "name": "Seat of Order",
+    "rules_text": "Gain {J} {P}.; Depleted unless you have a Sigil in your hand.",
+    "influence": "{P}{J}",
+    "id": 413,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal",
+      "Justice"
+    ],
+    "num": 51,
+    "generic_type": "Power",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set0",
+    "name": "Argenport Banner",
+    "rules_text": "Gain {J} {S}.; Depleted unless you have a unit.",
+    "influence": "{S}{J}",
+    "id": 414,
+    "rarity": "Common",
+    "colors": [
+      "Shadow",
+      "Justice"
+    ],
+    "num": 64,
+    "generic_type": "Power",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set0",
+    "name": "Seat of Vengeance",
+    "rules_text": "Gain {J} {S}.; Depleted unless you have a Sigil in your hand.",
+    "influence": "{S}{J}",
+    "id": 415,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow",
+      "Justice"
+    ],
+    "num": 55,
+    "generic_type": "Power",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set0",
+    "name": "Seat of Fury",
+    "rules_text": "Gain {F} {P}.; Depleted unless you have a Sigil in your hand.",
+    "influence": "{P}{F}",
+    "id": 416,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal",
+      "Fire"
+    ],
+    "num": 53,
+    "generic_type": "Power",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set0",
+    "name": "Skycrag Banner",
+    "rules_text": "Gain {F} {P}.; Depleted unless you have a unit.",
+    "influence": "{P}{F}",
+    "id": 417,
+    "rarity": "Common",
+    "colors": [
+      "Primal",
+      "Fire"
+    ],
+    "num": 65,
+    "generic_type": "Power",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "name": "Feln Banner",
+    "rules_text": "Gain {P} {S}.; Depleted unless you have a unit.",
+    "influence": "{S}{P}",
+    "id": 418,
+    "rarity": "Common",
+    "colors": [
+      "Primal",
+      "Shadow"
+    ],
+    "num": 417,
+    "generic_type": "Power",
+    "draftable": true,
+    "rank": 421
+  },
+  {
+    "set": "Set0",
+    "name": "Seat of Cunning",
+    "rules_text": "Gain {P} {S}.; Depleted unless you have a Sigil in your hand.",
+    "influence": "{S}{P}",
+    "id": 419,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal",
+      "Shadow"
+    ],
+    "num": 62,
+    "generic_type": "Power",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 379,
+    "name": "Twilight Raptor",
+    "rules_text": "Flying",
+    "influence": "{P}{S}",
+    "id": 420,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal",
+      "Shadow"
+    ],
+    "cost": 1,
+    "health": 2,
+    "subtypes": [
+      "Bird"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 176
+  },
+  {
+    "set": "Set1",
+    "num": 377,
+    "name": "Gorgon Swiftblade",
+    "rules_text": "Infiltrate: Deadly and Quickdraw.",
+    "influence": "{P}{S}",
+    "id": 421,
+    "rarity": "Common",
+    "colors": [
+      "Primal",
+      "Shadow"
+    ],
+    "cost": 2,
+    "health": 3,
+    "subtypes": [
+      "Gorgon"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 171
+  },
+  {
+    "set": "Set1",
+    "num": 372,
+    "name": "Grim Stranger",
+    "rules_text": "When one or more Strangers attack, deal that much damage to the defending player.",
+    "influence": "{P}{S}",
+    "id": 422,
+    "rarity": "Rare",
+    "colors": [
+      "Primal",
+      "Shadow"
+    ],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Stranger"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 292
+  },
+  {
+    "set": "Set1",
+    "num": 370,
+    "name": "Harbinger's Bite",
+    "rules_text": "Lifesteal; Deal 1 damage to two enemies.",
+    "influence": "{P}{S}",
+    "id": 423,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal",
+      "Shadow"
+    ],
+    "cost": 2,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 156
+  },
+  {
+    "set": "Set1",
+    "num": 374,
+    "name": "Haunting Scream",
+    "rules_text": "Play a unit with cost 4 or less from the void. It gets Charge and Flying. Sacrifice it at the end of the turn.",
+    "influence": "{P}{S}",
+    "id": 424,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal",
+      "Shadow"
+    ],
+    "cost": 2,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 162
+  },
+  {
+    "set": "Set1",
+    "num": 386,
+    "name": "Feln Bloodcaster",
+    "rules_text": "Ultimate: Pay 7 to draw the top card of each deck.",
+    "influence": "{P}{S}{S}",
+    "id": 425,
+    "rarity": "Rare",
+    "colors": [
+      "Primal",
+      "Shadow"
+    ],
+    "cost": 3,
+    "health": 5,
+    "subtypes": [
+      "Beast"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 175
+  },
+  {
+    "set": "Set1",
+    "num": 375,
+    "name": "Gorgon Fanatic",
+    "rules_text": "Infiltrate: Sacrifice Gorgon Fanatic to draw three cards and gain 3 Health.",
+    "influence": "{P}{S}",
+    "id": 426,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal",
+      "Shadow"
+    ],
+    "cost": 3,
+    "health": 2,
+    "subtypes": [
+      "Gorgon"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 124
+  },
+  {
+    "set": "Set1",
+    "num": 382,
+    "name": "Recurring Nightmare",
+    "rules_text": "Flying, Charge; Infiltrate: Double Recurring Nightmare's Attack and put it into your hand.",
+    "influence": "{P}{S}",
+    "id": 428,
+    "rarity": "Rare",
+    "colors": [
+      "Primal",
+      "Shadow"
+    ],
+    "cost": 3,
+    "health": 1,
+    "subtypes": [
+      "Nightmare"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 131
+  },
+  {
+    "set": "Set1",
+    "num": 369,
+    "name": "Trickster's Cloak",
+    "rules_text": "Summon: The wielder is Unblockable this turn.",
+    "influence": "{P}{S}",
+    "id": 429,
+    "rarity": "Common",
+    "colors": [
+      "Primal",
+      "Shadow"
+    ],
+    "cost": 3,
+    "health": 2,
+    "attack": 2,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 224
+  },
+  {
+    "set": "Set1",
+    "num": 381,
+    "name": "Feeding Time",
+    "rules_text": "Transform a unit into a Pig, and then kill it.",
+    "influence": "{P}{S}",
+    "id": 430,
+    "rarity": "Uncommon",
+    "colors": [
+      "Primal",
+      "Shadow"
+    ],
+    "cost": 4,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 23
+  },
+  {
+    "set": "Set1",
+    "num": 371,
+    "name": "Champion of Cunning",
+    "rules_text": "{P} {P} {P} {P} {P}: Your units have +1/+1 and Flying.; {S} {S} {S} {S} {S}: Your units have +1/+1 and Charge.",
+    "influence": "{P}{S}",
+    "id": 431,
+    "rarity": "Rare",
+    "colors": [
+      "Primal",
+      "Shadow"
+    ],
+    "cost": 5,
+    "health": 4,
+    "subtypes": [
+      "Elf",
+      "Serpent"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 133
+  },
+  {
+    "set": "Set1",
+    "num": 373,
+    "name": "Spell Swipe",
+    "rules_text": "Negate an enemy spell and steal it.",
+    "influence": "{P}{S}",
+    "id": 432,
+    "rarity": "Rare",
+    "colors": [
+      "Primal",
+      "Shadow"
+    ],
+    "cost": 5,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 374
+  },
+  {
+    "set": "Set1",
+    "num": 368,
+    "name": "Withering Witch",
+    "rules_text": "Summon: Each enemy unit's Health becomes 1.",
+    "influence": "{P}{S}",
+    "id": 433,
+    "rarity": "Rare",
+    "colors": [
+      "Primal",
+      "Shadow"
+    ],
+    "cost": 5,
+    "health": 4,
+    "subtypes": [
+      "Shaman"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 111
+  },
+  {
+    "set": "Set1",
+    "num": 385,
+    "name": "Black-Sky Harbinger",
+    "rules_text": "Flying, Lifesteal; Summon: Deal 1 damage to each enemy.",
+    "influence": "{P}{S}",
+    "id": 434,
+    "rarity": "Legendary",
+    "colors": [
+      "Primal",
+      "Shadow"
+    ],
+    "cost": 6,
+    "health": 5,
+    "subtypes": [
+      "Nightsworn",
+      "Dragon"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 34
+  },
+  {
+    "set": "Set1",
+    "num": 376,
+    "name": "Cabal Mastermind",
+    "rules_text": "Infiltrate: Steal the enemy player's hand.",
+    "influence": "{P}{P}{S}{S}",
+    "id": 435,
+    "rarity": "Legendary",
+    "colors": [
+      "Primal",
+      "Shadow"
+    ],
+    "cost": 7,
+    "health": 3,
+    "subtypes": [
+      "Cultist"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 381
+  },
+  {
+    "set": "Set1",
+    "num": 383,
+    "name": "Nightmaw, Sight Unseen",
+    "rules_text": "Your units are Unblockable.",
+    "influence": "{P}{P}{P}{S}{S}{S}",
+    "id": 436,
+    "rarity": "Legendary",
+    "colors": [
+      "Primal",
+      "Shadow"
+    ],
+    "cost": 7,
+    "health": 7,
+    "subtypes": [
+      "Beast"
+    ],
+    "attack": 7,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 191
+  },
+  {
+    "set": "Set1",
+    "num": 384,
+    "name": "Snowcrush Animist",
+    "rules_text": "Deadly; Summon: Kill all enemy units with 3 Attack or less. Stun all other enemy units.",
+    "influence": "{P}{P}{S}{S}",
+    "id": 437,
+    "rarity": "Legendary",
+    "colors": [
+      "Primal",
+      "Shadow"
+    ],
+    "cost": 8,
+    "health": 5,
+    "subtypes": [
+      "Nightsworn",
+      "Giant"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 102
+  },
+  {
+    "set": "Set1",
+    "num": 380,
+    "name": "Dimensional Rift",
+    "rules_text": "Kill two random enemy units. Stun two random enemy units. Draw two random units from the void. Draw two cards.",
+    "influence": "{P}{P}{S}{S}",
+    "id": 438,
+    "rarity": "Legendary",
+    "colors": [
+      "Primal",
+      "Shadow"
+    ],
+    "cost": 10,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 325
+  },
+  {
+    "set": "Set0",
+    "name": "Seat of Chaos",
+    "rules_text": "Gain {F} {S}.; Depleted unless you have a Sigil in your hand.",
+    "influence": "{S}{F}",
+    "id": 439,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow",
+      "Fire"
+    ],
+    "num": 60,
+    "generic_type": "Power",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 392,
+    "name": "Combust",
+    "rules_text": "Sacrifice a unit to kill an enemy unit.",
+    "influence": "{F}{S}",
+    "id": 441,
+    "rarity": "Common",
+    "colors": [
+      "Shadow",
+      "Fire"
+    ],
+    "cost": 1,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 261
+  },
+  {
+    "set": "Set1",
+    "num": 398,
+    "name": "Obsidian Golem",
+    "rules_text": "Entomb: Draw a +2/+2 Obsidian Armor.",
+    "influence": "{F}{S}",
+    "id": 442,
+    "rarity": "Common",
+    "colors": [
+      "Shadow",
+      "Fire"
+    ],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Golem"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 157
+  },
+  {
+    "set": "Set1",
+    "num": 401,
+    "name": "Swift Stranger",
+    "rules_text": "Strangers have Charge.",
+    "influence": "{F}{S}",
+    "id": 443,
+    "rarity": "Rare",
+    "colors": [
+      "Shadow",
+      "Fire"
+    ],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Stranger"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 293
+  },
+  {
+    "set": "Set1",
+    "num": 394,
+    "name": "Treachery",
+    "rules_text": "Deal 2 damage to the enemy player. They discard a unit of your choice.",
+    "influence": "{F}{S}",
+    "id": 444,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow",
+      "Fire"
+    ],
+    "cost": 2,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 348
+  },
+  {
+    "set": "Set1",
+    "num": 397,
+    "name": "Bloodrite Kalis",
+    "rules_text": "Summon: Sacrifice all of your units. Bloodrite Kalis gets +2/+2 for each unit sacrificed.",
+    "influence": "{F}{S}",
+    "id": 445,
+    "rarity": "Legendary",
+    "colors": [
+      "Shadow",
+      "Fire"
+    ],
+    "cost": 3,
+    "health": 0,
+    "attack": 0,
+    "generic_type": "Relic Weapon",
+    "draftable": true,
+    "rank": 195
+  },
+  {
+    "set": "Set1",
+    "num": 399,
+    "name": "Brimstone Altar",
+    "rules_text": "Once per turn, you may sacrifice a unit to deal 2 damage to the enemy player.",
+    "influence": "{F}{S}",
+    "id": 446,
+    "rarity": "Rare",
+    "colors": [
+      "Shadow",
+      "Fire"
+    ],
+    "cost": 3,
+    "generic_type": "Relic",
+    "draftable": true,
+    "rank": 350
+  },
+  {
+    "set": "Set1",
+    "num": 402,
+    "name": "Champion of Chaos",
+    "rules_text": "{F} {F} {F}: +1/+1 and Overwhelm.; {S} {S} {S}: +1/+1 and Deadly.",
+    "influence": "{F}{S}",
+    "id": 447,
+    "rarity": "Rare",
+    "colors": [
+      "Shadow",
+      "Fire"
+    ],
+    "cost": 3,
+    "health": 3,
+    "subtypes": [
+      "Nightsworn",
+      "Warrior"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 168
+  },
+  {
+    "set": "Set1",
+    "num": 405,
+    "name": "Pit Fighter",
+    "rules_text": "",
+    "influence": "{F}{S}",
+    "id": 448,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow",
+      "Fire"
+    ],
+    "cost": 3,
+    "health": 1,
+    "subtypes": [
+      "Warrior"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 377
+  },
+  {
+    "set": "Set1",
+    "num": 389,
+    "name": "Bandit Queen",
+    "rules_text": "Charge; Summon: Your units get +1 Attack and Quickdraw this turn.",
+    "influence": "{F}{F}{S}",
+    "id": 449,
+    "rarity": "Rare",
+    "colors": [
+      "Shadow",
+      "Fire"
+    ],
+    "cost": 4,
+    "health": 2,
+    "subtypes": [
+      "Gunslinger"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 125
+  },
+  {
+    "set": "Set1",
+    "num": 388,
+    "name": "Black Iron Manacles",
+    "rules_text": "At the end of each turn, deal 1 damage to the cursed player for each card they drew or discarded this turn.",
+    "influence": "{F}{S}",
+    "id": 450,
+    "rarity": "Rare",
+    "colors": [
+      "Shadow",
+      "Fire"
+    ],
+    "cost": 4,
+    "generic_type": "Relic",
+    "draftable": true,
+    "rank": 384
+  },
+  {
+    "set": "Set1",
+    "num": 387,
+    "name": "Statuary Maiden",
+    "rules_text": "Deadly; When an enemy unit dies, transform it into a +2/+2 Stone Cudgel and draw it.",
+    "influence": "{F}{S}",
+    "id": 451,
+    "rarity": "Legendary",
+    "colors": [
+      "Shadow",
+      "Fire"
+    ],
+    "cost": 4,
+    "health": 4,
+    "subtypes": [
+      "Gorgon"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 9
+  },
+  {
+    "set": "Set1",
+    "num": 391,
+    "name": "Scraptank",
+    "rules_text": "Summon: Play two 1/1 Grenadin.; When one of your other units dies, Autofurnace gets +2/+2.",
+    "influence": "{F}{S}",
+    "id": 452,
+    "rarity": "Legendary",
+    "colors": [
+      "Shadow",
+      "Fire"
+    ],
+    "cost": 5,
+    "health": 3,
+    "subtypes": [
+      "Grenadin"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 93
+  },
+  {
+    "set": "Set1",
+    "num": 395,
+    "name": "Warband Chieftain",
+    "rules_text": "Entomb: Give one of your units +5 Attack.",
+    "influence": "{F}{S}",
+    "id": 453,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow",
+      "Fire"
+    ],
+    "cost": 5,
+    "health": 5,
+    "subtypes": [
+      "Nightsworn",
+      "Centaur"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 87
+  },
+  {
+    "set": "Set1",
+    "num": 404,
+    "name": "Runic Revolver",
+    "rules_text": "Quickdraw; Summon: Deal 2 damage to the enemy player.",
+    "influence": "{F}{S}",
+    "id": 454,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow",
+      "Fire"
+    ],
+    "cost": 5,
+    "health": 2,
+    "attack": 2,
+    "generic_type": "Relic Weapon",
+    "draftable": true,
+    "rank": 149
+  },
+  {
+    "set": "Set1",
+    "num": 393,
+    "name": "Slagmite Swarm",
+    "rules_text": "Killer; When Slagmite Swarm kills a unit, it gains that unit's Attack / Health.",
+    "influence": "{F}{S}",
+    "id": 455,
+    "rarity": "Rare",
+    "colors": [
+      "Shadow",
+      "Fire"
+    ],
+    "cost": 5,
+    "health": 3,
+    "subtypes": [
+      "Vermin"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 100
+  },
+  {
+    "set": "Set1",
+    "num": 396,
+    "name": "Smuggler's Stash",
+    "rules_text": "Draw two units and two weapons from the void.",
+    "influence": "{F}{S}",
+    "id": 456,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow",
+      "Fire"
+    ],
+    "cost": 5,
+    "generic_type": "Spell",
+    "draftable": true,
+    "rank": 40
+  },
+  {
+    "set": "Set1",
+    "num": 390,
+    "name": "Infernal Tyrant",
+    "rules_text": "Lifesteal; Summon: Deal 2 damage to each of your other units.",
+    "influence": "{F}{F}{S}{S}",
+    "id": 457,
+    "rarity": "Legendary",
+    "colors": [
+      "Shadow",
+      "Fire"
+    ],
+    "cost": 6,
+    "health": 6,
+    "subtypes": [
+      "Nightsworn",
+      "Giant"
+    ],
+    "attack": 6,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 14
+  },
+  {
+    "set": "Set1",
+    "num": 400,
+    "name": "Voprex, the Great Ruin",
+    "rules_text": "Flying, Overwhelm; Summon: The enemy player must choose: Discard their hand or sacrifice all of their units.",
+    "influence": "{F}{F}{F}{S}{S}{S}",
+    "id": 459,
+    "rarity": "Legendary",
+    "colors": [
+      "Shadow",
+      "Fire"
+    ],
+    "cost": 7,
+    "health": 5,
+    "subtypes": [
+      "Nightsworn",
+      "Dragon"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 315
+  },
+  {
+    "set": "Set0",
+    "name": "Seat of Mystery",
+    "rules_text": "Gain {T} {S}.; Depleted unless you have a Sigil in your hand.",
+    "influence": "{S}{T}",
+    "id": 460,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time",
+      "Shadow"
+    ],
+    "num": 61,
+    "generic_type": "Power",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set0",
+    "name": "Xenan Banner",
+    "rules_text": "Gain {T} {S}.; Depleted unless you have a unit.",
+    "influence": "{S}{T}",
+    "id": 461,
+    "rarity": "Common",
+    "colors": [
+      "Time",
+      "Shadow"
+    ],
+    "num": 52,
+    "generic_type": "Power",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "name": "Diplomatic Seal",
+    "rules_text": "If you have two or fewer Influence, gain an Influence of your choice.",
+    "influence": "",
+    "id": 462,
+    "rarity": "Uncommon",
+    "colors": [],
+    "num": 425,
+    "generic_type": "Power",
+    "draftable": true,
+    "rank": 294
+  },
+  {
+    "set": "Set1",
+    "num": 406,
+    "name": "Spiked Helm",
+    "rules_text": "",
+    "influence": "",
+    "id": 463,
+    "rarity": "Uncommon",
+    "colors": [],
+    "cost": 0,
+    "health": 1,
+    "attack": 1,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 410
+  },
+  {
+    "set": "Set0",
+    "num": 44,
+    "name": "Snipe",
+    "rules_text": "Deal 1 damage.",
+    "influence": "",
+    "id": 464,
+    "rarity": "Common",
+    "colors": [],
+    "cost": 1,
+    "generic_type": "Spell",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set0",
+    "num": 43,
+    "name": "Village Watch",
+    "rules_text": "",
+    "influence": "",
+    "id": 465,
+    "rarity": "Common",
+    "colors": [],
+    "cost": 1,
+    "health": 1,
+    "subtypes": [
+      "Warrior"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 407,
+    "name": "Worn Shield",
+    "rules_text": "",
+    "influence": "",
+    "id": 466,
+    "rarity": "Common",
+    "colors": [],
+    "cost": 1,
+    "health": 3,
+    "attack": 0,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 416
+  },
+  {
+    "set": "Set1",
+    "num": 410,
+    "name": "Combrei Stranger",
+    "rules_text": "Summon: You gain {T} {J}.",
+    "influence": "",
+    "id": 467,
+    "rarity": "Common",
+    "colors": [],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Stranger"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 233
+  },
+  {
+    "set": "Set1",
+    "num": 414,
+    "name": "Daze",
+    "rules_text": "Stun an enemy unit.",
+    "influence": "",
+    "id": 468,
+    "rarity": "Common",
+    "colors": [],
+    "cost": 2,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 358
+  },
+  {
+    "set": "Set1",
+    "num": 412,
+    "name": "Elysian Stranger",
+    "rules_text": "Summon: You gain {T} {P}.",
+    "influence": "",
+    "id": 469,
+    "rarity": "Common",
+    "colors": [],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Stranger"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 234
+  },
+  {
+    "set": "Set1",
+    "num": 409,
+    "name": "Feln Stranger",
+    "rules_text": "Summon: You gain {P} {S}.",
+    "influence": "",
+    "id": 470,
+    "rarity": "Common",
+    "colors": [],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Stranger"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 235
+  },
+  {
+    "set": "Set0",
+    "num": 45,
+    "name": "Messenger Falcon",
+    "rules_text": "Flying",
+    "influence": "",
+    "id": 471,
+    "rarity": "Common",
+    "colors": [],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Bird"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set0",
+    "num": 46,
+    "name": "Outlands Sellsword",
+    "rules_text": "",
+    "influence": "",
+    "id": 472,
+    "rarity": "Common",
+    "colors": [],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Warrior"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 411,
+    "name": "Rakano Stranger",
+    "rules_text": "Summon: You gain {F} {J}.",
+    "influence": "",
+    "id": 473,
+    "rarity": "Common",
+    "colors": [],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Stranger"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 236
+  },
+  {
+    "set": "Set1",
+    "num": 415,
+    "name": "Alchemical Blast",
+    "rules_text": "Deal 2 damage.",
+    "influence": "",
+    "id": 475,
+    "rarity": "Common",
+    "colors": [],
+    "cost": 3,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 299
+  },
+  {
+    "set": "Set0",
+    "num": 47,
+    "name": "Highway Bandit",
+    "rules_text": "",
+    "influence": "",
+    "id": 476,
+    "rarity": "Common",
+    "colors": [],
+    "cost": 3,
+    "health": 2,
+    "subtypes": [
+      "Warrior"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set0",
+    "num": 48,
+    "name": "Hired Cavalry",
+    "rules_text": "Charge",
+    "influence": "",
+    "id": 477,
+    "rarity": "Common",
+    "colors": [],
+    "cost": 3,
+    "health": 2,
+    "subtypes": [
+      "Soldier"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 416,
+    "name": "Veteran Mercenary",
+    "rules_text": "+1/+1 for each type of influence you have.",
+    "influence": "",
+    "id": 478,
+    "rarity": "Uncommon",
+    "colors": [],
+    "cost": 3,
+    "health": 0,
+    "subtypes": [
+      "Soldier"
+    ],
+    "attack": 0,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 323
+  },
+  {
+    "set": "Set0",
+    "num": 49,
+    "name": "Trained Rhinoch",
+    "rules_text": "",
+    "influence": "",
+    "id": 479,
+    "rarity": "Common",
+    "colors": [],
+    "cost": 4,
+    "health": 2,
+    "subtypes": [
+      "Beast"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set0",
+    "num": 50,
+    "name": "War Elephant",
+    "rules_text": "Overwhelm",
+    "influence": "",
+    "id": 480,
+    "rarity": "Common",
+    "colors": [],
+    "cost": 6,
+    "health": 4,
+    "subtypes": [
+      "Beast"
+    ],
+    "attack": 5,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 34,
+    "name": "Censari Brigand",
+    "rules_text": "Charge; Deals double damage to players.",
+    "influence": "{F}{F}",
+    "id": 481,
+    "rarity": "Rare",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 3,
+    "health": 2,
+    "subtypes": [
+      "Centaur"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 257
+  },
+  {
+    "set": "Set1",
+    "num": 358,
+    "name": "Champion of Wisdom",
+    "rules_text": "{T} {T} {T} {T}: +3/+3.; {P} {P} {P} {P}: Flying.",
+    "influence": "{T}{P}",
+    "id": 482,
+    "rarity": "Rare",
+    "colors": [
+      "Time",
+      "Primal"
+    ],
+    "cost": 4,
+    "health": 3,
+    "subtypes": [
+      "Explorer"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 217
+  },
+  {
+    "set": "Set1",
+    "num": 241,
+    "name": "Celestial Omen",
+    "rules_text": "Draw a card of your choice from your deck.",
+    "influence": "{P}{P}",
+    "id": 483,
+    "rarity": "Rare",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 6,
+    "generic_type": "Fast Spell",
+    "draftable": true,
+    "rank": 297
+  },
+  {
+    "set": "Set1",
+    "num": 73,
+    "name": "Sanctuary Priest",
+    "rules_text": "Empower: You gain 1 Health.",
+    "influence": "{T}",
+    "id": 484,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 1,
+    "health": 1,
+    "subtypes": [
+      "Cleric"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 405
+  },
+  {
+    "set": "Set1",
+    "num": 378,
+    "name": "Midnight Gale",
+    "rules_text": "Flying; Infiltrate: Lifesteal.",
+    "influence": "{P}{P}{S}{S}",
+    "id": 485,
+    "rarity": "Legendary",
+    "colors": [
+      "Primal",
+      "Shadow"
+    ],
+    "cost": 3,
+    "health": 3,
+    "subtypes": [
+      "Elemental"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 88
+  },
+  {
+    "set": "Set1",
+    "num": 109,
+    "name": "Divining Rod",
+    "rules_text": "Summon: Play all units in the top four cards of your deck that share a skill with the wielder. Discard the rest.",
+    "influence": "{T}",
+    "id": 486,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 5,
+    "health": 2,
+    "attack": 2,
+    "generic_type": "Weapon",
+    "draftable": true,
+    "rank": 391
+  },
+  {
+    "set": "Set1",
+    "num": 220,
+    "name": "Jarrall's Frostkin",
+    "rules_text": "Summon: Stun an enemy unit.",
+    "influence": "{P}",
+    "id": 487,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 4,
+    "health": 3,
+    "subtypes": [
+      "Giant"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 226
+  },
+  {
+    "set": "Set1",
+    "num": 273,
+    "name": "Desperado",
+    "rules_text": "Infiltrate: Kill an enemy unit.",
+    "influence": "{S}{S}",
+    "id": 488,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 3,
+    "health": 2,
+    "subtypes": [
+      "Elf"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 192
+  },
+  {
+    "set": "Set1",
+    "num": 9,
+    "name": "Frontier Jito",
+    "rules_text": "Charge; Your units that cost 1 or less have Charge.",
+    "influence": "{F}",
+    "id": 489,
+    "rarity": "Rare",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 1,
+    "health": 1,
+    "subtypes": [
+      "Rebel",
+      "Oni"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 356
+  },
+  {
+    "set": "Set1",
+    "num": 89,
+    "name": "Dune Phantom",
+    "rules_text": "Flying, Ambush",
+    "influence": "{T}",
+    "id": 490,
+    "rarity": "Uncommon",
+    "colors": [
+      "Time"
+    ],
+    "cost": 3,
+    "health": 6,
+    "subtypes": [
+      "Illusion"
+    ],
+    "attack": 0,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 341
+  },
+  {
+    "set": "Set1",
+    "num": 52,
+    "name": "Stonescar Maul",
+    "rules_text": "Overwhelm",
+    "influence": "{F}{F}",
+    "id": 491,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 6,
+    "health": 3,
+    "attack": 6,
+    "generic_type": "Relic Weapon",
+    "draftable": true,
+    "rank": 107
+  },
+  {
+    "set": "Set0",
+    "num": 10,
+    "name": "Refresh",
+    "rules_text": "Give yourself or a unit +4 Health.",
+    "influence": "{T}",
+    "id": 492,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 2,
+    "generic_type": "Fast Spell",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 58,
+    "name": "Crowd Favorite",
+    "rules_text": "Summon: Choose a weapon with cost 3 or less from your deck and play it.",
+    "influence": "{F}",
+    "id": 493,
+    "rarity": "Uncommon",
+    "colors": [
+      "Fire"
+    ],
+    "cost": 6,
+    "health": 3,
+    "subtypes": [
+      "Oni"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 229
+  },
+  {
+    "set": "Set1",
+    "num": 257,
+    "name": "Knifejack",
+    "rules_text": "Summon: Knifejack deals 2 damage to you.",
+    "influence": "{S}",
+    "id": 494,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 1,
+    "health": 2,
+    "subtypes": [
+      "Rogue"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 288
+  },
+  {
+    "set": "Set0",
+    "num": 12,
+    "name": "Temple Scribe",
+    "rules_text": "Summon: You gain 1 Health and draw a card.",
+    "influence": "{T}{T}",
+    "id": 495,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 2,
+    "health": 1,
+    "subtypes": [
+      "Cleric"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": false,
+    "rank": -1
+  },
+  {
+    "set": "Set1",
+    "num": 296,
+    "name": "Subtle Stranger",
+    "rules_text": "When a player plays a Stranger, their enemy discards the top three cards of their deck.",
+    "influence": "{S}",
+    "id": 496,
+    "rarity": "Uncommon",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 5,
+    "health": 3,
+    "subtypes": [
+      "Stranger"
+    ],
+    "attack": 3,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 412
+  },
+  {
+    "set": "Set1",
+    "name": "Stonescar Banner",
+    "rules_text": "Gain {F} {S}.; Depleted unless you have a unit.",
+    "influence": "{S}{F}",
+    "id": 497,
+    "rarity": "Common",
+    "colors": [
+      "Shadow",
+      "Fire"
+    ],
+    "num": 419,
+    "generic_type": "Power",
+    "draftable": true,
+    "rank": 422
+  },
+  {
+    "set": "Set1",
+    "num": 403,
+    "name": "Stonescar Leviathan",
+    "rules_text": "Entomb: The enemy player's Health becomes 7.",
+    "influence": "{F}{F}{S}{S}",
+    "id": 498,
+    "rarity": "Legendary",
+    "colors": [
+      "Shadow",
+      "Fire"
+    ],
+    "cost": 7,
+    "health": 7,
+    "subtypes": [
+      "Elemental",
+      "Vermin"
+    ],
+    "attack": 7,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 311
+  },
+  {
+    "set": "Set1",
+    "num": 413,
+    "name": "Stonescar Stranger",
+    "rules_text": "Summon: You gain {F} {S}.",
+    "influence": "",
+    "id": 499,
+    "rarity": "Common",
+    "colors": [],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Stranger"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 237
+  },
+  {
+    "set": "Set1",
+    "num": 288,
+    "name": "Stonescar Magus",
+    "rules_text": "Entomb: Give an enemy unit -2/-2.",
+    "influence": "{S}",
+    "id": 500,
+    "rarity": "Common",
+    "colors": [
+      "Shadow"
+    ],
+    "cost": 4,
+    "health": 2,
+    "subtypes": [
+      "Mage"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 153
+  },
+  {
+    "set": "Set1",
+    "num": 203,
+    "name": "Yeti Snowslinger",
+    "rules_text": "Infiltrate: Draw a Snowball.",
+    "influence": "{P}",
+    "id": 501,
+    "rarity": "Common",
+    "colors": [
+      "Primal"
+    ],
+    "cost": 2,
+    "health": 2,
+    "subtypes": [
+      "Yeti"
+    ],
+    "attack": 2,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 252
+  },
+  {
+    "set": "Set1",
+    "num": 176,
+    "name": "Fourth-Tree Elder",
+    "rules_text": "Flying, Endurance",
+    "influence": "{J}{J}",
+    "id": 502,
+    "rarity": "Uncommon",
+    "colors": [
+      "Justice"
+    ],
+    "cost": 6,
+    "health": 6,
+    "subtypes": [
+      "Bird"
+    ],
+    "attack": 4,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 18
+  }
+]
