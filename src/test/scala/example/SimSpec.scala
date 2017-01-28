@@ -102,4 +102,8 @@ class SimSpec extends FlatSpec with Matchers {
     s.board should be ('empty)
     s.hand.size should be (8)
   }
+
+  it should "not test this function, but I'm lazy" in {
+    val c = Prefab.testCard
+  }
 }

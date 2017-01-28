@@ -1,5 +1,8 @@
 package example
 
+import scala.collection.JavaConversions._
+import com.google.gson.Gson
+
 /**
   * Card is the base object for building decks, etc.  This contains all the interesting properties of a card.
   * Maybe, we could introspect on DB columns or something rather than define the schema here, or even read
@@ -9,7 +12,7 @@ package example
   */
 class Card(
     val id: Int = -1,
-    val set: Int = -1,
+    val set: String = "",
     val num: Int = -1,
     val rarity: String = "",
 
@@ -19,16 +22,19 @@ class Card(
     val artist: String = "",
 
     val cost: Int = -1,
-    val colors: List[String] = List(""),
+    val colors: Array[String] = Array(),
     val influence: String = "",
 
     val generic_type: String = "",
-    val subtypes: List[String] = List(""),
+    val subtypes: Array[String] = Array(),
 
     val attack: Int = -1,
     val health: Int = -1,
 
     // Draft specific attributes
     val draftable: Boolean = false,
-    val rank: Int = -1)
+    val rank: Int = -1) {
+
+  def toJson() = new Gson().toJson(this)
+}
 
