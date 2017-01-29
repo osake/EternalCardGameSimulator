@@ -12,7 +12,7 @@ import com.typesafe.scalalogging.LazyLogging
   * A binary which utilizes the simulator will just utilize these common terms to navigate the sim
   * so that it can produce output based on given inputs.
   */
-class Sim(val d: Deck) extends LazyLogging {
+class Sim(val d: Deck, val playerOne: Player) extends LazyLogging {
   var power: Int = 0
   var maxPower: Int = 0
   var currentPower: Int = 0

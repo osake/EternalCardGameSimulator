@@ -26,7 +26,7 @@ class SimSpec extends FlatSpec with Matchers {
   "The Sim" should "intialize a game of cards" in {
     val f = fixture
     val deck = new Deck(f.cards)
-    val s = new Sim(deck)
+    val s = new Sim(deck, new Player("Bob", 25, deck))
 
     s.hand.size should be (7)
     deck.d.size should be (3)
@@ -41,7 +41,7 @@ class SimSpec extends FlatSpec with Matchers {
   it should "play a unit on the board" in {
     val f = fixture
     val deck = new Deck(f.cards)
-    val s = new Sim(deck)
+    val s = new Sim(deck, new Player("Bob", 25, deck))
 
     s.maxPower    = 5  // force power to a medium value
     s.currentPower = 5
@@ -58,7 +58,7 @@ class SimSpec extends FlatSpec with Matchers {
   it should "play a power in the pool" in {
     val f = fixture
     val deck = new Deck(f.cards)
-    val s = new Sim(deck)
+    val s = new Sim(deck, new Player("Bob", 25, deck))
 
     // The fixture guarantees we draw a power in 7 cards
     s.hand foreach { c =>
@@ -73,7 +73,7 @@ class SimSpec extends FlatSpec with Matchers {
     val f = fixture
     val trickCard = new Card(generic_type = "s", cost = 99)
     val deck = new Deck(f.cards)
-    val s = new Sim(deck)
+    val s = new Sim(deck, new Player("Bob", 25, deck))
 
     s.play(trickCard)
     s.hand.size should be (7)
@@ -83,7 +83,7 @@ class SimSpec extends FlatSpec with Matchers {
     val f = fixture
     val trickCard = new Card(generic_type = "s", cost = 99)
     val deck = new Deck(f.cards)
-    val s = new Sim(deck)
+    val s = new Sim(deck, new Player("Bob", 25, deck))
 
     s.discard(trickCard)
     s.hand.size should be (7)
@@ -93,7 +93,7 @@ class SimSpec extends FlatSpec with Matchers {
     val f = fixture
     val trickCard = new Card(generic_type = "u", cost = 99)
     val deck = new Deck(f.cards)
-    val s = new Sim(deck)
+    val s = new Sim(deck, new Player("Bob", 25, deck))
     s.hand += trickCard // force expensive card into hand
     s.maxPower     = 5  // force power to a medium value
     s.currentPower = 5

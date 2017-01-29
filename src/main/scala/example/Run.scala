@@ -13,12 +13,14 @@ object Run extends Greeting with App {
     iterations = args(0).toInt
   }
 
+  val playerOne = new Player("Player One", deck = new Deck(Prefab.gauntlet_thirty_deck()))
+
   val f = new File("data/cards.json")
   println(f.contents)
 
   println(greeting)
   (1 to iterations) map { index =>
-    val a = new Sim(new Deck(Prefab.gauntlet_thirty_deck()))
+    val a = new Sim(new Deck(Prefab.gauntlet_thirty_deck()), playerOne)
     val power_count = a.countType("p", a.hand)
     if (power_count <  2 || power_count > 5) {
       a.mulligan()
