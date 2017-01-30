@@ -21,5 +21,40 @@ class Sim(val playerOne: Player, val playerTwo: Player) extends LazyLogging {
   playerTwo.deck.shuffle
   playerTwo.draw(7)
 
+  // Brainstorming out some methods for the simulator
+  def table() {
+  }
+
+  // Who goes first?
+  def coinToss() {
+  }
+
+  /**
+   * Utility for certain cards that can look at opponent's hand.
+   */
+  def peekAtOpponentHand() {
+  }
+
+  /**
+   * A turn consists of phases:
+   *
+   * Simplified:
+   * - Start turn
+   * - Draw
+   * - 1st main
+   * - Combat
+   * - 2nd main
+   * - End (discard, cleanup, etc.)
+   */
+  def turn() {
+  }
+
+  def whoseTurn() {
+  }
+
+  def gameOver() {
+  }
+
+
 }
 
