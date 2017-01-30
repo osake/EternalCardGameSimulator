@@ -12,7 +12,7 @@ import com.typesafe.scalalogging.LazyLogging
   * A binary which utilizes the simulator will just utilize these common terms to navigate the sim
   * so that it can produce output based on given inputs.
   */
-class Sim(val d: Deck, val playerOne: Player) extends LazyLogging {
+class Sim(val deck: Deck, val playerOne: Player) extends LazyLogging {
   var power: Int = 0
   var maxPower: Int = 0
   var currentPower: Int = 0
@@ -23,7 +23,7 @@ class Sim(val d: Deck, val playerOne: Player) extends LazyLogging {
   var v: ListBuffer[Card] = new ListBuffer[Card]()
 
   // Setup the simulator with a shuffled deck and a hand of cards.
-  d.shuffle
+  deck.shuffle
   draw(7)
 
   def getMulliganCounter() : Int = {
@@ -31,7 +31,7 @@ class Sim(val d: Deck, val playerOne: Player) extends LazyLogging {
   }
 
   def draw(n: Int) {
-    for (i <- 1 to n) yield hand.append(d.draw)
+    for (i <- 1 to n) yield hand.append(deck.draw)
   }
 
   /**
@@ -56,19 +56,19 @@ class Sim(val d: Deck, val playerOne: Player) extends LazyLogging {
     */
   private def reset_and_draw() {
     hand foreach { c =>
-      d replace c
+      deck replace c
       hand -= c
     }
     v foreach { c =>
-      d replace c
+      deck replace c
       v -= c
     }
     board foreach { c =>
-      d replace c
+      deck replace c
       board -= c
     }
     pool foreach { c =>
-      d replace c
+      deck replace c
       pool -= c
     }
     d.shuffle
