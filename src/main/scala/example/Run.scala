@@ -25,7 +25,7 @@ object Run extends Greeting with App {
     if (power_count <  2 || power_count > 5) {
       a.mulligan()
     }
-    a.d.d foreach { c =>
+    a.deck.deck foreach { c =>
       //println(c.generic_type + ", " + c.cost)
     }
 

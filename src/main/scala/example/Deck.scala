@@ -20,6 +20,6 @@ class Deck(var deck: ListBuffer[Card]) {
 
   // Utilize Scala's shuffle method to shuffle the deck.
   def shuffle() {
-    deck = Random.shuffle(d)
+    deck = Random.shuffle(deck)
   }
 }

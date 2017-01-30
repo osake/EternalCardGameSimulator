@@ -71,7 +71,7 @@ class Sim(val deck: Deck, val playerOne: Player) extends LazyLogging {
       deck replace c
       pool -= c
     }
-    d.shuffle
+    deck.shuffle
     draw(7)
   }
 

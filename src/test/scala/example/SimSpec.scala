@@ -29,13 +29,13 @@ class SimSpec extends FlatSpec with Matchers {
     val s = new Sim(deck, new Player("Bob", 25, deck))
 
     s.hand.size should be (7)
-    deck.d.size should be (3)
+    deck.deck.size should be (3)
 
     val card = deck.draw
-    deck.d.size should be (2)
+    deck.deck.size should be (2)
 
     deck.replace(card)
-    deck.d.size should be (3)
+    deck.deck.size should be (3)
   }
 
   it should "play a unit on the board" in {
