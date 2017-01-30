@@ -13,16 +13,16 @@ class SimSpec extends FlatSpec with Matchers with BeforeAndAfterEach {
 
   override def beforeEach() {
     cards += (
-      new Card(generic_type = "p", cost = 0),
-      new Card(generic_type = "p", cost = 0),
-      new Card(generic_type = "u", cost = 2),
-      new Card(generic_type = "u", cost = 3),
-      new Card(generic_type = "s", cost = 1),
-      new Card(generic_type = "p", cost = 0),
-      new Card(generic_type = "p", cost = 0),
-      new Card(generic_type = "u", cost = 2),
-      new Card(generic_type = "u", cost = 3),
-      new Card(generic_type = "s", cost = 1)
+      new Card(generic_type = "Power", cost = 0),
+      new Card(generic_type = "Power", cost = 0),
+      new Card(generic_type = "Unit", cost = 2),
+      new Card(generic_type = "Unit", cost = 3),
+      new Card(generic_type = "Spell", cost = 1),
+      new Card(generic_type = "Power", cost = 0),
+      new Card(generic_type = "Power", cost = 0),
+      new Card(generic_type = "Unit", cost = 2),
+      new Card(generic_type = "Unit", cost = 3),
+      new Card(generic_type = "Spell", cost = 1)
     )
     deck = new Deck(cards)
     deck2 = new Deck(cards)
@@ -50,7 +50,7 @@ class SimSpec extends FlatSpec with Matchers with BeforeAndAfterEach {
 
     // The fixture guarantees we draw a unit in 7 cards
     sim.playerOne.hand foreach { c =>
-      if (c.generic_type == "u") {
+      if (c.generic_type == "Unit") {
         sim.playerOne.play(c)
         sim.playerOne.board.size should be > 0
       }
@@ -62,7 +62,7 @@ class SimSpec extends FlatSpec with Matchers with BeforeAndAfterEach {
 
     // The fixture guarantees we draw a power in 7 cards
     sim.playerOne.hand foreach { c =>
-      if (c.generic_type == "p") {
+      if (c.generic_type == "Power") {
         sim.playerOne.play(c)
         sim.playerOne.pool.size should be > 0
       }
@@ -70,7 +70,7 @@ class SimSpec extends FlatSpec with Matchers with BeforeAndAfterEach {
   }
 
   it should "not play a card you don't have" in {
-    val trickCard = new Card(generic_type = "s", cost = 99)
+    val trickCard = new Card(generic_type = "Spell", cost = 99)
     sim.start
 
     sim.playerOne.play(trickCard)
@@ -78,7 +78,7 @@ class SimSpec extends FlatSpec with Matchers with BeforeAndAfterEach {
   }
 
   it should "not discard a card you don't have" in {
-    val trickCard = new Card(generic_type = "s", cost = 99)
+    val trickCard = new Card(generic_type = "Spell", cost = 99)
     sim.start
 
     sim.playerOne.discard(trickCard)
@@ -86,7 +86,7 @@ class SimSpec extends FlatSpec with Matchers with BeforeAndAfterEach {
   }
 
   it should "not be able to play an expensive unit without sufficient power" in {
-    val trickCard = new Card(generic_type = "u", cost = 99)
+    val trickCard = new Card(generic_type = "Unit", cost = 99)
     sim.start
 
     sim.playerOne.hand += trickCard // force expensive card into hand

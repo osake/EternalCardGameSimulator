@@ -3,6 +3,7 @@ package example
 import com.google.gson.Gson
 import com.typesafe.scalalogging.LazyLogging
 import scala.collection.mutable.ListBuffer
+import scala.util.Random
 
 // TODO(jfrench): Probably want a configuration file which defines deck size, etc.
 // The tests would want to respec the size so I don't need 75 card decks in all the tests :)
@@ -15,6 +16,7 @@ import scala.collection.mutable.ListBuffer
   */
 class Sim(val playerOne: Player, val playerTwo: Player) extends LazyLogging {
 
+  var activePlayer: Player = _
 
   def start() {
     // Setup the simulator with a shuffled deck and a hand of cards for each player.
@@ -30,7 +32,16 @@ class Sim(val playerOne: Player, val playerTwo: Player) extends LazyLogging {
   }
 
   // Who goes first?
-  def coinToss() {
+  def coinToss() : Player = {
+    if (Random.nextInt() % 2 == 0) playerOne else playerTwo
+  }
+
+  def nextPlayer() {
+    // Seems like Scala should have an idiomatic way of doing this...
+    if (activePlayer == playerOne)
+      activePlayer = playerTwo
+    else
+      activePlayer = playerOne
   }
 
   /**
@@ -53,7 +64,8 @@ class Sim(val playerOne: Player, val playerTwo: Player) extends LazyLogging {
   def turn() {
   }
 
-  def whoseTurn() {
+  def whoseTurn() : Player = {
+    return activePlayer
   }
 
   def gameOver() {

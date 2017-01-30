@@ -16,6 +16,7 @@ class Player(var name: String, var health: Int = 25, var deck: Deck) extends Laz
   var pool: ListBuffer[Card] = new ListBuffer[Card]()
   var board: ListBuffer[Card] = new ListBuffer[Card]()
   var v: ListBuffer[Card] = new ListBuffer[Card]()
+  var first: Boolean = false
 
   /**
     * Accounts for taking damage -amount or gaining life +amount.
@@ -44,7 +45,7 @@ class Player(var name: String, var health: Int = 25, var deck: Deck) extends Laz
     mulligan_counter += 1
     // TODO(jfrench): put cards back in deck and shuffle
     reset_and_draw()
-    val power_count = countType("p", hand)
+    val power_count = countType("Power", hand)
     if (power_count < 2 || power_count > 5) {
       mulligan()
     }
@@ -91,10 +92,10 @@ class Player(var name: String, var health: Int = 25, var deck: Deck) extends Laz
   def play(c: Card) {
     if (hand.contains(c)) {
       c.generic_type match {
-        case "p" => playPower(c)
-        case "u" => playUnit(c)
-        case "s" => playSpell(c)
-        case "a" => playAttachment(c)
+        case "Power" => playPower(c)
+        case "Unit" => playUnit(c)
+        case "Spell" => playSpell(c)
+        case "Attachment" => playAttachment(c)
         case _ => logger.warn("Unexpected generic type" + c.generic_type)
       }
     } else {
@@ -156,10 +157,10 @@ class Player(var name: String, var health: Int = 25, var deck: Deck) extends Laz
   }
 
   def hand_data() {
-    println("P: " + countType("p", hand))
-    println("U: " + countType("u", hand))
-    println("S: " + countType("s", hand))
-    println("A: " + countType("a", hand))
+    println("P: " + countType("Power", hand))
+    println("U: " + countType("Unit", hand))
+    println("S: " + countType("Spell", hand))
+    println("A: " + countType("Attachment", hand))
     println("Mulligans: " + mulligan_counter)
   }
 

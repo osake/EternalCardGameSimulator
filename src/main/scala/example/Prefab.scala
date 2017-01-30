@@ -56,4 +56,15 @@ object Prefab {
 
     return d
   }
+
+  def simpleDeck() : ListBuffer[Card] = {
+    var d = new ListBuffer[Card]()
+    val sampleCollection = testCollection
+
+    for (i <- 1 to 30) yield { d += sampleCollection.filter(c => c.name == "Primal Sigil").head }
+    for (i <- 1 to 45) yield { d += sampleCollection.filter(c => c.name == "Cloudsnake Hatchling").head }
+    println("Deck size: " + d.size)
+
+    d
+  }
 }
