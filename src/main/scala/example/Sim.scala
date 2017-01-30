@@ -6,6 +6,7 @@ import scala.collection.mutable.ListBuffer
 
 // TODO(jfrench): Probably want a configuration file which defines deck size, etc.
 // The tests would want to respec the size so I don't need 75 card decks in all the tests :)
+// More thoughts: How about an FSM for handing turns?
 /**
   * Sim is the heart of the simulator.  It's effectively the methods needed to play a game of cards.
   * It utilizes decks and cards, then extends methods such as mulligans, playing, and restarting.
@@ -14,12 +15,15 @@ import scala.collection.mutable.ListBuffer
   */
 class Sim(val playerOne: Player, val playerTwo: Player) extends LazyLogging {
 
-  // Setup the simulator with a shuffled deck and a hand of cards for each player.
-  playerOne.deck.shuffle
-  playerOne.draw(7)
 
-  playerTwo.deck.shuffle
-  playerTwo.draw(7)
+  def start() {
+    // Setup the simulator with a shuffled deck and a hand of cards for each player.
+    playerOne.deck.shuffle
+    playerOne.draw(7)
+
+    playerTwo.deck.shuffle
+    playerTwo.draw(7)
+  }
 
   // Brainstorming out some methods for the simulator
   def table() {

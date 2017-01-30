@@ -4,123 +4,98 @@ import org.scalatest._
 import scala.collection.mutable.ListBuffer
 import scala.language.reflectiveCalls
 
-class SimSpec extends FlatSpec with Matchers {
+class SimSpec extends FlatSpec with Matchers with BeforeAndAfterEach {
 
-  def fixture =
-    new {
-      var cards = new ListBuffer[Card]()
-      cards += (
-        new Card(generic_type = "p", cost = 0),
-        new Card(generic_type = "p", cost = 0),
-        new Card(generic_type = "u", cost = 2),
-        new Card(generic_type = "u", cost = 3),
-        new Card(generic_type = "s", cost = 1),
-        new Card(generic_type = "p", cost = 0),
-        new Card(generic_type = "p", cost = 0),
-        new Card(generic_type = "u", cost = 2),
-        new Card(generic_type = "u", cost = 3),
-        new Card(generic_type = "s", cost = 1)
-      )
-      var deck = new Deck(cards)
-    }
+  var cards = new ListBuffer[Card]()
+  var deck: Deck = _
+  var deck2: Deck = _
+  var sim: Sim = _
 
-  def anotherFixture =
-    new {
-      var cards = new ListBuffer[Card]()
-      cards += (
-        new Card(generic_type = "p", cost = 0),
-        new Card(generic_type = "p", cost = 0),
-        new Card(generic_type = "u", cost = 2),
-        new Card(generic_type = "u", cost = 3),
-        new Card(generic_type = "s", cost = 1),
-        new Card(generic_type = "p", cost = 0),
-        new Card(generic_type = "p", cost = 0),
-        new Card(generic_type = "u", cost = 2),
-        new Card(generic_type = "u", cost = 3),
-        new Card(generic_type = "s", cost = 1)
-      )
-      var deck = new Deck(cards)
-    }
+  override def beforeEach() {
+    cards += (
+      new Card(generic_type = "p", cost = 0),
+      new Card(generic_type = "p", cost = 0),
+      new Card(generic_type = "u", cost = 2),
+      new Card(generic_type = "u", cost = 3),
+      new Card(generic_type = "s", cost = 1),
+      new Card(generic_type = "p", cost = 0),
+      new Card(generic_type = "p", cost = 0),
+      new Card(generic_type = "u", cost = 2),
+      new Card(generic_type = "u", cost = 3),
+      new Card(generic_type = "s", cost = 1)
+    )
+    deck = new Deck(cards)
+    deck2 = new Deck(cards)
+    sim = new Sim(new Player("Bob", 25, deck), new Player("Sue", 25, deck2))
+  }
 
   "The Sim" should "initialize a game of cards" in {
-    val f = fixture
-    val g = anotherFixture
-    val s = new Sim(new Player("Bob", 25, f.deck), new Player("Sue", 25, g.deck))
+    sim.start
 
-    s.playerOne.hand.size should be (7)
-    s.playerOne.deck.deck.size should be (3)
+    sim.playerOne.hand.size should be (7)
+    sim.playerOne.deck.deck.size should be (3)
 
-    val card = s.playerOne.deck.draw
-    s.playerOne.deck.deck.size should be (2)
+    val card = sim.playerOne.deck.draw
+    sim.playerOne.deck.deck.size should be (2)
 
-    s.playerOne.deck.replace(card)
-    s.playerOne.deck.deck.size should be (3)
+    sim.playerOne.deck.replace(card)
+    sim.playerOne.deck.deck.size should be (3)
   }
 
   it should "play a unit on the board" in {
-    val f = fixture
-    val g = anotherFixture
-    val s = new Sim(new Player("Bob", 25, f.deck), new Player("Sue", 25, g.deck))
+    sim.start
 
-    s.playerOne.maxPower    = 5  // force power to a medium value
-    s.playerOne.currentPower = 5
+    sim.playerOne.maxPower    = 5  // force power to a medium value
+    sim.playerOne.currentPower = 5
 
     // The fixture guarantees we draw a unit in 7 cards
-    s.playerOne.hand foreach { c =>
+    sim.playerOne.hand foreach { c =>
       if (c.generic_type == "u") {
-        s.playerOne.play(c)
-        s.playerOne.board.size should be > 0
+        sim.playerOne.play(c)
+        sim.playerOne.board.size should be > 0
       }
     }
   }
 
   it should "play a power in the pool" in {
-    val f = fixture
-    val g = anotherFixture
-    val s = new Sim(new Player("Bob", 25, f.deck), new Player("Sue", 25, g.deck))
+    sim.start
 
     // The fixture guarantees we draw a power in 7 cards
-    s.playerOne.hand foreach { c =>
+    sim.playerOne.hand foreach { c =>
       if (c.generic_type == "p") {
-        s.playerOne.play(c)
-        s.playerOne.pool.size should be > 0
+        sim.playerOne.play(c)
+        sim.playerOne.pool.size should be > 0
       }
     }
   }
 
   it should "not play a card you don't have" in {
-    val f = fixture
-    val g = anotherFixture
     val trickCard = new Card(generic_type = "s", cost = 99)
-    val s = new Sim(new Player("Bob", 25, f.deck), new Player("Sue", 25, g.deck))
+    sim.start
 
-    s.playerOne.play(trickCard)
-    s.playerOne.hand.size should be (7)
+    sim.playerOne.play(trickCard)
+    sim.playerOne.hand.size should be (7)
   }
 
   it should "not discard a card you don't have" in {
-    val f = fixture
-    val g = anotherFixture
     val trickCard = new Card(generic_type = "s", cost = 99)
-    val deck = new Deck(f.cards)
-    val s = new Sim(new Player("Bob", 25, f.deck), new Player("Sue", 25, g.deck))
+    sim.start
 
-    s.playerOne.discard(trickCard)
-    s.playerOne.hand.size should be (7)
+    sim.playerOne.discard(trickCard)
+    sim.playerOne.hand.size should be (7)
   }
 
   it should "not be able to play an expensive unit without sufficient power" in {
-    val f = fixture
-    val g = anotherFixture
     val trickCard = new Card(generic_type = "u", cost = 99)
-    val s = new Sim(new Player("Bob", 25, f.deck), new Player("Sue", 25, g.deck))
-    s.playerOne.hand += trickCard // force expensive card into hand
-    s.playerOne.maxPower     = 5  // force power to a medium value
-    s.playerOne.currentPower = 5
+    sim.start
 
-    s.playerOne.play(trickCard)
-    s.playerOne.board should be ('empty)
-    s.playerOne.hand.size should be (8)
+    sim.playerOne.hand += trickCard // force expensive card into hand
+    sim.playerOne.maxPower     = 5  // force power to a medium value
+    sim.playerOne.currentPower = 5
+
+    sim.playerOne.play(trickCard)
+    sim.playerOne.board should be ('empty)
+    sim.playerOne.hand.size should be (8)
   }
 
   it should "not test this function, but I'm lazy" in {

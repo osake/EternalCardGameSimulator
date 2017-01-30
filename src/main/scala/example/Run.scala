@@ -22,6 +22,7 @@ object Run extends Greeting with App {
   println(greeting)
   (1 to iterations) map { index =>
     val a = new Sim(playerOne, playerTwo)
+    a.start
 
     val p1PowerCount = playerOne.countType("p", playerOne.hand)
     if (p1PowerCount <  2 || p1PowerCount > 5) {
