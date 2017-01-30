@@ -14,27 +14,24 @@ object Run extends Greeting with App {
   }
 
   val playerOne = new Player("Player One", deck = new Deck(Prefab.gauntlet_thirty_deck()))
+  val playerTwo = new Player("Player Two", deck = new Deck(Prefab.gauntlet_thirty_deck()))
 
   val f = new File("data/cards.json")
-  println(f.contents)
+  //println(f.contents)
 
   println(greeting)
   (1 to iterations) map { index =>
-    val a = new Sim(new Deck(Prefab.gauntlet_thirty_deck()), playerOne)
-    val power_count = a.countType("p", a.hand)
-    if (power_count <  2 || power_count > 5) {
-      a.mulligan()
-    }
-    a.deck.deck foreach { c =>
-      //println(c.generic_type + ", " + c.cost)
+    val a = new Sim(playerOne, playerTwo)
+
+    val p1PowerCount = playerOne.countType("p", playerOne.hand)
+    if (p1PowerCount <  2 || p1PowerCount > 5) {
+      playerOne.mulligan()
     }
 
-    //println(a.d.d.size)
-    println(a.mulligan_counter)
-  }
-
-  def card_count(t: String, list: ListBuffer[Card]) : Int = {
-    return list.filter(c => c.generic_type == t).size
+    val p2PowerCount = playerTwo.countType("p", playerTwo.hand)
+    if (p2PowerCount <  2 || p2PowerCount > 5) {
+      playerTwo.mulligan()
+    }
   }
 }
 
