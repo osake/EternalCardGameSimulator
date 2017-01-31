@@ -81,6 +81,14 @@ object Run extends Greeting with App {
       isGameOver = turnCounter > maxTurns
     }
 
+    // Output the board states
+    a.outputGameState
+    a.printChar("~")
+    a.playerOne.hand_data
+    a.playerTwo.hand_data
+    a.printChar("~")
+
+
     // Output the winner's name.  TODO(jfrench): Maybe this should happen in gameOver/cleanup
 
     // End the simulation

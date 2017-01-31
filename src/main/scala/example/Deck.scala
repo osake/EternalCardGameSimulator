@@ -22,4 +22,8 @@ class Deck(var deck: ListBuffer[Card]) {
   def shuffle() {
     deck = Random.shuffle(deck)
   }
+
+  def size() : Int = {
+    return deck.size
+  }
 }

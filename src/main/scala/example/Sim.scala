@@ -70,5 +70,32 @@ class Sim(val playerOne: Player, val playerTwo: Player) extends LazyLogging {
 
   def gameOver() {
   }
+
+  def outputGameState() {
+    printChar("*")
+    println(playerTwo.deck.size)
+    print("Cards in hand: ")
+    playerTwo.hand foreach (c => print(c.name + ", "))
+    print("\n")
+    println(playerTwo.v)
+    print("Board: ")
+    playerTwo.board foreach (c => print(c.name + ", "))
+    print("\n")
+    printChar("=")
+    print("Board: ")
+    playerOne.board foreach (c => print(c.name + ", "))
+    print("\n")
+    println(playerOne.v)
+    print("Cards in hand: ")
+    playerOne.hand foreach (c => print(c.name + ", "))
+    print("\n")
+    println(playerOne.deck.size)
+    printChar("*")
+  }
+
+  def printChar(character : String) {
+    (1 to 20) foreach (_ => print(character))
+    print("\n")
+  }
 }
 
