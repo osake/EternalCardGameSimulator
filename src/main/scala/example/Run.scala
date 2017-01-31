@@ -43,6 +43,8 @@ object Run extends Greeting with App {
     var isGameOver = false // TODO(jfrench): We can fix this later to be in simulator or something
     var maxTurns = 10 // Just for brevity... what is the actual limit?
     var turnCounter = 0
+    var playablePower: Option[Card] = None
+    var playableUnit: Option[Card] = None
     // Now we're ready to play.
     while (!isGameOver) {
       println(a.whoseTurn().name + "'s turn.")
@@ -55,6 +57,14 @@ object Run extends Greeting with App {
         a.activePlayer.draw(1)
         showCard(a.activePlayer.hand.last)
       }
+
+      // First Main phase
+      // - play a power, play a unit
+      playablePower = a.activePlayer.hand.find(_.generic_type == "Power")
+      if (!playablePower.isEmpty) a.activePlayer.play(playablePower.get)
+
+      playableUnit = a.activePlayer.hand.find(_.generic_type == "Unit")
+      if (!playableUnit.isEmpty) a.activePlayer.play(playableUnit.get)
 
       println(a.activePlayer.name + " has " + a.activePlayer.hand.size + " cards in hand.")
 
