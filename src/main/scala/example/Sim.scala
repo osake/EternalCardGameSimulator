@@ -44,6 +44,10 @@ class Sim(val playerOne: Player, val playerTwo: Player) extends LazyLogging {
       activePlayer = playerOne
   }
 
+  def defendingPlayer() : Player = {
+    if (activePlayer == playerOne) playerTwo else playerOne
+  }
+
   /**
    * Utility for certain cards that can look at opponent's hand.
    */
@@ -73,29 +77,49 @@ class Sim(val playerOne: Player, val playerTwo: Player) extends LazyLogging {
 
   def outputGameState() {
     printChar("*")
-    println(playerTwo.deck.size)
+    println(s"Cards in deck: ${playerTwo.deck.size}, Power: ${playerTwo.power}/${playerTwo.maxPower}, Player health: ${playerTwo.health}")
     print("Cards in hand: ")
-    playerTwo.hand foreach (c => print(c.name + ", "))
+    playerTwo.hand foreach (c => print(s"${c.name}(${c.cost}), "))
     print("\n")
-    println(playerTwo.v)
+    print("Void: ")
+    playerTwo.v foreach (c => print(s"${c.name}(${c.cost}), "))
+    print("\n")
     print("Board: ")
-    playerTwo.board foreach (c => print(c.name + ", "))
+    playerTwo.board foreach (c => print(s"${c.name}(${c.attack}/${c.health}), "))
     print("\n")
     printChar("=")
     print("Board: ")
-    playerOne.board foreach (c => print(c.name + ", "))
+    playerOne.board foreach (c => print(s"${c.name}(${c.attack}/${c.health}), "))
     print("\n")
-    println(playerOne.v)
+    print("Void: ")
+    playerOne.v foreach (c => print(s"${c.name}(${c.cost}), "))
+    print("\n")
     print("Cards in hand: ")
-    playerOne.hand foreach (c => print(c.name + ", "))
+    playerOne.hand foreach (c => print(s"${c.name}(${c.cost}), "))
     print("\n")
-    println(playerOne.deck.size)
+    println(s"Cards in deck: ${playerOne.deck.size}, Power: ${playerOne.power}/${playerOne.maxPower}, Player health: ${playerOne.health}")
     printChar("*")
   }
 
   def printChar(character : String) {
     (1 to 20) foreach (_ => print(character))
     print("\n")
+  }
+
+  def setAttacking(c : Card) {
+    c.attacking = true
+  }
+
+  def performAttack() {
+    activePlayer.board foreach { c=>
+      c.exhausted = true
+      c.attacking = false
+      defendingPlayer.health -= c.attack
+    }
+  }
+
+  def checkGameOver() : Boolean = {
+    if (playerOne.health < 1 || playerTwo.health < 1) true else false
   }
 }
 

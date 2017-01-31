@@ -41,13 +41,17 @@ object Run extends Greeting with App {
     }
 
     var isGameOver = false // TODO(jfrench): We can fix this later to be in simulator or something
-    var maxTurns = 10 // Just for brevity... what is the actual limit?
+    var maxTurns = 20 // Just for brevity... what is the actual limit?
     var turnCounter = 0
     var playablePower: Option[Card] = None
     var playableUnit: Option[Card] = None
     // Now we're ready to play.
     while (!isGameOver) {
+      // Begin turn
       println(a.whoseTurn().name + "'s turn.")
+      // Before we draw, let's remove summoning sickness from your board
+      a.activePlayer.board foreach (c => c.summonSickness = false)
+      a.activePlayer.currentPower = a.activePlayer.maxPower
       showHand(a.activePlayer)
       // If the turn counter is 0 and player is first, just in case we decide to extract turnCounter
       // then we skip the draw phase
@@ -63,22 +67,36 @@ object Run extends Greeting with App {
       playablePower = a.activePlayer.hand.find(_.generic_type == "Power")
       if (!playablePower.isEmpty) a.activePlayer.play(playablePower.get)
 
-      playableUnit = a.activePlayer.hand.find(_.generic_type == "Unit")
-      if (!playableUnit.isEmpty) a.activePlayer.play(playableUnit.get)
-
-      println(a.activePlayer.name + " has " + a.activePlayer.hand.size + " cards in hand.")
-
-      // Discard step
-      if (a.activePlayer.hand.size > 9) {
-        println("Automated discard to mimic max hand of 9 at end of turn")
-        println("Discarding: " +  a.activePlayer.discard(a.activePlayer.hand.last).name)
+      // Combat Phase -- this sucks as it's written because there is interaction
+      // Let's perform a dumb attack
+      println(s"${a.activePlayer.name} is attacking ${a.defendingPlayer.name}")
+      a.activePlayer.board foreach { c =>
+        a.setAttacking(c)
       }
+      a.performAttack
+      isGameOver = a.checkGameOver
 
-      a.nextPlayer()
-      turnCounter += 1 // maybe this makes sense to track on each player
+      // TODO(jfrench): This looks terrible, so I'll look at how to make it more clean.
+      if (!isGameOver) {
+        // Second main phase
+        playableUnit = a.activePlayer.hand.find(_.generic_type == "Unit")
+        if (!playableUnit.isEmpty) a.activePlayer.play(playableUnit.get)
 
-      // Cleanup checks to see if we should set game over.
-      isGameOver = turnCounter > maxTurns
+        // Prep for ending turn
+        println(a.activePlayer.name + " has " + a.activePlayer.hand.size + " cards in hand.")
+
+        // Discard step
+        if (a.activePlayer.hand.size > 9) {
+          println("Automated discard to mimic max hand of 9 at end of turn")
+          println("Discarding: " +  a.activePlayer.discard(a.activePlayer.hand.last).name)
+        }
+
+        a.nextPlayer()
+        turnCounter += 1 // maybe this makes sense to track on each player
+
+        // Cleanup checks to see if we should set game over.
+        isGameOver = turnCounter > maxTurns
+      }
     }
 
     // Output the board states
@@ -97,13 +115,15 @@ object Run extends Greeting with App {
   }
 
   def showHand(p: Player) {
+    print(s"${p.name} hand: ")
     p.hand foreach { card =>
       showCard(card)
     }
+    print("\n")
   }
 
   def showCard(card: Card) {
-    println(card.name + ", " + card.cost)
+    print(card.name + ", " + card.cost)
   }
 }
 

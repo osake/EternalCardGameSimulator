@@ -35,6 +35,14 @@ class Card(
     val draftable: Boolean = false,
     val rank: Int = -1) {
 
+  // Units come into play sick, so let's just force that.
+  // TODO(jfrench): Add check for Charge ability when we parse rules text
+  var summonSickness = true
+
+  // More transient attributes
+  var exhausted = false
+  var attacking = false
+
   def toJson() = new Gson().toJson(this)
 }
 
