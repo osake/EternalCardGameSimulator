@@ -67,4 +67,28 @@ object Prefab {
 
     d
   }
+
+
+  def minionsOfShadowAI() : ListBuffer[Card] = {
+    var d = new ListBuffer[Card]()
+    val sampleCollection = testCollection
+
+    for (i <- 1 to 2) yield { d += sampleCollection.filter(c => c.name == "Direfang Spider").head }
+    for (i <- 1 to 2) yield { d += sampleCollection.filter(c => c.name == "Direwood Rampager").head }
+    for (i <- 1 to 2) yield { d += sampleCollection.filter(c => c.name == "Xenan Destroyer").head }
+    for (i <- 1 to 4) yield { d += sampleCollection.filter(c => c.name == "Devouring Shadow").head }
+    for (i <- 1 to 3) yield { d += sampleCollection.filter(c => c.name == "Dark Wisp").head }
+    for (i <- 1 to 4) yield { d += sampleCollection.filter(c => c.name == "Sporefolk").head }
+    for (i <- 1 to 3) yield { d += sampleCollection.filter(c => c.name == "Dark Return").head }
+    for (i <- 1 to 3) yield { d += sampleCollection.filter(c => c.name == "Cabal Cutthroat").head }
+    for (i <- 1 to 4) yield { d += sampleCollection.filter(c => c.name == "Vara's Favor").head }
+    for (i <- 1 to 3) yield { d += sampleCollection.filter(c => c.name == "Scavenging Vulture").head }
+    for (i <- 1 to 3) yield { d += sampleCollection.filter(c => c.name == "Back-Alley Bouncer").head }
+    d += sampleCollection.filter(c => c.name == "Plague").head
+    for (i <- 1 to 2) yield { d += sampleCollection.filter(c => c.name == "Suffocate").head }
+    for (i <- 1 to 2) yield { d += sampleCollection.filter(c => c.name == "Spirit Drain").head }
+    for (i <- 1 to 37) yield { d += sampleCollection.filter(c => c.name == "Shadow Sigil").head }
+
+    d
+  }
 }

@@ -9,16 +9,16 @@ class PlayerSpec extends FlatSpec with Matchers {
     new {
       var cards = new ListBuffer[Card]()
       cards += (
-        new Card(generic_type = "p", cost = 0),
-        new Card(generic_type = "p", cost = 0),
-        new Card(generic_type = "u", cost = 2),
-        new Card(generic_type = "u", cost = 3),
-        new Card(generic_type = "s", cost = 1),
-        new Card(generic_type = "p", cost = 0),
-        new Card(generic_type = "p", cost = 0),
-        new Card(generic_type = "u", cost = 2),
-        new Card(generic_type = "u", cost = 3),
-        new Card(generic_type = "s", cost = 1)
+        new Card(generic_type = "Power", cost = 0),
+        new Card(generic_type = "Power", cost = 0),
+        new Card(generic_type = "Unit", cost = 2),
+        new Card(generic_type = "Unit", cost = 3),
+        new Card(generic_type = "Spell", cost = 1),
+        new Card(generic_type = "Power", cost = 0),
+        new Card(generic_type = "Power", cost = 0),
+        new Card(generic_type = "Unit", cost = 2),
+        new Card(generic_type = "Unit", cost = 3),
+        new Card(generic_type = "Spell", cost = 1)
       )
       var deck = new Deck(cards)
     }
@@ -55,5 +55,17 @@ class PlayerSpec extends FlatSpec with Matchers {
 
     p.adjustHealth(-2500)
     p.health should be (-999)
+  }
+
+  it should "sort power" in {
+    val f = fixture
+    val p = new Player("Player One", deck = f.deck)
+    p.draw(7)
+    p.draw(3)
+    p.sortPower
+    val firstFourCards = p.hand.slice(0, 3)
+    firstFourCards foreach { c =>
+      c.generic_type should be ("Power")
+    }
   }
 }

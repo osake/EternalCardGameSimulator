@@ -13,7 +13,7 @@ object Run extends Greeting with App {
     iterations = args(0).toInt
   }
 
-  val playerOne = new Player("Player One", deck = new Deck(Prefab.simpleDeck()))
+  val playerOne = new Player("Player One", deck = new Deck(Prefab.minionsOfShadowAI()))
   val playerTwo = new Player("Player Two", deck = new Deck(Prefab.simpleDeck()))
 
   val f = new File("data/cards.json")
@@ -39,12 +39,11 @@ object Run extends Greeting with App {
       playerTwo.mulligan()
     }
 
-
     var isGameOver = false // TODO(jfrench): We can fix this later to be in simulator or something
-    var maxTurns = 4 // Just for brevity... what is the actual limit?
+    var maxTurns = 10 // Just for brevity... what is the actual limit?
     var turnCounter = 0
     // Now we're ready to play.
-    while (turnCounter < maxTurns) {
+    while (!isGameOver) {
       println(a.whoseTurn().name + "'s turn.")
       showHand(a.activePlayer)
       // If the turn counter is 0 and player is first, just in case we decide to extract turnCounter
@@ -58,9 +57,19 @@ object Run extends Greeting with App {
 
       println(a.activePlayer.name + " has " + a.activePlayer.hand.size + " cards in hand.")
 
+      // Discard step
+      if (a.activePlayer.hand.size > 9) {
+        println("Automated discard to mimic max hand of 9 at end of turn")
+        println("Discarding: " +  a.activePlayer.discard(a.activePlayer.hand.last).name)
+      }
+
       a.nextPlayer()
       turnCounter += 1 // maybe this makes sense to track on each player
+
+      // Cleanup checks to see if we should set game over.
+      isGameOver = turnCounter > maxTurns
     }
+
     // Output the winner's name.  TODO(jfrench): Maybe this should happen in gameOver/cleanup
 
     // End the simulation

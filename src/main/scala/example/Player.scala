@@ -147,13 +147,14 @@ class Player(var name: String, var health: Int = 25, var deck: Deck) extends Laz
     return c.cost <= currentPower
   }
 
-  def discard(c: Card) {
+  def discard(c: Card) : Card = {
     if (hand.contains(c)) {
       hand -= c
       v += c
     } else {
       logger.warn("You can't discard a card you don't have.")
     }
+    c // Let us know what card we dumped.
   }
 
   def hand_data() {
@@ -169,5 +170,14 @@ class Player(var name: String, var health: Int = 25, var deck: Deck) extends Laz
     */
   def countType(t: String, list: ListBuffer[Card]) : Int = {
     return list.filter(c => c.generic_type == t).size
+  }
+
+  /**
+   * Push all the power cards to the head of the list so you can determine mulligan more easily.
+   */
+  def sortPower() {
+    val pc = hand.filter(c => c.generic_type == "Power")
+    hand --= pc
+    hand.++=:(pc)
   }
 }

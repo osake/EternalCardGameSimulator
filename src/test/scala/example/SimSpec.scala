@@ -7,6 +7,7 @@ import scala.language.reflectiveCalls
 class SimSpec extends FlatSpec with Matchers with BeforeAndAfterEach {
 
   var cards = new ListBuffer[Card]()
+  var cards2 = new ListBuffer[Card]()
   var deck: Deck = _
   var deck2: Deck = _
   var sim: Sim = _
@@ -24,8 +25,20 @@ class SimSpec extends FlatSpec with Matchers with BeforeAndAfterEach {
       new Card(generic_type = "Unit", cost = 3),
       new Card(generic_type = "Spell", cost = 1)
     )
+    cards2 += (
+      new Card(generic_type = "Power", cost = 0),
+      new Card(generic_type = "Power", cost = 0),
+      new Card(generic_type = "Unit", cost = 2),
+      new Card(generic_type = "Unit", cost = 3),
+      new Card(generic_type = "Spell", cost = 1),
+      new Card(generic_type = "Power", cost = 0),
+      new Card(generic_type = "Power", cost = 0),
+      new Card(generic_type = "Unit", cost = 2),
+      new Card(generic_type = "Unit", cost = 3),
+      new Card(generic_type = "Spell", cost = 1)
+    )
     deck = new Deck(cards)
-    deck2 = new Deck(cards)
+    deck2 = new Deck(cards2)
     sim = new Sim(new Player("Bob", 25, deck), new Player("Sue", 25, deck2))
   }
 

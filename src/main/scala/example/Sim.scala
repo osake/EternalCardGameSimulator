@@ -20,11 +20,11 @@ class Sim(val playerOne: Player, val playerTwo: Player) extends LazyLogging {
 
   def start() {
     // Setup the simulator with a shuffled deck and a hand of cards for each player.
-    playerOne.deck.shuffle
-    playerOne.draw(7)
+    playerOne.restart
+    playerOne.sortPower
 
-    playerTwo.deck.shuffle
-    playerTwo.draw(7)
+    playerTwo.restart
+    playerTwo.sortPower
   }
 
   // Brainstorming out some methods for the simulator
@@ -70,7 +70,5 @@ class Sim(val playerOne: Player, val playerTwo: Player) extends LazyLogging {
 
   def gameOver() {
   }
-
-
 }
 
