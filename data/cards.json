@@ -9206,5 +9206,42 @@
     "generic_type": "Unit",
     "draftable": true,
     "rank": 18
+  },
+  {
+    "set": "Set1",
+    "num": 999,
+    "name": "Humbug",
+    "rules_text": "Flying",
+    "influence": "{T}",
+    "id": 999,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 1,
+    "health": 1,
+    "subtypes": [
+      "Vermin"
+    ],
+    "attack": 1,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 999
+  },
+  {
+    "set": "Set1",
+    "num": 1000,
+    "name": "Dormant Sentinel",
+    "rules_text": "Empower: Overwhelm this turn.",
+    "influence": "{T}{T}",
+    "id": 1000,
+    "rarity": "Common",
+    "colors": [
+      "Time"
+    ],
+    "cost": 7,
+    "generic_type": "Unit",
+    "draftable": true,
+    "rank": 1000
   }
 ]

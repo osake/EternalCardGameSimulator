@@ -5,10 +5,10 @@ import com.google.gson.Gson
 
 object Prefab {
 
-  private val P = "p"
-  private val U = "u"
-  private val S = "s"
-  private val A = "a"
+  private val P = "Power"
+  private val U = "Unit"
+  private val S = "Spell"
+  private val A = "Attachment"
 
   def testCard() : Card = {
     val gson = new Gson
@@ -71,7 +71,7 @@ object Prefab {
 
   def minionsOfShadowAI() : ListBuffer[Card] = {
     var d = new ListBuffer[Card]()
-    val sampleCollection = testCollection
+  val sampleCollection = testCollection
 
     for (i <- 1 to 2) yield { d += sampleCollection.filter(c => c.name == "Direfang Spider").head }
     for (i <- 1 to 2) yield { d += sampleCollection.filter(c => c.name == "Direwood Rampager").head }
@@ -91,4 +91,50 @@ object Prefab {
 
     d
   }
+
+  def studentsOfTimeAI() : ListBuffer[Card] = {
+    var d = new ListBuffer[Card]()
+    val sampleCollection = testCollection
+
+    for (i <- 1 to 3) yield { d += sampleCollection.filter(c => c.name == "Silence").head }
+    for (i <- 1 to 3) yield { d += sampleCollection.filter(c => c.name == "Sand Warrior").head }
+    for (i <- 1 to 2) yield { d += sampleCollection.filter(c => c.name == "Amber Monument").head }
+    for (i <- 1 to 2) yield { d += sampleCollection.filter(c => c.name == "Refresh").head }
+    for (i <- 1 to 2) yield { d += sampleCollection.filter(c => c.name == "Xenan Guardian").head }
+    for (i <- 1 to 2) yield { d += sampleCollection.filter(c => c.name == "Humbug").head }
+    for (i <- 1 to 2) yield { d += sampleCollection.filter(c => c.name == "Predator's Instinct").head }
+    for (i <- 1 to 3) yield { d += sampleCollection.filter(c => c.name == "Timekeeper").head }
+    for (i <- 1 to 2) yield { d += sampleCollection.filter(c => c.name == "Dormant Sentinel").head }
+    for (i <- 1 to 2) yield { d += sampleCollection.filter(c => c.name == "Praxis Displacer").head }
+    for (i <- 1 to 3) yield { d += sampleCollection.filter(c => c.name == "Synchronized Strike").head } // best guess 3x
+    for (i <- 1 to 4) yield { d += sampleCollection.filter(c => c.name == "Bold Adventurer").head }
+    for (i <- 1 to 3) yield { d += sampleCollection.filter(c => c.name == "Oasis Sanctuary").head }
+    for (i <- 1 to 4) yield { d += sampleCollection.filter(c => c.name == "Horned Vorlunk").head }
+    for (i <- 1 to 2) yield { d += sampleCollection.filter(c => c.name == "Towering Terrazon").head }
+    for (i <- 1 to 2) yield { d += sampleCollection.filter(c => c.name == "Initiate of the Sands").head }
+    for (i <- 1 to 34) yield { d += sampleCollection.filter(c => c.name == "Time Sigil").head }
+
+    d
+  }
+
+
+  /* Mono-justice stall deck
+4 Steadfast Deputy (Set1 #504)
+4 Valkyrie Aspirant (Set1 #127)
+4 Crownwatch Paladin (Set1 #139)
+4 Eager Owlet (Set1 #144)
+4 Paladin Oathbook (Set1 #140)
+2 Rolant's Favor (Set0 #18)
+4 Vanquish (Set1 #143)
+3 Brightmace Paladin (Set1 #147)
+4 Silverwing Familiar (Set1 #152)
+4 Auric Runehammer (Set1 #166)
+4 Hammer of Might (Set1 #170)
+4 Mantle of Justice (Set0 #21)
+2 Throne Warden (Set0 #514)
+1 Augmented Form (Set1 #182)
+2 Valkyrie Wings (Set1 #181)
+25 Justice Sigil (Set1 #126)
+  */
+
 }

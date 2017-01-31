@@ -14,7 +14,8 @@ object Run extends Greeting with App {
   }
 
   val playerOne = new Player("Player One", deck = new Deck(Prefab.minionsOfShadowAI()))
-  val playerTwo = new Player("Player Two", deck = new Deck(Prefab.simpleDeck()))
+  // val playerTwo = new Player("Player Two", deck = new Deck(Prefab.gauntlet_thirty_deck()))
+  val playerTwo = new Player("Player Two", deck = new Deck(Prefab.studentsOfTimeAI()))
 
   val f = new File("data/cards.json")
   //println(f.contents)
