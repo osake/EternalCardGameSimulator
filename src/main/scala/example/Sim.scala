@@ -20,9 +20,11 @@ class Sim(val playerOne: Player, val playerTwo: Player) extends LazyLogging {
 
   def start() {
     // Setup the simulator with a shuffled deck and a hand of cards for each player.
+    playerOne.health = 25 // Need to actually examine instantiated health rather than assume 25
     playerOne.restart
     playerOne.sortPower
 
+    playerTwo.health = 25
     playerTwo.restart
     playerTwo.sortPower
   }
@@ -110,7 +112,12 @@ class Sim(val playerOne: Player, val playerTwo: Player) extends LazyLogging {
     c.attacking = true
   }
 
+  def unsetAttacking(c : Card) {
+    c.attacking = false
+  }
+
   def performAttack() {
+    // TODO(jfrench): Planning to move this to pubsub, so publish attack to other player(s) so that they can respond, or maybe that's overcomplicated if we just need to "wait" for a response.... hrmmm
     activePlayer.board foreach { c=>
       c.exhausted = true
       c.attacking = false

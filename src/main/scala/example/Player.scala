@@ -56,6 +56,8 @@ class Player(var name: String, var health: Int = 25, var deck: Deck) extends Laz
     * the lists by replacing them into the deck, shuffle, and draw seven new cards.
     */
   private def reset_and_draw() {
+    // TODO(jfrench): Let's replace this with a simpler reset:
+    //   store original deck in init, then empty list buffers  and set deck = originalDeck
     hand foreach { c =>
       deck replace c
       hand -= c
