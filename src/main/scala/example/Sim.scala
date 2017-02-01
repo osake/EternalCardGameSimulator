@@ -121,7 +121,7 @@ class Sim(val playerOne: Player, val playerTwo: Player) extends LazyLogging {
     activePlayer.board foreach { c=>
       c.exhausted = true
       c.attacking = false
-      defendingPlayer.health -= c.attack
+      if (!c.blocked) defendingPlayer.health -= c.attack
     }
   }
 

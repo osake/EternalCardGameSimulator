@@ -42,6 +42,8 @@ class Card(
   // More transient attributes
   var exhausted = false
   var attacking = false
+  var blocking = false
+  var blocked = false
 
   def toJson() = new Gson().toJson(this)
 }

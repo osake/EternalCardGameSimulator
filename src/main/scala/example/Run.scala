@@ -53,6 +53,10 @@ object Run extends Greeting with App {
       a.activePlayer.board foreach (c => c.summonSickness = false)
       a.activePlayer.currentPower = a.activePlayer.maxPower
       showHand(a.activePlayer)
+      // Reset your board
+      a.activePlayer.board foreach { c =>
+        c.attacking = false
+      }
       // If the turn counter is 0 and player is first, just in case we decide to extract turnCounter
       // then we skip the draw phase
       if (turnCounter == 0 && a.activePlayer.first) {
@@ -89,6 +93,28 @@ object Run extends Greeting with App {
           }
         }
       }
+
+      // Simple defender should block to prevent lethal, let's just do chump blocking for now
+      a.activePlayer.board foreach { c =>
+        if (c.attacking && c.attack >= a.defendingPlayer.health && !a.defendingPlayer.board.isEmpty) {
+          var chumps = a.defendingPlayer.board.filter { d => d.blocking == false }
+          var chump = chumps.head
+          chump.blocking = true
+          c.blocked == true
+          if (c.attack >= chump.health) {
+            println("OMGOMGOMG THE VOID!")
+            chump.blocking = false
+            a.defendingPlayer.board -= chump
+            a.defendingPlayer.v += chump
+          }
+          if (chump.attack >= c.health) {
+            c.blocked = false
+            a.activePlayer.board -= c
+            a.activePlayer.v += c
+          }
+        }
+      }
+
 
       // Is there additive defense to kill/block me
       var defenseAtk = 0
