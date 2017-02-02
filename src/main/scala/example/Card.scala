@@ -48,3 +48,15 @@ class Card(
   def toJson() = new Gson().toJson(this)
 }
 
+// TODO (jfrench): Thinking of case classes since there are some differences in how each of these behave
+/*
+case class Curse() extends Card
+case class FastSpell() extends Card
+case class Power() extends Card
+case class Relic() extends Card
+case class RelicWeapon() extends Card
+case class Spell() extends Card
+case class Unit() extends Card
+case class Weapon() extends Card
+*/
+

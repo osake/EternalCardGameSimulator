@@ -97,6 +97,7 @@ class Player(var name: String, var health: Int = 25, var deck: Deck) extends Laz
         case "Power" => playPower(c)
         case "Unit" => playUnit(c)
         case "Spell" => playSpell(c)
+        case "Fast Spell" => playFastSpell(c)
         case "Attachment" => playAttachment(c)
         case _ => logger.warn("Unexpected generic type" + c.generic_type)
       }
@@ -131,6 +132,17 @@ class Player(var name: String, var health: Int = 25, var deck: Deck) extends Laz
       v += c
     } else {
       logger.warn("Could not afford " + c.cost + " spell with " + currentPower + " power available.")
+    }
+  }
+
+  private def playFastSpell(c: Card) {
+    // TODO(jfrench): Add spell interactions
+    if (isAffordable(c)) {
+      hand -= c
+      currentPower -= c.cost
+      v += c
+    } else {
+      logger.warn("Could not afford " + c.cost + " fast spell with " + currentPower + " power available.")
     }
   }
 

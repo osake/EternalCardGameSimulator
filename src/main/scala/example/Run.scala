@@ -41,7 +41,7 @@ object Run extends Greeting with App {
     }
 
     var isGameOver = false // TODO(jfrench): We can fix this later to be in simulator or something
-    var maxTurns = 20 // Just for brevity... what is the actual limit?
+    var maxTurns = 30 // Just for brevity... what is the actual limit?
     var turnCounter = 0
     var playablePower: Option[Card] = None
     var playableUnit: Option[Card] = None
@@ -130,6 +130,10 @@ object Run extends Greeting with App {
 
       a.performAttack
       isGameOver = a.checkGameOver
+      if (isGameOver) {
+        if (playerOne.health < 1) println(s"PlayerTwo wins! ${a.playerTwo.first}")
+        if (playerTwo.health < 1) println(s"PlayerOne wins! ${a.playerOne.first}")
+      }
 
       // TODO(jfrench): This looks terrible, so I'll look at how to make it more clean.
       if (!isGameOver) {
