@@ -1,12 +1,6 @@
 implement
 * Solitaire mode
-* Card Set0 and Set1
-* aggressive unit casting
-* vanilla card concepts like power and toughness
-* two players and a table for them to play on
 * turns
- * turn counter
- * turn printing/output and forward/backward time controls (might be advanced table/game operations)
  * turn UI, more controls in solitaire vs the AI only simulation
 
 
