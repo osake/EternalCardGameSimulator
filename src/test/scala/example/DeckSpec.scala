@@ -15,12 +15,12 @@ class DeckSpec extends FlatSpec with Matchers {
       new Card()
     )
     val deck = new Deck(cards)
-    deck.deck.size should be (5)
+    deck.cards.size should be (5)
 
     val card = deck.draw
-    deck.deck.size should be (4)
+    deck.cards.size should be (4)
 
     deck.replace(card)
-    deck.deck.size should be (5)
+    deck.cards.size should be (5)
   }
 }

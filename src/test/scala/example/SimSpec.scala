@@ -46,13 +46,13 @@ class SimSpec extends FlatSpec with Matchers with BeforeAndAfterEach {
     sim.start
 
     sim.playerOne.hand.size should be (7)
-    sim.playerOne.deck.deck.size should be (3)
+    sim.playerOne.deck.cards.size should be (3)
 
     val card = sim.playerOne.deck.draw
-    sim.playerOne.deck.deck.size should be (2)
+    sim.playerOne.deck.cards.size should be (2)
 
     sim.playerOne.deck.replace(card)
-    sim.playerOne.deck.deck.size should be (3)
+    sim.playerOne.deck.cards.size should be (3)
   }
 
   it should "play a unit on the board" in {

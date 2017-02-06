@@ -6,24 +6,24 @@ import scala.collection.mutable.ListBuffer
 /**
   * Deck object which holds a list of cards.
   */
-class Deck(var deck: ListBuffer[Card]) {
+class Deck(var cards: ListBuffer[Card]) {
 
   // Convenience method for removing a card.
   def draw() : Card = {
-    return deck.remove(0)
+    return cards.remove(0)
   }
 
   // Convenience method for putting back a card.
   def replace(card: Card) : Unit = {
-    deck += card
+    cards += card
   }
 
   // Utilize Scala's shuffle method to shuffle the deck.
   def shuffle() {
-    deck = Random.shuffle(deck)
+    cards = Random.shuffle(cards)
   }
 
   def size() : Int = {
-    return deck.size
+    return cards.size
   }
 }
