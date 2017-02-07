@@ -5,9 +5,21 @@ package example
   *
   * Reads the first argument as a given number of times to execute the simulator.
   */
-abstract class Turn(simulator: Sim, playerOne: Player, playerTwo: Player) {}
+abstract class Turn() extends GameState {
+  def showHand(p: Player) {
+    print(s"${p.name} hand: ")
+    p.hand foreach { card =>
+      showCard(card)
+    }
+    print("\n")
+  }
 
-case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends GameState{
+  def showCard(card: Card) {
+    print(card.name + ", " + card.cost)
+  }
+}
+
+case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends Turn {
   val a = simulator
   var playablePower: Option[Card] = None
   var playableUnit: Option[Card] = None
@@ -126,20 +138,9 @@ case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends 
       }
     }
   }
-
-  def showHand(p: Player) {
-    print(s"${p.name} hand: ")
-    p.hand foreach { card =>
-      showCard(card)
-    }
-    print("\n")
-  }
-
-  def showCard(card: Card) {
-    print(card.name + ", " + card.cost)
-  }
 }
 
-case class SolitaireTurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends GameState {
-  def run() {}
+case class SolitaireTurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends Turn {
+  def run() {
+  }
 }
