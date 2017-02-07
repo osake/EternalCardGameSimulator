@@ -5,16 +5,14 @@ package example
   *
   * Reads the first argument as a given number of times to execute the simulator.
   */
-class Turn extends GameState {
-/*
-  var isGameOver = false // TODO(jfrench): We can fix this later to be in simulator or something
-  var turnCounter = 0
-  var maxTurns = 30 // Just for brevity... what is the actual limit?
-  */
+abstract class Turn(simulator: Sim, playerOne: Player, playerTwo: Player) {}
+
+case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends GameState{
+  val a = simulator
   var playablePower: Option[Card] = None
   var playableUnit: Option[Card] = None
 
-  def run(a: Sim, playerOne: Player, playerTwo: Player) {
+  def run() {
     // Now we're ready to play.
     while (!isGameOver) {
       // Begin turn
@@ -140,4 +138,8 @@ class Turn extends GameState {
   def showCard(card: Card) {
     print(card.name + ", " + card.cost)
   }
+}
+
+case class SolitaireTurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends GameState {
+  def run() {}
 }

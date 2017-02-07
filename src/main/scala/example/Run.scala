@@ -7,7 +7,7 @@ import scala.collection.mutable.ListBuffer
   *
   * Reads the first argument as a given number of times to execute the simulator.
   */
-object Run extends Turn with App {
+object Run extends App {
   var iterations = 10
   if (args.size > 0) {
     iterations = args(0).toInt
@@ -37,7 +37,8 @@ object Run extends Turn with App {
       playerTwo.mulligan()
     }
 
-    run(a, playerOne, playerTwo)
+    val gameLoop = new AITurn(a, playerOne, playerTwo)
+    gameLoop.run
 
     // Output the board states
     a.outputGameState
