@@ -1,11 +1,16 @@
 package example
 
+import scala.io.StdIn.readLine
+
 /**
   * Turn class for main game loop.
   *
   * Reads the first argument as a given number of times to execute the simulator.
   */
 abstract class Turn() extends GameState {
+  var playablePower: Option[Card] = None
+  var playableUnit: Option[Card] = None
+
   def showHand(p: Player) {
     print(s"${p.name} hand: ")
     p.hand foreach { card =>
@@ -20,77 +25,73 @@ abstract class Turn() extends GameState {
 }
 
 case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends Turn {
-  val a = simulator
-  var playablePower: Option[Card] = None
-  var playableUnit: Option[Card] = None
-
   def run() {
     // Now we're ready to play.
     while (!isGameOver) {
       // Begin turn
-      println(a.whoseTurn().name + "'s turn.")
+      println(simulator.whoseTurn().name + "'s turn.")
         // Before we draw, let's remove summoning sickness from your board
-        a.activePlayer.board foreach (c => c.summonSickness = false)
-        a.activePlayer.currentPower = a.activePlayer.maxPower
-        showHand(a.activePlayer)
+        simulator.activePlayer.board foreach (c => c.summonSickness = false)
+        simulator.activePlayer.currentPower = simulator.activePlayer.maxPower
+        showHand(simulator.activePlayer)
         // Reset your board
-        a.activePlayer.board foreach { c =>
+        simulator.activePlayer.board foreach { c =>
           c.attacking = false
         }
       // If the turn counter is 0 and player is first, just in case we decide to extract turnCounter
       // then we skip the draw phase
-      if (turnCounter == 0 && a.activePlayer.first) {
+      if (turnCounter == 0 && simulator.activePlayer.first) {
         println("You go first... no card for you!")
       } else {
-        a.activePlayer.draw(1)
-          showCard(a.activePlayer.hand.last)
+        simulator.activePlayer.draw(1)
+          showCard(simulator.activePlayer.hand.last)
       }
 
       // First Main phase
       // - play a power, play a unit
-      playablePower = a.activePlayer.hand.find(_.generic_type == "Power")
-        if (!playablePower.isEmpty) a.activePlayer.play(playablePower.get)
+      playablePower = simulator.activePlayer.hand.find(_.generic_type == "Power")
+        if (!playablePower.isEmpty) simulator.activePlayer.play(playablePower.get)
 
           // Combat Phase -- this sucks as it's written because there is interaction
           // Let's perform a dumb attack
-          println(s"${a.activePlayer.name} is attacking ${a.defendingPlayer.name}")
-            if (a.defendingPlayer.board.isEmpty) {
-              a.activePlayer.board foreach { c =>
-                a.setAttacking(c)
+          println(s"${simulator.activePlayer.name} is attacking ${simulator.defendingPlayer.name}")
+            if (simulator.defendingPlayer.board.isEmpty) {
+              simulator.activePlayer.board foreach { c =>
+                simulator.setAttacking(c)
               }
             }
       // Now the combat cases get a bit more complicated, this approach may not be most suitable
       // Let's look and see if we can overrun the opponent
       // determine trade or win attacks, keep all other units back
-      a.activePlayer.board foreach { c =>
-        a.setAttacking(c)
-          a.defendingPlayer.board.foreach { d =>
+      simulator.activePlayer.board foreach { c =>
+        simulator.setAttacking(c)
+          simulator.defendingPlayer.board.foreach { d =>
             if (d.attack > c.health) {
-              a.unsetAttacking(c)
+              simulator.unsetAttacking(c)
             }
             if (d.health > c.attack) {
-              a.unsetAttacking(c)
+              simulator.unsetAttacking(c)
             }
           }
       }
 
       // Simple defender should block to prevent lethal, let's just do chump blocking for now
-      a.activePlayer.board foreach { c =>
-        if (c.attacking && c.attack >= a.defendingPlayer.health && !a.defendingPlayer.board.isEmpty) {
-          var chumps = a.defendingPlayer.board.filter { d => d.blocking == false }
+      simulator.activePlayer.board foreach { c =>
+        if (c.attacking && c.attack >= simulator.defendingPlayer.health && !simulator.defendingPlayer.board.isEmpty) {
+          var chumps = simulator.defendingPlayer.board.filter { d => d.blocking == false }
           var chump = chumps.head
             chump.blocking = true
             c.blocked == true
             if (c.attack >= chump.health) {
               println("OMGOMGOMG THE VOID!")
                 chump.blocking = false
-                a.defendingPlayer.board -= chump
-                a.defendingPlayer.v += chump
+                simulator.defendingPlayer.board -= chump
+                simulator.defendingPlayer.v += chump
             }
           if (chump.attack >= c.health) {
             c.blocked = false
-              a.activePlayer.board -= c
-              a.activePlayer.v += c
+              simulator.activePlayer.board -= c
+              simulator.activePlayer.v += c
           }
         }
       }
@@ -99,38 +100,38 @@ case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends 
       // Is there additive defense to kill/block me
       var defenseAtk = 0
         var defenseHp = 0
-        a.defendingPlayer.board.foreach { d =>
+        simulator.defendingPlayer.board.foreach { d =>
           defenseAtk += d.attack
             defenseHp += d.health
         }
-      a.activePlayer.board foreach { c =>
-        if (defenseAtk >= c.health) a.unsetAttacking(c)
-          if (defenseHp >= c.attack) a.unsetAttacking(c)
+      simulator.activePlayer.board foreach { c =>
+        if (defenseAtk >= c.health) simulator.unsetAttacking(c)
+          if (defenseHp >= c.attack) simulator.unsetAttacking(c)
       }
 
-      a.performAttack
-        isGameOver = a.checkGameOver
+      simulator.performAttack
+        isGameOver = simulator.checkGameOver
         if (isGameOver) {
-          if (playerOne.health < 1) println(s"PlayerTwo wins! ${a.playerTwo.first}")
-            if (playerTwo.health < 1) println(s"PlayerOne wins! ${a.playerOne.first}")
+          if (playerOne.health < 1) println(s"PlayerTwo wins! ${simulator.playerTwo.first}")
+            if (playerTwo.health < 1) println(s"PlayerOne wins! ${simulator.playerOne.first}")
         }
 
       // TODO(jfrench): This looks terrible, so I'll look at how to make it more clean.
       if (!isGameOver) {
         // Second main phase
-        playableUnit = a.activePlayer.hand.find(_.generic_type == "Unit")
-          if (!playableUnit.isEmpty) a.activePlayer.play(playableUnit.get)
+        playableUnit = simulator.activePlayer.hand.find(_.generic_type == "Unit")
+          if (!playableUnit.isEmpty) simulator.activePlayer.play(playableUnit.get)
 
             // Prep for ending turn
-            println(a.activePlayer.name + " has " + a.activePlayer.hand.size + " cards in hand.")
+            println(simulator.activePlayer.name + " has " + simulator.activePlayer.hand.size + " cards in hand.")
 
               // Discard step
-              if (a.activePlayer.hand.size > 9) {
+              if (simulator.activePlayer.hand.size > 9) {
                 println("Automated discard to mimic max hand of 9 at end of turn")
-                  println("Discarding: " +  a.activePlayer.discard(a.activePlayer.hand.last).name)
+                  println("Discarding: " +  simulator.activePlayer.discard(simulator.activePlayer.hand.last).name)
               }
 
-        a.nextPlayer()
+        simulator.nextPlayer()
           turnCounter += 1 // maybe this makes sense to track on each player
 
           // Cleanup checks to see if we should set game over.
@@ -140,7 +141,128 @@ case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends 
   }
 }
 
-case class SolitaireTurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends Turn {
+
+case class SolitaireTurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends Turn with PlayerInput {
+  // TODO(jfrench): Fix this so that it takes player inputs, etc.
   def run() {
+    // Now we're ready to play.
+    while (!isGameOver) {
+      // Begin turn
+      println(simulator.whoseTurn().name + "'s turn.")
+        // Before we draw, let's remove summoning sickness from your board
+        simulator.activePlayer.board foreach (c => c.summonSickness = false)
+        simulator.activePlayer.currentPower = simulator.activePlayer.maxPower
+        showHand(simulator.activePlayer)
+        // Reset your board
+        simulator.activePlayer.board foreach { c =>
+          c.attacking = false
+        }
+      // If the turn counter is 0 and player is first, just in case we decide to extract turnCounter
+      // then we skip the draw phase
+      if (turnCounter == 0 && simulator.activePlayer.first) {
+        println("You go first... no card for you!")
+      } else {
+        simulator.activePlayer.draw(1)
+          showCard(simulator.activePlayer.hand.last)
+      }
+
+      // First Main phase
+      // - play a power, play a unit
+      playablePower = simulator.activePlayer.hand.find(_.generic_type == "Power")
+        if (!playablePower.isEmpty) simulator.activePlayer.play(playablePower.get)
+
+          // Combat Phase -- this sucks as it's written because there is interaction
+          // Let's perform a dumb attack
+          println(s"${simulator.activePlayer.name} is attacking ${simulator.defendingPlayer.name}")
+            if (simulator.defendingPlayer.board.isEmpty) {
+              simulator.activePlayer.board foreach { c =>
+                simulator.setAttacking(c)
+              }
+            }
+      // Now the combat cases get a bit more complicated, this approach may not be most suitable
+      // Let's look and see if we can overrun the opponent
+      // determine trade or win attacks, keep all other units back
+      simulator.activePlayer.board foreach { c =>
+        simulator.setAttacking(c)
+          simulator.defendingPlayer.board.foreach { d =>
+            if (d.attack > c.health) {
+              simulator.unsetAttacking(c)
+            }
+            if (d.health > c.attack) {
+              simulator.unsetAttacking(c)
+            }
+          }
+      }
+
+      // Simple defender should block to prevent lethal, let's just do chump blocking for now
+      simulator.activePlayer.board foreach { c =>
+        if (c.attacking && c.attack >= simulator.defendingPlayer.health && !simulator.defendingPlayer.board.isEmpty) {
+          var chumps = simulator.defendingPlayer.board.filter { d => d.blocking == false }
+          var chump = chumps.head
+            chump.blocking = true
+            c.blocked == true
+            if (c.attack >= chump.health) {
+              println("OMGOMGOMG THE VOID!")
+                chump.blocking = false
+                simulator.defendingPlayer.board -= chump
+                simulator.defendingPlayer.v += chump
+            }
+          if (chump.attack >= c.health) {
+            c.blocked = false
+              simulator.activePlayer.board -= c
+              simulator.activePlayer.v += c
+          }
+        }
+      }
+
+
+      // Is there additive defense to kill/block me
+      var defenseAtk = 0
+        var defenseHp = 0
+        simulator.defendingPlayer.board.foreach { d =>
+          defenseAtk += d.attack
+            defenseHp += d.health
+        }
+      simulator.activePlayer.board foreach { c =>
+        if (defenseAtk >= c.health) simulator.unsetAttacking(c)
+          if (defenseHp >= c.attack) simulator.unsetAttacking(c)
+      }
+
+      simulator.performAttack
+        isGameOver = simulator.checkGameOver
+        if (isGameOver) {
+          if (playerOne.health < 1) println(s"PlayerTwo wins! ${simulator.playerTwo.first}")
+            if (playerTwo.health < 1) println(s"PlayerOne wins! ${simulator.playerOne.first}")
+        }
+
+      // TODO(jfrench): This looks terrible, so I'll look at how to make it more clean.
+      if (!isGameOver) {
+        // Second main phase
+        playableUnit = simulator.activePlayer.hand.find(_.generic_type == "Unit")
+          if (!playableUnit.isEmpty) simulator.activePlayer.play(playableUnit.get)
+
+            // Prep for ending turn
+            println(simulator.activePlayer.name + " has " + simulator.activePlayer.hand.size + " cards in hand.")
+
+              // Discard step
+              if (simulator.activePlayer.hand.size > 9) {
+                println("Automated discard to mimic max hand of 9 at end of turn")
+                  println("Discarding: " +  simulator.activePlayer.discard(simulator.activePlayer.hand.last).name)
+              }
+
+        simulator.nextPlayer()
+          turnCounter += 1 // maybe this makes sense to track on each player
+
+          // Cleanup checks to see if we should set game over.
+          isGameOver = turnCounter > maxTurns
+      }
+    }
+  }
+}
+
+trait PlayerInput {
+  def getCommand() : String = {
+    val command = readLine("Enter a command: ")
+    return command
   }
 }
