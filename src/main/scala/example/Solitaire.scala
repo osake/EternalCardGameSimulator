@@ -1,6 +1,7 @@
 package example
 
 import scala.collection.mutable.ListBuffer
+import scala.io.StdIn.readLine
 
 /**
   * Binary for executing the simulator in Solitaire mode.
@@ -13,11 +14,11 @@ object Solitaire extends App {
     iterations = args(0).toInt
   }
 
-  // For now, we'll just give you the P1 default deck.
-  val playerOne = new Player("Player One", deck = new Deck(Prefab.minionsOfShadowAI()))
-  val playerTwo = new Player("Player Two", deck = new Deck(Prefab.studentsOfTimeAI()))
+  val playerOneName = readLine("What name do you want to go by? ")
 
-  val f = new File("data/cards.json")
+  // For now, we'll just give you the P1 default deck.
+  val playerOne = new Player(playerOneName, deck = new Deck(Prefab.minionsOfShadowAI()))
+  val playerTwo = new Player("Player Two", deck = new Deck(Prefab.studentsOfTimeAI()))
 
   (1 to iterations) map { index =>
     val a = new Sim(playerOne, playerTwo)
@@ -27,14 +28,18 @@ object Solitaire extends App {
 
     println(a.activePlayer.name + " goes first!")
 
-    // Both players determine mulligan, we'll go aggressive and simple
-    val p1PowerCount = playerOne.countType("Power", playerOne.hand)
-    if (p1PowerCount <  2 || p1PowerCount > 5) {
-      playerOne.mulligan()
-    }
+    // Both players determine mulligan, we'll go aggressive and simple for the AI
+    playerOne.showHand
+    print("Do you wish to mulligan? (y/n) ")
+    val playerOneMulligan = readChar()
+    if (playerOneMulligan == 'y') {
+      playerOne.mulligan
+      println(s"${playerOne.name} mulliganed.")
+    } else println(s"${playerOne.name} is keeping their hand.")
 
     val p2PowerCount = playerTwo.countType("Power", playerTwo.hand)
     if (p2PowerCount <  2 || p2PowerCount > 5) {
+      println(s"${playerTwo.name} mulliganed.")
       playerTwo.mulligan()
     }
 

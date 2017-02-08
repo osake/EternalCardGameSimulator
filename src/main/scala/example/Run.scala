@@ -16,8 +16,6 @@ object Run extends App {
   val playerOne = new Player("Player One", deck = new Deck(Prefab.minionsOfShadowAI()))
   val playerTwo = new Player("Player Two", deck = new Deck(Prefab.studentsOfTimeAI()))
 
-  val f = new File("data/cards.json")
-
   (1 to iterations) map { index =>
     val a = new Sim(playerOne, playerTwo)
     a.start

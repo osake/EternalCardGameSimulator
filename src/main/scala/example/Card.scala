@@ -46,6 +46,13 @@ class Card(
   var blocked = false
 
   def toJson() = new Gson().toJson(this)
+
+  /**
+   * Print the card and cost.
+   */
+  def showCard() {
+    print(s"${name} (${cost}),  ")
+  }
 }
 
 // TODO (jfrench): Thinking of case classes since there are some differences in how each of these behave

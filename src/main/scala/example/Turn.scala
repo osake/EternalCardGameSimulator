@@ -11,17 +11,6 @@ abstract class Turn() extends GameState {
   var playablePower: Option[Card] = None
   var playableUnit: Option[Card] = None
 
-  def showHand(p: Player) {
-    print(s"${p.name} hand: ")
-    p.hand foreach { card =>
-      showCard(card)
-    }
-    print("\n")
-  }
-
-  def showCard(card: Card) {
-    print(card.name + ", " + card.cost)
-  }
 }
 
 case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends Turn {
@@ -33,7 +22,7 @@ case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends 
         // Before we draw, let's remove summoning sickness from your board
         simulator.activePlayer.board foreach (c => c.summonSickness = false)
         simulator.activePlayer.currentPower = simulator.activePlayer.maxPower
-        showHand(simulator.activePlayer)
+        simulator.activePlayer.showHand
         // Reset your board
         simulator.activePlayer.board foreach { c =>
           c.attacking = false
@@ -44,7 +33,7 @@ case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends 
         println("You go first... no card for you!")
       } else {
         simulator.activePlayer.draw(1)
-          showCard(simulator.activePlayer.hand.last)
+        simulator.activePlayer.hand.last.showCard
       }
 
       // First Main phase
@@ -152,7 +141,7 @@ case class SolitaireTurn(simulator: Sim, playerOne: Player, playerTwo: Player) e
         // Before we draw, let's remove summoning sickness from your board
         simulator.activePlayer.board foreach (c => c.summonSickness = false)
         simulator.activePlayer.currentPower = simulator.activePlayer.maxPower
-        showHand(simulator.activePlayer)
+        simulator.activePlayer.showHand
         // Reset your board
         simulator.activePlayer.board foreach { c =>
           c.attacking = false
@@ -163,7 +152,7 @@ case class SolitaireTurn(simulator: Sim, playerOne: Player, playerTwo: Player) e
         println("You go first... no card for you!")
       } else {
         simulator.activePlayer.draw(1)
-          showCard(simulator.activePlayer.hand.last)
+        simulator.activePlayer.hand.last.showCard
       }
 
       // First Main phase

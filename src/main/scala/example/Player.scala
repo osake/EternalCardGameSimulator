@@ -194,4 +194,15 @@ class Player(var name: String, var health: Int = 25, var deck: Deck) extends Laz
     hand --= pc
     hand.++=:(pc)
   }
+
+  /**
+   * Print the hand.
+   */
+  def showHand() {
+    print(s"${name}'s hand: ")
+    hand foreach { card =>
+      card.showCard
+    }
+    print("\n")
+  }
 }
