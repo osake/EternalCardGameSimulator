@@ -11,5 +11,6 @@ lazy val root = (project in file(".")).
     libraryDependencies += scalaTest % Test,
     libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.5.0",
     libraryDependencies += "org.slf4j" % "slf4j-simple" % "1.7.22",
-    libraryDependencies += "com.google.code.gson" % "gson" % "2.8.0"
+    libraryDependencies += "com.google.code.gson" % "gson" % "2.8.0",
+    libraryDependencies += "org.backuity" %% "ansi-interpolator" % "1.1.0" % "provided"
   )

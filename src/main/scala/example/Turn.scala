@@ -1,5 +1,6 @@
 package example
 
+import org.backuity.ansi.AnsiFormatter.FormattedHelper
 import scala.io.StdIn.readLine
 
 /**
@@ -22,7 +23,7 @@ abstract class Turn(simulator: Sim, playerOne: Player, playerTwo: Player) extend
 
     // Combat Phase -- this sucks as it's written because there is interaction
     // Let's perform a dumb attack
-    println(s"${simulator.activePlayer.name} is attacking ${simulator.defendingPlayer.name}")
+    println(ansi"%red{${simulator.activePlayer.name} is attacking ${simulator.defendingPlayer.name}}")
     if (simulator.defendingPlayer.board.isEmpty) {
       simulator.activePlayer.board foreach { c =>
         simulator.setAttacking(c)
