@@ -47,7 +47,6 @@ class Player(var name: String, var health: Int = 25, var deck: Deck, var human: 
     */
   def mulligan() {
     mulligan_counter += 1
-    // TODO(jfrench): put cards back in deck and shuffle
     reset_and_draw()
     val power_count = countType("Power", hand)
     if (power_count < 2 || power_count > 5) {
