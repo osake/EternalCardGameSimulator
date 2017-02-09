@@ -140,6 +140,13 @@ case class SolitaireTurn(simulator: Sim, playerOne: Player, playerTwo: Player) e
     while (!isGameOver) {
       if (simulator.activePlayer.human) {
         // Interact
+        readLine("duh")
+        // bump turn
+        simulator.nextPlayer()
+        turnCounter += 1 // maybe this makes sense to track on each player
+
+        // Cleanup checks to see if we should set game over.
+        isGameOver = turnCounter > maxTurns
       } else {
         performAITurn
       }

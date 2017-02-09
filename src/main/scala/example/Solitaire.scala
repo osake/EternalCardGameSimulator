@@ -1,7 +1,7 @@
 package example
 
 import scala.collection.mutable.ListBuffer
-import scala.io.StdIn.readLine
+import scala.io.StdIn.{readLine,readChar}
 
 /**
   * Binary for executing the simulator in Solitaire mode.
