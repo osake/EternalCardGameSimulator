@@ -1,7 +1,7 @@
 package example
 
 import scala.collection.mutable.ListBuffer
-import scala.io.StdIn.{readLine,readChar}
+import scala.io.StdIn.readLine
 
 /**
   * Binary for executing the simulator in Solitaire mode.
@@ -31,7 +31,7 @@ object Solitaire extends App {
     // Both players determine mulligan, we'll go aggressive and simple for the AI
     playerOne.showHand
     print("Do you wish to mulligan? (y/n) ")
-    val playerOneMulligan = readChar()
+    val playerOneMulligan = readLine()
     if (playerOneMulligan == 'y') {
       playerOne.mulligan
       println(s"${playerOne.name} mulliganed.")

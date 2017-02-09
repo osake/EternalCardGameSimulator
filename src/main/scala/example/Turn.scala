@@ -12,26 +12,8 @@ abstract class Turn(simulator: Sim, playerOne: Player, playerTwo: Player) extend
   var playableUnit: Option[Card] = None
 
   def performAITurn() {
-    // Begin turn
-    println(simulator.whoseTurn().name + "'s turn.")
-    // Before we draw, let's remove summoning sickness from your board
-    simulator.activePlayer.board foreach (c => c.summonSickness = false)
-    simulator.activePlayer.currentPower = simulator.activePlayer.maxPower
-    simulator.activePlayer.showHand
-
-    // Reset your board
-    simulator.activePlayer.board foreach { c =>
-      c.attacking = false
-    }
-
-    // If the turn counter is 0 and player is first, just in case we decide to extract turnCounter
-    // then we skip the draw phase
-    if (turnCounter == 0 && simulator.activePlayer.first) {
-      println("You go first... no card for you!")
-    } else {
-      simulator.activePlayer.draw(1)
-      simulator.activePlayer.hand.last.showCard
-    }
+    beginTurnSetup
+    for (drawnCard <- drawPhase) println(s"You drew ${drawnCard.name} (${drawnCard.cost})")
 
     // First Main phase
     // - play a power, play a unit
@@ -121,6 +103,34 @@ abstract class Turn(simulator: Sim, playerOne: Player, playerTwo: Player) extend
       isGameOver = turnCounter > maxTurns
     }
   }
+
+  def beginTurnSetup() {
+    // Begin turn
+    println(simulator.activePlayer.name + "'s turn.")
+
+    // Before we draw, let's remove summoning sickness from your board
+    simulator.activePlayer.board foreach (c => c.summonSickness = false)
+    simulator.activePlayer.currentPower = simulator.activePlayer.maxPower
+    simulator.activePlayer.showHand
+
+    // Reset your board
+    simulator.activePlayer.board foreach { c =>
+      c.attacking = false
+    }
+  }
+
+  def drawPhase() : Option[Card] = {
+    // If the turn counter is 0 and player is first, just in case we decide to extract turnCounter
+    // then we skip the draw phase
+    if (turnCounter == 0 && simulator.activePlayer.first) {
+      println("You go first... no card for you!")
+      return None
+    } else {
+      // TODO(jfrench): Would this be better to return the drawn card(s)?
+      simulator.activePlayer.draw(1)
+      return Some(simulator.activePlayer.hand.last)
+    }
+  }
 }
 
 case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends Turn(simulator, playerOne, playerTwo) {
@@ -139,9 +149,15 @@ case class SolitaireTurn(simulator: Sim, playerOne: Player, playerTwo: Player) e
     // Now we're ready to play.
     while (!isGameOver) {
       if (simulator.activePlayer.human) {
-        // Interact
-        readLine("duh")
+        beginTurnSetup
+        // TODO(french): Remove duplication
+        for (drawnCard <- drawPhase) println(s"You drew ${drawnCard.name} (${drawnCard.cost})")
+
+        println("Type 'help' to get list of commands.")
+        parseCommand(getCommand())
+
         // bump turn
+        readLine("Press enter.")
         simulator.nextPlayer()
         turnCounter += 1 // maybe this makes sense to track on each player
 
@@ -153,15 +169,30 @@ case class SolitaireTurn(simulator: Sim, playerOne: Player, playerTwo: Player) e
       if (isGameOver) getAnyKey
     }
   }
+
+  def parseCommand(command: String) {
+    command match {
+      case "help" => printHelp
+      case "exit" => sys.exit(0) // Just exit 1 for now.
+      case _ => println(s"You entered: ${command}, but I'm not sure how to handle that command.")
+    }
+  }
+
+  def printHelp() {
+    println("This is no help, it's a space station.")
+    println("\nCurrent supported commands are: help and exit")
+  }
 }
 
 trait PlayerInput {
   def getCommand(prompt: String = "Enter a command: ") : String = {
-    val command = readLine(prompt)
-    return command
+    readLine(prompt)
   }
 
+  /**
+   * Convenience "any key" prompt.
+   */
   def getAnyKey() {
-    readLine("Press Enter to continue.")
+    getCommand("Press Enter to continue.")
   }
 }
