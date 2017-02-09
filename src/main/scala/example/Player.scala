@@ -4,7 +4,11 @@ import com.google.gson.Gson
 import com.typesafe.scalalogging.LazyLogging
 import scala.collection.mutable.ListBuffer
 
-class Player(var name: String, var health: Int = 25, var deck: Deck) extends LazyLogging {
+/**
+ * Represent a player.  By default, you must present a name and a deck.  The health and human settings
+ * are defaulted to 25 and false respectively.  Meaning the players are standard AI units.
+ */
+class Player(var name: String, var health: Int = 25, var deck: Deck, var human: Boolean = false) extends LazyLogging {
   val MAX_HEALTH = 999
   val MIN_HEALTH = -MAX_HEALTH
 
