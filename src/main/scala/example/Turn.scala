@@ -2,6 +2,7 @@ package example
 
 import org.backuity.ansi.AnsiFormatter.FormattedHelper
 import scala.io.StdIn.readLine
+import scala.util.Try
 
 /**
   * Turn class for main game loop.
@@ -173,8 +174,13 @@ case class SolitaireTurn(simulator: Sim, playerOne: Player, playerTwo: Player) e
 
   def parseCommand(command: String) {
     command match {
-      case "help" => printHelp
+      case "combat" => println("Placeholder for combat")
+      case "end" => println("Placeholder for end turn, discard, etc.")
       case "exit" => sys.exit(0) // Just exit 1 for now.
+      case "hand" => printHand
+      case "help" => printHelp
+      case "main2" => println("Placeholder for 2nd main phase")
+      case "play" => parseCardMenuOptions
       case _ => println(s"You entered: ${command}, but I'm not sure how to handle that command.")
     }
   }
@@ -182,6 +188,29 @@ case class SolitaireTurn(simulator: Sim, playerOne: Player, playerTwo: Player) e
   def printHelp() {
     println("This is no help, it's a space station.")
     println("\nCurrent supported commands are: help and exit")
+  }
+
+  def printHand() {
+    simulator.activePlayer.showHand
+  }
+
+  def parseCardMenuOptions() {
+    var picked = false
+    while (!picked) {
+      val card = getCommand("Enter the number in square brackets of the card you want to play. ")
+      val number = cliToInt(card)
+      number match {
+        case Some(n) => {
+          picked = true
+          simulator.activePlayer.play(simulator.activePlayer.hand(n))
+        }
+        case None => println("I didn't understand which card.  Try again.")
+      }
+    }
+  }
+
+  def cliToInt(value: String) : Option[Int] = {
+    if (value.isEmpty) None else Try(value.toInt).toOption
   }
 }
 

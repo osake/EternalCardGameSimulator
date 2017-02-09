@@ -203,7 +203,8 @@ class Player(var name: String, var health: Int = 25, var deck: Deck, var human: 
    */
   def showHand() {
     print(s"${name}'s hand: ")
-    hand foreach { card =>
+    hand.zipWithIndex foreach { case(card, i) =>
+      print(s"[${i}]:")
       card.showCard
     }
     print("\n")
