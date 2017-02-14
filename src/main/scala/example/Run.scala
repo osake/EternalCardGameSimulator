@@ -1,5 +1,6 @@
 package example
 
+import akka.actor.{ Props, ActorSystem }
 import scala.collection.mutable.ListBuffer
 
 /**
@@ -35,8 +36,12 @@ object Run extends App {
       playerTwo.mulligan()
     }
 
-    val gameLoop = new AITurn(a, playerOne, playerTwo)
-    gameLoop.run
+    val system = ActorSystem()
+    val gameLoop = system.actorOf(Props(classOf[AITurn], a, playerOne, playerTwo))
+    gameLoop ! Start
+
+    system.stop(gameLoop)
+    system.shutdown
 
     // Output the board states
     a.outputGameState

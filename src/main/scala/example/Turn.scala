@@ -1,15 +1,36 @@
 package example
 
+import akka.actor.{ Actor, ActorContext, ActorRef, FSM }
 import org.backuity.ansi.AnsiFormatter.FormattedHelper
+import scala.concurrent.duration._
 import scala.io.StdIn.readLine
 import scala.util.Try
+
+/** Turn Messages */
+sealed trait TurnMessage
+object Ready extends TurnMessage
+object ResponseWait extends TurnMessage
+object Done extends TurnMessage
+final case class Busy(turn: ActorRef) extends TurnMessage
+
+/** Turn States */
+sealed trait TurnState
+case object Start extends TurnState
+case object FirstMain extends TurnState
+case object Combat extends TurnState
+case object SecondMain extends TurnState
+case object End extends TurnState
+case object Waiting extends TurnState
+
+/** State container for turn. */
+final case class TurnBy(player: Option[ActorRef])
 
 /**
   * Turn class for main game loop.
   *
   * Reads the first argument as a given number of times to execute the simulator.
   */
-abstract class Turn(simulator: Sim, playerOne: Player, playerTwo: Player) extends GameState {
+abstract class Turn(simulator: Sim, playerOne: Player, playerTwo: Player) extends GameState with Actor with FSM[TurnState, TurnBy] {
   var playablePower: Option[Card] = None
   var playableUnit: Option[Card] = None
 
@@ -136,12 +157,24 @@ abstract class Turn(simulator: Sim, playerOne: Player, playerTwo: Player) extend
 }
 
 case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends Turn(simulator, playerOne, playerTwo) {
+
+  startWith(Waiting, new TurnBy(None))
+
+  when(Waiting) {
+    case Event(Start, _) => {
+      println("Starting turn")
+      goto(End)
+    }
+  }
+
   def run() {
     // Now we're ready to play.
     while (!isGameOver) {
       performAITurn
     }
   }
+
+  initialize
 }
 
 
