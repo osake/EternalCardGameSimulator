@@ -25,12 +25,15 @@ case object Waiting extends TurnState
 /** State container for turn. */
 final case class TurnBy(player: Option[ActorRef])
 
+sealed trait Data
+case object Uninitialized extends Data
+
 /**
   * Turn class for main game loop.
   *
   * Reads the first argument as a given number of times to execute the simulator.
   */
-abstract class Turn(simulator: Sim, playerOne: Player, playerTwo: Player) extends GameState with Actor with FSM[TurnState, TurnBy] {
+abstract class Turn(simulator: Sim, playerOne: Player, playerTwo: Player) extends GameState with Actor with FSM[TurnState, Data] {
   var playablePower: Option[Card] = None
   var playableUnit: Option[Card] = None
 
@@ -158,12 +161,13 @@ abstract class Turn(simulator: Sim, playerOne: Player, playerTwo: Player) extend
 
 case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends Turn(simulator, playerOne, playerTwo) {
 
-  startWith(Waiting, new TurnBy(None))
+  startWith(Waiting, Uninitialized)
 
   when(Waiting) {
     case Event(Start, _) => {
-      println("Starting turn")
-      goto(End)
+      // These next two lines are how I sound to my kids.
+      run
+      stay()
     }
   }
 
