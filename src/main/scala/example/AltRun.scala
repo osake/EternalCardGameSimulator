@@ -40,11 +40,13 @@ object AltRun extends App {
     }
 
     val system = ActorSystem()
-    val gameLoop = system.actorOf(Props(classOf[AITurn], a, playerOne, playerTwo))
+    //#val gameLoop = system.actorOf(Props(classOf[AITurn], a, playerOne, playerTwo))
 
     val game = system.actorOf(Props[GameCoordinator])
     val simData = new SimData(a, Array(playerOne, playerTwo))
-    game ! Start
+    game ! Setup(simData)
+
+
     /*
     gameLoop ! Start
 
