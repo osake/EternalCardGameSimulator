@@ -1,7 +1,5 @@
 implement
-* Solitaire mode
-* turns
- * turn UI, more controls in solitaire vs the AI only simulation
+* smarter card import from data file, I looked at TypeAdapters for GSON, but it's not super clear to me
 
 
 and much more...
