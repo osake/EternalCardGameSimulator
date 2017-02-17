@@ -11,7 +11,7 @@ import scala.concurrent.{ Await, Future }
   *
   * Reads the first argument as a given number of times to execute the simulator.
   */
-object Run extends App {
+object AltRun extends App {
   var iterations = 10
   if (args.size > 0) {
     iterations = args(0).toInt
@@ -42,6 +42,10 @@ object Run extends App {
     val system = ActorSystem()
     val gameLoop = system.actorOf(Props(classOf[AITurn], a, playerOne, playerTwo))
 
+    val game = system.actorOf(Props[GameCoordinator])
+    val simData = new SimData(a, Array(playerOne, playerTwo))
+    game ! Start
+    /*
     gameLoop ! Start
 
     try {
@@ -55,6 +59,7 @@ object Run extends App {
     }
     //system.stop(gameLoop)
     //system.shutdown
+    */
 
     // Output the board states
     a.outputGameState
