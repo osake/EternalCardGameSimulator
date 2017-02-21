@@ -46,22 +46,15 @@ object AltRun extends App {
     val simData = new SimData(a, Array(playerOne, playerTwo))
     game ! Setup(simData)
 
-
-    /*
-    gameLoop ! Start
-
     try {
-      val stopped: Future[Boolean] = gracefulStop(gameLoop, 2 seconds)
+      val stopped: Future[Boolean] = gracefulStop(game, 2 seconds)
       Await.result(stopped, 3 seconds)
-      println("Game Loop stopped")
+      println("Game stopped")
     } catch {
       case e: Exception => e.printStackTrace
     } finally {
       system.shutdown
     }
-    //system.stop(gameLoop)
-    //system.shutdown
-    */
 
     // Output the board states
     a.outputGameState
