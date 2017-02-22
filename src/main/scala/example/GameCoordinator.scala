@@ -13,56 +13,71 @@ case object GameOver extends State
 
 sealed trait GameData
 case object UninitializedGame extends GameData
-case class SimData(sim: Sim, players: Array[Player]) extends GameData
+case class SimData(sim: Sim, players: Array[Player], gameLoop: ActorRef) extends GameData
 
 // Events
 sealed trait GameEvent
 case object GameWaiting extends GameEvent
+case object EndGame extends GameEvent
 case class Setup(simData: SimData) extends GameEvent
 
-class GameCoordinator extends Actor with FSM[State, Data] {
+class GameCoordinator extends Actor with FSM[State, GameData] with GameState {
 
-  startWith(NotStarted, Uninitialized)
+  startWith(NotStarted, UninitializedGame)
 
   when(NotStarted) {
-    case Event(Setup, simData) =>
-      val setupSimData = someFunc(simData)
-      goto(Begin) using (simData)
-    case _ => stay replying(Waiting)
+    case Event(Setup(simData), _) =>
+      goto(Begin) using simData.copy(simData.sim, simData.players, simData.gameLoop)
+    case Event(EndGame, _) =>
+      goto(GameOver)
+    case _ => stay replying(GameWaiting)
   }
 
   when(Begin) {
-    case _ => stay replying(Waiting)
+    case Event(Begin, SimData(sim, players, gameLoop)) =>
+      println(s"${sim.activePlayer.name} is active")
+      gameLoop ! Start
+      //Thread.sleep(100)
+
+      gameLoop ! ResetForTurn
+      //Thread.sleep(100)
+
+      // Play a power if one is available
+      gameLoop ! PlayPower
+      //Thread.sleep(100)
+
+      gameLoop ! Combat
+      //Thread.sleep(100)
+      gameLoop ! Fight
+      //Thread.sleep(100)
+
+      gameLoop ! SecondMain
+      //Thread.sleep(100)
+      gameLoop ! PlayUnit
+      //Thread.sleep(100)
+
+      gameLoop ! End
+      //Thread.sleep(100)
+      gameLoop ! EndTurn
+      //Thread.sleep(100)
+
+      stay replying(GameWaiting)
+    case Event(EndGame, _) =>
+      goto(GameOver) using stateData
+    case Event(e, s) =>
+      println(s"WOOOOOOO ${e}")
+      stay
   }
 
   when(GameOver) {
-    case Event(_, simData) => stay replying(simData)
+    case Event(_, SimData(sim, players, gameLoop))  =>
+      println("So long simulator")
+      if (sim.playerOne.health < 1) println(s"${sim.playerTwo.name} wins! ${sim.playerTwo.first}")
+      if (sim.playerTwo.health < 1) println(s"${sim.playerOne.name} wins! ${sim.playerOne.first}")
+      stay
   }
 
   initialize
-
-  // Methods that control turn behavior as this class listens to turn messages to control the game
-
-  def someFunc(simData: Data) {
-    simData match {
-      case s: SimData =>
-        val system = ActorSystem()
-        val gameLoop = system.actorOf(Props(classOf[AITurn], s.sim, s.players(0), s.players(1)))
-
-        gameLoop ! Start
-
-        try {
-          val stopped: Future[Boolean] = gracefulStop(gameLoop, 2 seconds)
-          Await.result(stopped, 3 seconds)
-          println("Game Loop stopped")
-        } catch {
-          case e: Exception => e.printStackTrace
-        } finally {
-          system.shutdown
-        }
-      case _ => println("No match for Data type")
-    }
-  }
 }
 
 

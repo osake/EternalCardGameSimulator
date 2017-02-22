@@ -1,6 +1,6 @@
 package example
 
-import akka.actor.{ Actor, ActorContext, ActorRef, FSM }
+import akka.actor._
 import org.backuity.ansi.AnsiFormatter.FormattedHelper
 import scala.concurrent.duration._
 import scala.io.StdIn.readLine
@@ -11,11 +11,17 @@ sealed trait TurnMessage
 object Ready extends TurnMessage
 object ResponseWait extends TurnMessage
 object Done extends TurnMessage
+object ResetForTurn extends TurnMessage
+object Start extends TurnMessage
+object PlayPower extends TurnMessage
+object PlayUnit extends TurnMessage
+object Fight extends TurnMessage
+object EndTurn extends TurnMessage
 final case class Busy(turn: ActorRef) extends TurnMessage
 
 /** Turn States */
 sealed trait TurnState
-case object Start extends TurnState
+case object BeginTurn extends TurnState
 case object FirstMain extends TurnState
 case object Combat extends TurnState
 case object SecondMain extends TurnState
@@ -165,11 +171,132 @@ case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends 
 
   when(Waiting) {
     case Event(Start, _) => {
-      // These next two lines are how I sound to my kids.
-      run
-      stay()
+      goto(BeginTurn)
+    }
+    case _ => stay
+  }
+
+  when(BeginTurn) {
+    case Event(ResetForTurn, _) => {
+      beginTurnSetup
+      for (drawnCard <- drawPhase) println(s"You drew ${drawnCard.name} (${drawnCard.cost})")
+      if (simulator.activePlayer.deck.size == 0) sender ! EndGame
+
+      // We don't need to wait for the change
+      goto(FirstMain)
     }
   }
+
+  when(FirstMain) {
+    case Event(PlayPower, _) => {
+      // First Main phase
+      // - play a power, play a unit
+      playablePower = simulator.activePlayer.hand.find(_.generic_type == "Power")
+      if (!playablePower.isEmpty) simulator.activePlayer.play(playablePower.get)
+      stay
+    }
+
+    case Event(Combat, _) =>
+      goto(Combat)
+
+  }
+
+  when(Combat) {
+    // TODO(jfrench): Probably move this combat AI into it's own thing at some point
+    case Event(Fight, _) =>
+      // Combat Phase -- this sucks as it's written because there is interaction
+      // Let's perform a dumb attack
+      println(ansi"%red{${simulator.activePlayer.name} is attacking ${simulator.defendingPlayer.name}}")
+      if (simulator.defendingPlayer.board.isEmpty) {
+        simulator.activePlayer.board foreach { c =>
+          simulator.setAttacking(c)
+        }
+      }
+
+      // Now the combat cases get a bit more complicated, this approach may not be most suitable
+      // Let's look and see if we can overrun the opponent
+      // determine trade or win attacks, keep all other units back
+      simulator.activePlayer.board foreach { c =>
+        simulator.setAttacking(c)
+        simulator.defendingPlayer.board.foreach { d =>
+          if (d.attack > c.health) simulator.unsetAttacking(c)
+          if (d.health > c.attack) simulator.unsetAttacking(c)
+        }
+      }
+
+      // Simple defender should block to prevent lethal, let's just do chump blocking for now
+      simulator.activePlayer.board foreach { c =>
+        if (c.attacking && c.attack >= simulator.defendingPlayer.health && !simulator.defendingPlayer.board.isEmpty) {
+          var chumps = simulator.defendingPlayer.board.filter { d => d.blocking == false }
+          var chump = chumps.head
+          chump.blocking = true
+          c.blocked == true
+          if (c.attack >= chump.health) {
+            chump.blocking = false
+            simulator.defendingPlayer.board -= chump
+            simulator.defendingPlayer.v += chump
+          }
+          if (chump.attack >= c.health) {
+            c.blocked = false
+            simulator.activePlayer.board -= c
+            simulator.activePlayer.v += c
+          }
+        }
+      }
+
+      // Is there additive defense to kill/block me
+      var defenseAtk = 0
+      var defenseHp = 0
+      simulator.defendingPlayer.board.foreach { d =>
+        defenseAtk += d.attack
+        defenseHp += d.health
+      }
+
+      simulator.activePlayer.board foreach { c =>
+        if (defenseAtk >= c.health) simulator.unsetAttacking(c)
+        if (defenseHp >= c.attack) simulator.unsetAttacking(c)
+      }
+
+      simulator.performAttack
+      isGameOver = simulator.checkGameOver
+      if (isGameOver) {
+        if (playerOne.health < 1) println(s"${playerTwo.name} wins! ${playerTwo.first}")
+        if (playerTwo.health < 1) println(s"${playerOne.name} wins! ${playerOne.first}")
+        sender ! EndGame
+      }
+      stay
+
+    case Event(SecondMain, _) =>
+      goto(SecondMain)
+  }
+
+  when(SecondMain) {
+    case Event(PlayUnit, _) =>
+      // Second main phase
+      playableUnit = simulator.activePlayer.hand.find(_.generic_type == "Unit")
+      if (!playableUnit.isEmpty) simulator.activePlayer.play(playableUnit.get)
+      stay
+
+    case Event(End, _) =>
+      goto(End)
+  }
+
+  when(End) {
+    case Event(EndTurn, _) =>
+      // Prep for ending turn
+      println(simulator.activePlayer.name + " has " + simulator.activePlayer.hand.size + " cards in hand.")
+
+      // Discard step
+      if (simulator.activePlayer.hand.size > 9) {
+        println("Automated discard to mimic max hand of 9 at end of turn")
+        println("Discarding: " +  simulator.activePlayer.discard(simulator.activePlayer.hand.last).name)
+      }
+      simulator.nextPlayer
+      turnCounter += 1
+      sender ! Begin
+      goto(Waiting) // Go back to the beginning of the machine to wait for next turn
+  }
+
 
   def run() {
     // Now we're ready to play.
