@@ -42,8 +42,8 @@ object AltRun extends App {
     val system = ActorSystem()
 
     val game = system.actorOf(Props[GameCoordinator])
-    val gameLoop = system.actorOf(Props(classOf[AITurn], a, playerOne, playerTwo))
-    val simData = new SimData(a, Array(playerOne, playerTwo), gameLoop)
+    val turnLoop = system.actorOf(Props(classOf[AITurn], a, playerOne, playerTwo))
+    val simData = new SimData(a, Array(playerOne, playerTwo), turnLoop)
 
     game ! Setup(simData)
     game ! Begin
@@ -51,7 +51,7 @@ object AltRun extends App {
     // This weird ass async issue where if I don't wait a bit, the sim cannot finish
     Thread.sleep(15000)
     try {
-      val stoppedLoop: Future[Boolean] = gracefulStop(gameLoop, 2 seconds)
+      val stoppedLoop: Future[Boolean] = gracefulStop(turnLoop, 2 seconds)
       Await.result(stoppedLoop, 3 seconds)
       println("Game Loop stopped")
       val stopped: Future[Boolean] = gracefulStop(game, 2 seconds)

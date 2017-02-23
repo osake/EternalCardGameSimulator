@@ -27,6 +27,7 @@ case object Combat extends TurnState
 case object SecondMain extends TurnState
 case object End extends TurnState
 case object Waiting extends TurnState
+case object WaitingPlayerCommand extends TurnState
 
 /** State container for turn. */
 final case class TurnBy(player: Option[ActorRef])
@@ -297,7 +298,6 @@ case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends 
       goto(Waiting) // Go back to the beginning of the machine to wait for next turn
   }
 
-
   def run() {
     // Now we're ready to play.
     while (!isGameOver) {
@@ -309,32 +309,53 @@ case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends 
 }
 
 
-case class SolitaireTurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends Turn(simulator, playerOne, playerTwo) with PlayerInput {
+case class SolitaireTurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends Turn(simulator, playerOne, playerTwo) {
 
-  var takingTurn: Boolean = _
+  startWith(Waiting, Uninitialized)
+
+  when(Waiting) {
+    case Event(Start, _) => {
+      goto(BeginTurn)
+    }
+    case _ => stay
+  }
+
+  when(BeginTurn) {
+    case Event(ResetForTurn, _) => {
+      beginTurnSetup
+      for (drawnCard <- drawPhase) println(s"You drew ${drawnCard.name} (${drawnCard.cost})")
+      if (simulator.activePlayer.deck.size == 0) sender ! EndGame
+
+      // We don't need to wait for the change
+      goto(FirstMain)
+    }
+  }
+
+  when(WaitingPlayerCommand) {
+    case _ =>
+      println("Type 'help' to get list of commands.")
+      // Commands are fairly state-like, so we could use more control here.
+      stay
+  }
+
+  when(FirstMain) {
+    case Event(PlayPower, _) => {
+      stay
+    }
+
+    case Event(Combat, _) =>
+      goto(Combat)
+  }
 
   def run() {
     // Now we're ready to play.
     while (!isGameOver) {
       if (simulator.activePlayer.human) {
-        takingTurn = true
-        beginTurnSetup
-        // TODO(french): Remove duplication
-        for (drawnCard <- drawPhase) println(s"You drew ${drawnCard.name} (${drawnCard.cost})")
 
-        println("Type 'help' to get list of commands.")
-        // Commands are fairly state-like, so we could use more control here.
-        while (takingTurn) {
-          parseCommand(getCommand())
-        }
 
         // bump turn
         readLine("Press enter.")
         simulator.nextPlayer()
-        turnCounter += 1 // maybe this makes sense to track on each player
-
-        // Cleanup checks to see if we should set game over.
-        isGameOver = turnCounter > maxTurns
       } else {
         performAITurn
       }
@@ -342,67 +363,5 @@ case class SolitaireTurn(simulator: Sim, playerOne: Player, playerTwo: Player) e
     }
   }
 
-  def parseCommand(command: String) {
-    command match {
-      case "combat" => println("Placeholder for combat")
-      case "end" => performEndTurn
-      case "exit" => sys.exit(0) // Just exit 0 for now.
-      case "hand" => printHand
-      case "help" => printHelp
-      case "main2" => println("Placeholder for 2nd main phase")
-      case "play" => parseCardMenuOptions
-      case _ => println(s"You entered: ${command}, but I'm not sure how to handle that command.")
-    }
-  }
-
-  def performEndTurn() {
-    println(ansi"%blue{Ending turn.}")
-    takingTurn = false
-  }
-
-  def printHelp() {
-    println("This is no help, it's a space station.")
-    println("\nCurrent supported commands are: help and exit")
-  }
-
-  def printHand() {
-    simulator.activePlayer.showHand
-  }
-
-  def parseCardMenuOptions() {
-    var picked = false
-    if (simulator.activePlayer.hand.size == 0) picked = true // guard against empty hand
-    while (!picked) {
-      val card = getCommand("Enter the number in square brackets of the card you want to play. ")
-      val number = cliToInt(card)
-      number match {
-        case Some(n) => {
-          if (n >= 0 && n < simulator.activePlayer.hand.size) {
-            picked = true
-            simulator.activePlayer.play(simulator.activePlayer.hand(n))
-          } else {
-            println(s"You don't have card ${n} in your hand.")
-          }
-        }
-        case None => println("I didn't understand which card.  Try again.")
-      }
-    }
-  }
-
-  def cliToInt(value: String) : Option[Int] = {
-    if (value.isEmpty) None else Try(value.toInt).toOption
-  }
 }
 
-trait PlayerInput {
-  def getCommand(prompt: String = "Enter a command: ") : String = {
-    readLine(prompt)
-  }
-
-  /**
-   * Convenience "any key" prompt.
-   */
-  def getAnyKey() {
-    getCommand("Press Enter to continue.")
-  }
-}

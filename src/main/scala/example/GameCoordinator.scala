@@ -13,7 +13,7 @@ case object GameOver extends State
 
 sealed trait GameData
 case object UninitializedGame extends GameData
-case class SimData(sim: Sim, players: Array[Player], gameLoop: ActorRef) extends GameData
+case class SimData(sim: Sim, players: Array[Player], turnLoop: ActorRef) extends GameData
 
 // Events
 sealed trait GameEvent
@@ -27,38 +27,38 @@ class GameCoordinator extends Actor with FSM[State, GameData] with GameState {
 
   when(NotStarted) {
     case Event(Setup(simData), _) =>
-      goto(Begin) using simData.copy(simData.sim, simData.players, simData.gameLoop)
+      goto(Begin) using simData.copy(simData.sim, simData.players, simData.turnLoop)
     case Event(EndGame, _) =>
       goto(GameOver)
     case _ => stay replying(GameWaiting)
   }
 
   when(Begin) {
-    case Event(Begin, SimData(sim, players, gameLoop)) =>
+    case Event(Begin, SimData(sim, players, turnLoop)) =>
       println(s"${sim.activePlayer.name} is active")
-      gameLoop ! Start
+      turnLoop ! Start
       //Thread.sleep(100)
 
-      gameLoop ! ResetForTurn
+      turnLoop ! ResetForTurn
       //Thread.sleep(100)
 
       // Play a power if one is available
-      gameLoop ! PlayPower
+      turnLoop ! PlayPower
       //Thread.sleep(100)
 
-      gameLoop ! Combat
+      turnLoop ! Combat
       //Thread.sleep(100)
-      gameLoop ! Fight
-      //Thread.sleep(100)
-
-      gameLoop ! SecondMain
-      //Thread.sleep(100)
-      gameLoop ! PlayUnit
+      turnLoop ! Fight
       //Thread.sleep(100)
 
-      gameLoop ! End
+      turnLoop ! SecondMain
       //Thread.sleep(100)
-      gameLoop ! EndTurn
+      turnLoop ! PlayUnit
+      //Thread.sleep(100)
+
+      turnLoop ! End
+      //Thread.sleep(100)
+      turnLoop ! EndTurn
       //Thread.sleep(100)
 
       stay replying(GameWaiting)
@@ -70,7 +70,7 @@ class GameCoordinator extends Actor with FSM[State, GameData] with GameState {
   }
 
   when(GameOver) {
-    case Event(_, SimData(sim, players, gameLoop))  =>
+    case Event(_, SimData(sim, players, turnLoop))  =>
       println("So long simulator")
       if (sim.playerOne.health < 1) println(s"${sim.playerTwo.name} wins! ${sim.playerTwo.first}")
       if (sim.playerTwo.health < 1) println(s"${sim.playerOne.name} wins! ${sim.playerOne.first}")
