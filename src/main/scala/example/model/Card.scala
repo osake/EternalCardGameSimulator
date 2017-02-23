@@ -1,4 +1,4 @@
-package example
+package example.model
 
 import scala.collection.JavaConversions._
 import com.google.gson.Gson

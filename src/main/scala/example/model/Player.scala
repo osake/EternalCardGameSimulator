@@ -1,6 +1,5 @@
-package example
+package example.model
 
-import com.google.gson.Gson
 import com.typesafe.scalalogging.LazyLogging
 import scala.collection.mutable.ListBuffer
 

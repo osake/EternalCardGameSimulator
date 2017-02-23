@@ -4,6 +4,8 @@ import com.google.gson.Gson
 import com.typesafe.scalalogging.LazyLogging
 import scala.collection.mutable.ListBuffer
 import scala.util.Random
+import example.model.Card
+import example.model.Player
 
 // TODO(jfrench): Probably want a configuration file which defines deck size, etc.
 // The tests would want to respec the size so I don't need 75 card decks in all the tests :)

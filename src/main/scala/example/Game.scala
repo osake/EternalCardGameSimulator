@@ -1,5 +1,7 @@
 package example
 
+import example.model.Player
+
 
 
 object Game {

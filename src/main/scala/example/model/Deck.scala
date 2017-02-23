@@ -1,4 +1,4 @@
-package example
+package example.model
 
 import scala.util.Random
 import scala.collection.mutable.ListBuffer

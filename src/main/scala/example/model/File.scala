@@ -1,4 +1,4 @@
-package example
+package example.model
 
 import scala.io.Source
 

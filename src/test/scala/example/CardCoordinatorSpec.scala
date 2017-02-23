@@ -4,6 +4,9 @@ import akka.testkit._
 import akka.actor._
 import org.scalatest._
 import org.scalatest.concurrent._
+import example.model.Deck
+import example.model.Player
+import example.model.Prefab
 
 class GameCoordinatorSpec extends TestKit(ActorSystem("game-system")) with FlatSpecLike with Matchers with ScalaFutures {
   "GameCoordinatorActor" should "do stuff for a new game" in {

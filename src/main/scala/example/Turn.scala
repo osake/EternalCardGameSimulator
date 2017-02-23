@@ -5,6 +5,8 @@ import org.backuity.ansi.AnsiFormatter.FormattedHelper
 import scala.concurrent.duration._
 import scala.io.StdIn.readLine
 import scala.util.Try
+import example.model.Card
+import example.model.Player
 
 /** Turn Messages */
 sealed trait TurnMessage
@@ -311,26 +313,6 @@ case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends 
 
 case class SolitaireTurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends Turn(simulator, playerOne, playerTwo) {
 
-  startWith(Waiting, Uninitialized)
-
-  when(Waiting) {
-    case Event(Start, _) => {
-      goto(BeginTurn)
-    }
-    case _ => stay
-  }
-
-  when(BeginTurn) {
-    case Event(ResetForTurn, _) => {
-      beginTurnSetup
-      for (drawnCard <- drawPhase) println(s"You drew ${drawnCard.name} (${drawnCard.cost})")
-      if (simulator.activePlayer.deck.size == 0) sender ! EndGame
-
-      // We don't need to wait for the change
-      goto(FirstMain)
-    }
-  }
-
   when(WaitingPlayerCommand) {
     case _ =>
       println("Type 'help' to get list of commands.")
@@ -338,14 +320,6 @@ case class SolitaireTurn(simulator: Sim, playerOne: Player, playerTwo: Player) e
       stay
   }
 
-  when(FirstMain) {
-    case Event(PlayPower, _) => {
-      stay
-    }
-
-    case Event(Combat, _) =>
-      goto(Combat)
-  }
 
   def run() {
     // Now we're ready to play.
@@ -359,7 +333,7 @@ case class SolitaireTurn(simulator: Sim, playerOne: Player, playerTwo: Player) e
       } else {
         performAITurn
       }
-      if (isGameOver) getAnyKey
+//      if (isGameOver) getAnyKey
     }
   }
 

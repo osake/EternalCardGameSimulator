@@ -2,6 +2,8 @@ package example
 
 import org.scalatest._
 import scala.collection.mutable.ListBuffer
+import example.model.Card
+import example.model.Deck
 
 
 class DeckSpec extends FlatSpec with Matchers {

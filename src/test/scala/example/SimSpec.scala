@@ -3,6 +3,10 @@ package example
 import org.scalatest._
 import scala.collection.mutable.ListBuffer
 import scala.language.reflectiveCalls
+import example.model.Card
+import example.model.Deck
+import example.model.Player
+import example.model.Prefab
 
 class SimSpec extends FlatSpec with Matchers with BeforeAndAfterEach {
 

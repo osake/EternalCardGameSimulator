@@ -5,6 +5,9 @@ import akka.pattern.gracefulStop
 import scala.collection.mutable.ListBuffer
 import scala.concurrent.duration._
 import scala.concurrent.{ Await, Future }
+import example.model.Deck
+import example.model.Player
+import example.model.Prefab
 
 /**
   * Binary for executing the simulator.
