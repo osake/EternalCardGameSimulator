@@ -9,6 +9,8 @@ import example.model.Player
 import scala.util.Try
 import scala.io.StdIn.readLine
 
+import org.joda.time.DateTime
+
 // States
 sealed trait State
 case object NotStarted extends State
@@ -41,27 +43,37 @@ class GameCoordinator extends Actor with FSM[State, GameData] with GameState wit
 
   when(Begin) {
     case Event(Begin, SimData(sim, players, turnLoop)) =>
-      if (sim.activePlayer.human) takingTurn = true
-      while (takingTurn) {
-        parseCommand(getCommand(), sim.activePlayer)
+      if (sim.activePlayer.human) {
+        takingTurn = true
+        var startTime = DateTime.now
+        while (takingTurn) {
+          parseCommand(getCommand(), sim.activePlayer, turnLoop)
+          if (DateTime.now.getMillis - startTime.getMillis > 10000) {
+            println("Time's up!")
+            takingTurn = false
+          }
+          startTime = DateTime.now // I think this will work since we're just timing the parseCommand
+        }
+        turnLoop ! EndTurn
+      } else { // AI Turn
+
+        println(s"${sim.activePlayer.name} is active")
+        turnLoop ! Start
+
+        turnLoop ! ResetForTurn
+
+        // Play a power if one is available
+        turnLoop ! PlayPower
+
+        turnLoop ! Combat
+        turnLoop ! Fight
+
+        turnLoop ! SecondMain
+        turnLoop ! PlayUnit
+
+        turnLoop ! End
+        turnLoop ! EndTurn
       }
-
-      println(s"${sim.activePlayer.name} is active")
-      turnLoop ! Start
-
-      turnLoop ! ResetForTurn
-
-      // Play a power if one is available
-      turnLoop ! PlayPower
-
-      turnLoop ! Combat
-      turnLoop ! Fight
-
-      turnLoop ! SecondMain
-      turnLoop ! PlayUnit
-
-      turnLoop ! End
-      turnLoop ! EndTurn
 
       stay replying(GameWaiting)
     case Event(EndGame, _) =>
@@ -95,11 +107,20 @@ trait PlayerInput {
     getCommand("Press Enter to continue.")
   }
 
-  def parseCommand(command: String, player: Player) {
+  /**
+   * For the placeholder sets, we'll just run the AI version of the state
+   */
+  def parseCommand(command: String, player: Player, turnLoop: ActorRef) {
     command match {
-      case "combat" => println("Placeholder for combat")
-      case "end" => performEndTurn
-      case "exit" => sys.exit(0) // Just exit 0 for now.
+      case "combat" =>
+        println("Placeholder for combat")
+        turnLoop ! Combat
+        turnLoop ! Fight
+      case "end" =>
+        performEndTurn
+        turnLoop ! End
+        turnLoop ! EndTurn
+      case "exit" => turnLoop ! EndGame
       case "hand" => printHand(player)
       case "help" => printHelp
       case "main2" => println("Placeholder for 2nd main phase")
