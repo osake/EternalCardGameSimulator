@@ -202,6 +202,9 @@ case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends 
     case Event(Combat, _) =>
       goto(Combat)
 
+    case Event(End, _) =>
+      goto(End)
+
   }
 
   when(Combat) {
@@ -318,6 +321,7 @@ case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends 
 }
 
 
+/*
 case class SolitaireTurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends Turn(simulator, playerOne, playerTwo) {
 
   when(WaitingPlayerCommand) {
@@ -345,4 +349,4 @@ case class SolitaireTurn(simulator: Sim, playerOne: Player, playerTwo: Player) e
   }
 
 }
-
+*/
