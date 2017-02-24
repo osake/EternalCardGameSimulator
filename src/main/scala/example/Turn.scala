@@ -300,12 +300,19 @@ case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends 
       goto(Waiting) // Go back to the beginning of the machine to wait for next turn
   }
 
-  def run() {
-    // Now we're ready to play.
-    while (!isGameOver) {
-      performAITurn
-    }
+  onTransition {
+    case FirstMain -> End => println("main to end")
+    case _ => println("wtf")
   }
+
+/* probably delete this
+ *  def run() {
+ *    // Now we're ready to play.
+ *    while (!isGameOver) {
+ *      performAITurn
+ *    }
+ *  }
+ */
 
   initialize
 }

@@ -29,8 +29,6 @@ case class Setup(simData: SimData) extends GameEvent
 
 class GameCoordinator extends Actor with FSM[State, GameData] with GameState with PlayerInput {
 
-  var takingTurn: Boolean = _
-
   startWith(NotStarted, UninitializedGame)
 
   when(NotStarted) {
@@ -44,18 +42,28 @@ class GameCoordinator extends Actor with FSM[State, GameData] with GameState wit
   when(Begin) {
     case Event(Begin, SimData(sim, players, turnLoop)) =>
       if (sim.activePlayer.human) {
+        println("human player")
+        println(s"${sim.activePlayer.name} is active")
+
+        turnLoop ! Start
+        turnLoop ! ResetForTurn
+
         takingTurn = true
         var startTime = DateTime.now
         while (takingTurn) {
           parseCommand(getCommand(), sim.activePlayer, turnLoop)
-          if (DateTime.now.getMillis - startTime.getMillis > 10000) {
+          // Ghetto version of a 30 second timer
+          if (DateTime.now.getMillis - startTime.getMillis > 30000) {
             println("Time's up!")
             takingTurn = false
+            sender ! "done" // shim to exit the sim for now
           }
           startTime = DateTime.now // I think this will work since we're just timing the parseCommand
         }
+        println("sending an endturn")
         turnLoop ! EndTurn
       } else { // AI Turn
+        println("AI player")
 
         println(s"${sim.activePlayer.name} is active")
         turnLoop ! Start
@@ -88,6 +96,7 @@ class GameCoordinator extends Actor with FSM[State, GameData] with GameState wit
       println("So long simulator")
       if (sim.playerOne.health < 1) println(s"${sim.playerTwo.name} wins! ${sim.playerTwo.first}")
       if (sim.playerTwo.health < 1) println(s"${sim.playerOne.name} wins! ${sim.playerOne.first}")
+      sender ! "done" // shim to exit the sim for now
       stay
   }
 
@@ -96,6 +105,9 @@ class GameCoordinator extends Actor with FSM[State, GameData] with GameState wit
 }
 
 trait PlayerInput {
+
+  var takingTurn: Boolean = _
+
   def getCommand(prompt: String = "Enter a command: ") : String = {
     readLine(prompt)
   }
@@ -113,17 +125,15 @@ trait PlayerInput {
   def parseCommand(command: String, player: Player, turnLoop: ActorRef) {
     command match {
       case "combat" =>
-        println("Placeholder for combat")
         turnLoop ! Combat
         turnLoop ! Fight
+        turnLoop ! SecondMain
       case "end" =>
         performEndTurn
         turnLoop ! End
-        turnLoop ! EndTurn
       case "exit" => turnLoop ! EndGame
       case "hand" => printHand(player)
       case "help" => printHelp
-      case "main2" => println("Placeholder for 2nd main phase")
       case "play" => parseCardMenuOptions(player)
       case _ => println(s"You entered: ${command}, but I'm not sure how to handle that command.")
     }
@@ -131,7 +141,7 @@ trait PlayerInput {
 
   def performEndTurn() {
     println(ansi"%blue{Ending turn.}")
-//    takingTurn = false
+    takingTurn = false
   }
 
   def printHelp() {
