@@ -97,6 +97,7 @@ class GameCoordinator extends Actor with FSM[State, GameData] with GameState wit
       if (sim.playerOne.health < 1) println(s"${sim.playerTwo.name} wins! ${sim.playerTwo.first}")
       if (sim.playerTwo.health < 1) println(s"${sim.playerOne.name} wins! ${sim.playerOne.first}")
       sender ! "done" // shim to exit the sim for now
+      turnLoop ! EndTurn
       stay
   }
 

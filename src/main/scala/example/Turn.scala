@@ -305,7 +305,9 @@ case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends 
 
   onTransition {
     case FirstMain -> End => println("main to end")
-    case _ => println("wtf")
+    //case _ => println("wtf")
+    case e -> s =>
+      println(s"WOOOOOOO ${e} -> ${s}")
   }
 
 /* probably delete this
