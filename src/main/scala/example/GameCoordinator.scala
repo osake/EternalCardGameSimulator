@@ -27,7 +27,7 @@ case object GameWaiting extends GameEvent
 case object EndGame extends GameEvent
 case class Setup(simData: SimData) extends GameEvent
 
-class GameCoordinator extends Actor with FSM[State, GameData] with GameState with PlayerInput {
+class GameCoordinator(runner: Actor)  extends Actor with FSM[State, GameData] with GameState with PlayerInput {
 
   startWith(NotStarted, UninitializedGame)
 
@@ -87,7 +87,7 @@ class GameCoordinator extends Actor with FSM[State, GameData] with GameState wit
     case Event(EndGame, _) =>
       goto(GameOver) using stateData
     case Event(e, s) =>
-      println(s"WOOOOOOO ${e}")
+      println(s"WAAAAAAAA ${e}")
       stay
   }
 
@@ -96,7 +96,10 @@ class GameCoordinator extends Actor with FSM[State, GameData] with GameState wit
       println("So long simulator")
       if (sim.playerOne.health < 1) println(s"${sim.playerTwo.name} wins! ${sim.playerTwo.first}")
       if (sim.playerTwo.health < 1) println(s"${sim.playerOne.name} wins! ${sim.playerOne.first}")
-      sender ! "done" // shim to exit the sim for now
+      runner.self ! "done" // shim to exit the sim for now
+      println(sender.toString)
+      println(turnLoop.toString)
+      println("headin' out")
       turnLoop ! EndTurn
       stay
   }

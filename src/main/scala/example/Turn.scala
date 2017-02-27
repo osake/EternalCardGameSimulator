@@ -305,50 +305,10 @@ case class AITurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends 
 
   onTransition {
     case FirstMain -> End => println("main to end")
-    //case _ => println("wtf")
     case e -> s =>
       println(s"WOOOOOOO ${e} -> ${s}")
   }
 
-/* probably delete this
- *  def run() {
- *    // Now we're ready to play.
- *    while (!isGameOver) {
- *      performAITurn
- *    }
- *  }
- */
-
   initialize
 }
 
-
-/*
-case class SolitaireTurn(simulator: Sim, playerOne: Player, playerTwo: Player) extends Turn(simulator, playerOne, playerTwo) {
-
-  when(WaitingPlayerCommand) {
-    case _ =>
-      println("Type 'help' to get list of commands.")
-      // Commands are fairly state-like, so we could use more control here.
-      stay
-  }
-
-
-  def run() {
-    // Now we're ready to play.
-    while (!isGameOver) {
-      if (simulator.activePlayer.human) {
-
-
-        // bump turn
-        readLine("Press enter.")
-        simulator.nextPlayer()
-      } else {
-        performAITurn
-      }
-//      if (isGameOver) getAnyKey
-    }
-  }
-
-}
-*/

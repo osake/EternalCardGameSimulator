@@ -71,7 +71,7 @@ class Coordinator(a: Sim, playerOne: Player, playerTwo: Player, system: ActorSys
     playerTwo.mulligan()
   }
 
-  val game = system.actorOf(Props[GameCoordinator])
+  val game = system.actorOf(Props(classOf[GameCoordinator], this))
   val turnLoop = system.actorOf(Props(classOf[AITurn], a, playerOne, playerTwo))
   val simData = new SimData(a, Array(playerOne, playerTwo), turnLoop)
 
