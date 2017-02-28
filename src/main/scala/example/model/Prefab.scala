@@ -1,4 +1,4 @@
-package example
+package example.model
 
 import scala.collection.mutable.ListBuffer
 import com.google.gson.Gson

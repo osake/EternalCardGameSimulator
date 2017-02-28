@@ -1,6 +1,13 @@
 package example
 
+import akka.actor.{ Props, ActorSystem }
+import akka.pattern.gracefulStop
 import scala.collection.mutable.ListBuffer
+import scala.concurrent.duration._
+import scala.concurrent.{ Await, Future }
+import example.model.Deck
+import example.model.Player
+import example.model.Prefab
 
 /**
   * Binary for executing the simulator.
@@ -35,8 +42,22 @@ object Run extends App {
       playerTwo.mulligan()
     }
 
-    val gameLoop = new AITurn(a, playerOne, playerTwo)
-    gameLoop.run
+    val system = ActorSystem()
+    val gameLoop = system.actorOf(Props(classOf[AITurn], a, playerOne, playerTwo))
+
+    gameLoop ! Start
+
+    try {
+      val stopped: Future[Boolean] = gracefulStop(gameLoop, 2 seconds)
+      Await.result(stopped, 3 seconds)
+      println("Game Loop stopped")
+    } catch {
+      case e: Exception => e.printStackTrace
+    } finally {
+      system.shutdown
+    }
+    //system.stop(gameLoop)
+    //system.shutdown
 
     // Output the board states
     a.outputGameState

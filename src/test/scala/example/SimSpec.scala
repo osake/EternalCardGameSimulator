@@ -3,6 +3,10 @@ package example
 import org.scalatest._
 import scala.collection.mutable.ListBuffer
 import scala.language.reflectiveCalls
+import example.model.Card
+import example.model.Deck
+import example.model.Player
+import example.model.Prefab
 
 class SimSpec extends FlatSpec with Matchers with BeforeAndAfterEach {
 
@@ -48,7 +52,7 @@ class SimSpec extends FlatSpec with Matchers with BeforeAndAfterEach {
     sim.playerOne.hand.size should be (7)
     sim.playerOne.deck.cards.size should be (3)
 
-    val card = sim.playerOne.deck.draw
+    val card = sim.playerOne.deck.draw.get
     sim.playerOne.deck.cards.size should be (2)
 
     sim.playerOne.deck.replace(card)

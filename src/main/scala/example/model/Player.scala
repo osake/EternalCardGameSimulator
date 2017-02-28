@@ -1,6 +1,5 @@
-package example
+package example.model
 
-import com.google.gson.Gson
 import com.typesafe.scalalogging.LazyLogging
 import scala.collection.mutable.ListBuffer
 
@@ -32,7 +31,9 @@ class Player(var name: String, var health: Int = 25, var deck: Deck, var human: 
   }
 
   def draw(n: Int) {
-    for (i <- 1 to n) yield hand.append(deck.draw)
+    if (deck.size >= n) {
+      for (i <- 1 to n) yield hand.append(deck.draw.get)
+    }
   }
 
   def getMulliganCounter() : Int = {

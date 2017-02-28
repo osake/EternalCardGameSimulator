@@ -12,5 +12,9 @@ lazy val root = (project in file(".")).
     libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.5.0",
     libraryDependencies += "org.slf4j" % "slf4j-simple" % "1.7.22",
     libraryDependencies += "com.google.code.gson" % "gson" % "2.8.0",
-    libraryDependencies += "org.backuity" %% "ansi-interpolator" % "1.1.0" % "provided"
+    libraryDependencies += "org.backuity" %% "ansi-interpolator" % "1.1.0" % "provided",
+    libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.4.17",
+    libraryDependencies += "com.typesafe.akka" %% "akka-testkit" % "2.4.17",
+    libraryDependencies += "com.typesafe" % "config" % "1.3.1",
+    libraryDependencies += "joda-time" % "joda-time" % "2.9.7"
   )

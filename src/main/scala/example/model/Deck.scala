@@ -1,4 +1,4 @@
-package example
+package example.model
 
 import scala.util.Random
 import scala.collection.mutable.ListBuffer
@@ -9,8 +9,12 @@ import scala.collection.mutable.ListBuffer
 class Deck(var cards: ListBuffer[Card]) {
 
   // Convenience method for removing a card.
-  def draw() : Card = {
-    return cards.remove(0)
+  def draw() : Option[Card] = {
+    if (cards.size > 0) {
+      return Some(cards.remove(0))
+    } else {
+      return None
+    }
   }
 
   // Convenience method for putting back a card.

@@ -1,6 +1,7 @@
 package example
 
 import org.scalatest._
+import example.model.Card
 
 class CardSpec extends FlatSpec with Matchers {
   "The Card object" should "have a cost and a type" in {
