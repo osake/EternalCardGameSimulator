@@ -1,6 +1,6 @@
 package example
 
-import akka.actor.{ Props, ActorSystem }
+import akka.actor.{ Props, Actor, ActorSystem }
 import akka.pattern.gracefulStop
 import scala.collection.mutable.ListBuffer
 import scala.concurrent.duration._
@@ -25,59 +25,67 @@ object AltRun extends App {
 
   (1 to iterations) map { index =>
     val a = new Sim(playerOne, playerTwo)
-    a.start
-    a.activePlayer = a.coinToss
-    a.activePlayer.first = true
-
-    println(a.activePlayer.name + " goes first!")
-
-    // Both players determine mulligan, we'll go aggressive and simple
-    val p1PowerCount = playerOne.countType("Power", playerOne.hand)
-    if (p1PowerCount <  2 || p1PowerCount > 5) {
-      playerOne.mulligan()
-    }
-
-    val p2PowerCount = playerTwo.countType("Power", playerTwo.hand)
-    if (p2PowerCount <  2 || p2PowerCount > 5) {
-      playerTwo.mulligan()
-    }
-
     val system = ActorSystem()
+    val coordinator = system.actorOf(Props(classOf[AICoordinator], a, playerOne, playerTwo, system))
+  }
+}
 
-    val game = system.actorOf(Props[GameCoordinator])
-    val turnLoop = system.actorOf(Props(classOf[AITurn], a, playerOne, playerTwo))
-    val simData = new SimData(a, Array(playerOne, playerTwo), turnLoop)
+// Temporary setup to get some parity between AI and Solitaire
+class AICoordinator(a: Sim, playerOne: Player, playerTwo: Player, system: ActorSystem) extends Actor {
 
-    game ! Setup(simData)
-    game ! Begin
+  a.start
+  a.activePlayer = a.coinToss
+  a.activePlayer.first = true
 
-    // This weird ass async issue where if I don't wait a bit, the sim cannot finish
-    Thread.sleep(5000)
-    try {
-      val stoppedLoop: Future[Boolean] = gracefulStop(turnLoop, 2 seconds)
-      Await.result(stoppedLoop, 3 seconds)
-      println("Game Loop stopped")
-      val stopped: Future[Boolean] = gracefulStop(game, 2 seconds)
-      Await.result(stopped, 3 seconds)
-      println("Game stopped")
-    } catch {
-      case e: Exception => e.printStackTrace
-    } finally {
-      system.shutdown
-    }
+  println(a.activePlayer.name + " goes first!")
 
-    // Output the board states
-    a.outputGameState
-    a.printChar("~")
-    a.playerOne.hand_data
-    a.playerTwo.hand_data
-    a.printChar("~")
+  // Both players determine mulligan, we'll go aggressive and simple
+  val p1PowerCount = playerOne.countType("Power", playerOne.hand)
+  if (p1PowerCount <  2 || p1PowerCount > 5) {
+    playerOne.mulligan()
+  }
 
-    // Output the winner's name.  TODO(jfrench): Maybe this should happen in gameOver/cleanup
+  val p2PowerCount = playerTwo.countType("Power", playerTwo.hand)
+  if (p2PowerCount <  2 || p2PowerCount > 5) {
+    playerTwo.mulligan()
+  }
 
-    // End the simulation
-    println("Game over!")
-    a.gameOver()
+  val game = system.actorOf(Props(classOf[GameCoordinator], this))
+  val turnLoop = system.actorOf(Props(classOf[AITurn], a, playerOne, playerTwo))
+  val simData = new SimData(a, Array(playerOne, playerTwo), turnLoop)
+
+  game ! Setup(simData)
+  game ! Begin
+
+  def receive = {
+    case "done" =>
+      println("done")
+      try {
+        val stoppedLoop: Future[Boolean] = gracefulStop(turnLoop, 2 seconds)
+        Await.result(stoppedLoop, 3 seconds)
+        println("Game Loop stopped")
+        val stopped: Future[Boolean] = gracefulStop(game, 2 seconds)
+        Await.result(stopped, 3 seconds)
+        println("Game stopped")
+      } catch {
+        case e: Exception => e.printStackTrace
+      } finally {
+        system.shutdown
+      }
+
+      // Output the board states
+      a.outputGameState
+      a.printChar("~")
+      a.playerOne.hand_data
+      a.playerTwo.hand_data
+      a.printChar("~")
+
+      // Output the winner's name.  TODO(jfrench): Maybe this should happen in gameOver/cleanup
+
+      // End the simulation
+      println("Game over!")
+      a.gameOver()
+      context stop self
   }
 }
 

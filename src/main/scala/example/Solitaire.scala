@@ -33,18 +33,6 @@ object Solitaire extends App {
     val system = ActorSystem()
     val coordinator = system.actorOf(Props(classOf[Coordinator], a, playerOne, playerTwo, system))
 
-/*
-    try {
-      val stoppedLoop: Future[Boolean] = gracefulStop(coordinator, 2 seconds)
-      Await.result(stoppedLoop, 3 seconds)
-      println("Coordinator stopped")
-    } catch {
-      case e: Exception => e.printStackTrace
-    } finally {
-      system.shutdown
-    }
-    */
-
   }
 }
 // TODO(jfrench): I left off in the middle of moving the player command parsing to Solitaire engine, then having solitaire turn just do either an AI turn or a player turn based on player inputs from Solitaire.  It feels a bit weird to control the FSM from here, but I'm not sure how else to do it just yet.  You have to get player input to determine the next state, but players are really flexible in what they can do, at least for now.  Maybe at some point it will make sense to put this back in the GameCoordinator?  Rather than having two Turn subclasses, we can simply run the turn logic and just ask if it's a human and see what they want to do. From their inputs, they can control the state machine a little.
