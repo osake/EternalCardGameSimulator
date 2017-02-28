@@ -105,6 +105,14 @@ class Sim(val playerOne: Player, val playerTwo: Player) extends LazyLogging {
     printChar("*")
   }
 
+  def outputBoardState() {
+      outputGameState
+      printChar("~")
+      playerOne.hand_data
+      playerTwo.hand_data
+      printChar("~")
+  }
+
   def printChar(character : String) {
     (1 to 20) foreach (_ => print(character))
     print("\n")
