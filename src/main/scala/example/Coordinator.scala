@@ -25,7 +25,7 @@ class PcCoordinator(a: Sim, playerOne: Player, playerTwo: Player, system: ActorS
   playerOne.showHand
   print("Do you wish to mulligan? (y/n) ")
   val playerOneMulligan = readLine()
-  if (playerOneMulligan == 'y') {
+  if (playerOneMulligan.charAt(0) == 'y') {
     playerOne.mulligan
     println(s"${playerOne.name} mulliganed.")
   } else println(s"${playerOne.name} is keeping their hand.")
@@ -115,3 +115,4 @@ trait GracefulShutdown {
       }
   }
 }
+
