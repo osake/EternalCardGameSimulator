@@ -11,15 +11,22 @@ import example.model.Player
 import example.model.Prefab
 
 abstract class Coordinator(a: Sim, playerOne: Player, playerTwo: Player, system: ActorSystem) extends Actor{
-
-}
-
-class PcCoordinator(a: Sim, playerOne: Player, playerTwo: Player, system: ActorSystem) extends Coordinator(a, playerOne, playerTwo, system) with GracefulShutdown {
   a.start
   a.activePlayer = a.coinToss
   a.activePlayer.first = true
 
   println(a.activePlayer.name + " goes first!")
+
+  val game = system.actorOf(Props(classOf[GameCoordinator], this))
+  val turnLoop = system.actorOf(Props(classOf[AITurn], a, playerOne, playerTwo))
+  val simData = new SimData(a, Array(playerOne, playerTwo), turnLoop)
+
+  // Setting up is okay, but Human interaction happens in Begin, so we defer to subclass
+  game ! Setup(simData)
+}
+
+class PcCoordinator(a: Sim, playerOne: Player, playerTwo: Player, system: ActorSystem)
+    extends Coordinator(a, playerOne, playerTwo, system) with GracefulShutdown {
 
   // Both players determine mulligan, we'll go aggressive and simple for the AI
   playerOne.showHand
@@ -36,11 +43,6 @@ class PcCoordinator(a: Sim, playerOne: Player, playerTwo: Player, system: ActorS
     playerTwo.mulligan()
   }
 
-  val game = system.actorOf(Props(classOf[GameCoordinator], this))
-  val turnLoop = system.actorOf(Props(classOf[AITurn], a, playerOne, playerTwo))
-  val simData = new SimData(a, Array(playerOne, playerTwo), turnLoop)
-
-  game ! Setup(simData)
   game ! Begin
 
   def receive = {
@@ -59,12 +61,8 @@ class PcCoordinator(a: Sim, playerOne: Player, playerTwo: Player, system: ActorS
   }
 }
 
-class AICoordinator(a: Sim, playerOne: Player, playerTwo: Player, system: ActorSystem) extends Coordinator(a, playerOne, playerTwo, system) with GracefulShutdown {
-  a.start
-  a.activePlayer = a.coinToss
-  a.activePlayer.first = true
-
-  println(a.activePlayer.name + " goes first!")
+class AICoordinator(a: Sim, playerOne: Player, playerTwo: Player, system: ActorSystem)
+    extends Coordinator(a, playerOne, playerTwo, system) with GracefulShutdown {
 
   // Both players determine mulligan, we'll go aggressive and simple
   val p1PowerCount = playerOne.countType("Power", playerOne.hand)
@@ -77,11 +75,6 @@ class AICoordinator(a: Sim, playerOne: Player, playerTwo: Player, system: ActorS
     playerTwo.mulligan()
   }
 
-  val game = system.actorOf(Props(classOf[GameCoordinator], this))
-  val turnLoop = system.actorOf(Props(classOf[AITurn], a, playerOne, playerTwo))
-  val simData = new SimData(a, Array(playerOne, playerTwo), turnLoop)
-
-  game ! Setup(simData)
   game ! Begin
 
   def receive = {
